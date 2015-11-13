@@ -1,0 +1,22 @@
+application: weather-beacon
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /css
+  static_dir: static/css
+- url: /img
+  static_dir: static/img
+- url: /key_setter
+  static_files: static/key_setter.html
+  upload: static/key_setter.html
+- url: /.*
+  script: weatherbeacon.application
+
+libraries:
+- name: webapp2
+  version: latest
+- name: jinja2
+  version: latest
