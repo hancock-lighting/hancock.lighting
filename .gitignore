@@ -1,6 +1,8 @@
 ## Project-specific files and folders #########################################
 
+node_modules/
 *.pyc
+
 
 
 
