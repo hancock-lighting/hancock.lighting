@@ -1,14 +1,20 @@
 // Vendor
 @import 'vendor/normalize';
+@import 'vendor/rem';
 
 // Utilities
 @import 'utilities/variables';
+@import 'utilities/extends';
 @import 'utilities/z-index';
 @import 'utilities/colors';
 @import 'utilities/typography';
 
 // Base
 @import 'base/global';
+
+// Layout
+@import 'layout/main';
+@import 'layout/aside';
 
 // Components
 
