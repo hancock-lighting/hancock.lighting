@@ -1,13 +1,17 @@
-@import 'base/variables';
+// Vendor
+@import 'vendor/normalize';
 
-@import 'base/normalize';
+// Utilities
+@import 'utilities/variables';
+@import 'utilities/z-index';
+@import 'utilities/colors';
+@import 'utilities/typography';
+
+// Base
 @import 'base/global';
 
-// Import Components
-// @import 'components/header';
+// Components
 
-// Import Layouts
-// @import 'layouts/home';
 
-// Import Plugins
-// @import 'plugins/plugin';
+// Shame
+@import 'shame';
