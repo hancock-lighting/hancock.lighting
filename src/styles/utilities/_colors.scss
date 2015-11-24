@@ -1,0 +1,35 @@
+$colors: (
+    // Basics
+    black:  #000000,
+
+    // Type
+    type: (
+        light: hsla(187, 45%, 89%, 1),
+        dark:  hsla(209, 33%, 22%, 1)
+    ),
+
+    // Time
+    time: (
+        day:   hsla(187, 45%, 89%, 1),
+        night: hsla(209, 33%, 22%, 1)
+    ),
+
+    // Beacon
+    beacon: (
+        red:  hsla(13, 100%, 73%, 1),
+        blue: hsla(211, 75%, 78%, 1)
+    )
+);
+
+// Retrieve color from $colors map
+@function c($color-name, $color-variant:null) {
+    // Color variant is optional
+    @if ($color-variant != null) {
+        // Return `map-get` for cleaner declaration
+        @return map-get(map-get($colors, $color-name), $color-variant);
+    }
+    // Color with color variant
+    @else if ($color-variant == null) {
+        @return map-get($colors, $color-name);
+    }
+}
