@@ -1,0 +1,10 @@
+.o-aside
+{
+height: 300px;
+    color: white;
+    margin-bottom: 100px;
+
+    z-index: z(o-aside);
+
+    background-color: c(time, night); // Fallback background color
+}
