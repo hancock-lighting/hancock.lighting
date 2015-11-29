@@ -10,9 +10,12 @@ $colors: (
 
     // Links
     link: (
-        base-day:   hsla(360, 100%, 100%, 1),
-        hover-day:  darken(hsla(360, 100%, 100%, 1), 25%),
-        active-day: darken(hsla(360, 100%, 100%, 1), 50%),
+        base-day:   hsla(7, 22%, 92%, 1),
+        hover-day:  darken(hsla(7, 22%, 92%, 1), 25%),
+        active-day: darken(hsla(7, 22%, 92%, 1), 50%),
+        base-night:   hsla(209, 33%, 22%, 1),
+        hover-night:  lighten(hsla(209, 33%, 22%, 1), 25%),
+        active-night: lighten(hsla(209, 33%, 22%, 1), 50%),
     ),
 
     // Time
