@@ -27,12 +27,6 @@ $font-weight-bold: 700;
 $font-weight-extra-bold: 800;
 $font-weight-black: 900;
 
-// Fonts
-$base-font-family: 'Poppins', sans-serif;
-$base-font-size: 16px !default;
-$base-font-weight: $font-weight-medium;
-$base-font-line-height: 1.4;
-
 // Sizes
 $font-size-giga: 1;
 $font-size-mega: 2;
@@ -45,17 +39,26 @@ $font-size-zeta: 8;
 $font-size-eta: 9;
 
 // Tracking
-$font-tracking-none: -9px;
-$font-tracking-xxs: -7px;
-$font-tracking-xs: -5px;
-$font-tracking-s: -3px;
-$font-tracking-m: 1px;
-$font-tracking-l: 3px;
-$font-tracking-xl: 5px;
-$font-tracking-xxl: 7px;
-$font-tracking-loose: 9px;
+$font-tracking-tightest: -7px;
+$font-tracking-tighter: -5px;
+$font-tracking-tight: -3px;
+$font-tracking-slight: 1px;
+$font-tracking-loose: 3px;
+$font-tracking-looser: 5px;
+$font-tracking-loosest: 7px;
+
+// Global
+$global-font-family: 'Poppins', sans-serif;
+$global-font-size: 16px !default;
+$global-font-weight: $font-weight-medium;
+$global-font-line-height: 1.4;
 
 
 // Animation -------------------------------------------------------------------
 $animation-ease: ease-in;
-$animation-duration: 0.2s;
+$animation-duration-shortest: 0.1s;
+$animation-duration-shorter: 0.2s;
+$animation-duration-short: 0.3s;
+$animation-duration-long: 0.5s;
+$animation-duration-longer: 0.7s;
+$animation-duration-longest: 0.9s;

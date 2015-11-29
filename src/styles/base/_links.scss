@@ -1,16 +1,31 @@
+// Base Styling ----------------------------------------------------------------
 a {
-    color: c(link, base);
+    color: c(link, base-day);
     text-decoration: none;
 
-    transition: color $animation-duration $animation-ease;
+    transition: color $animation-duration-shortest $animation-ease;
 
+    // States
     &:hover {
-        color: c(link, hover);
+        color: c(link, hover-day);
     }
 
     &:active {
-        color: c(link, active);
+        color: c(link, active-day);
 
         transition: none;
+    }
+
+    // Conditions
+    .sun-night & {
+        color: black;
+
+        &:hover {
+            color: orange;
+        }
+
+        &:active {
+            color: lime;
+        }
     }
 }

@@ -1,20 +1,30 @@
 //%banner-height
 
-
+// Component Styling -----------------------------------------------------------
 .c-install-instructions {
     align-items: flex-end;
     display: flex;
     margin-bottom: rem(40);
     z-index: z(c-install-instructions);
 
+    // Breakpoints
+    @include media(">desk-small") {
+        margin-bottom: rem(60);
+    }
+
     &__banner-center {
 height: rem(59);
         padding-left: rem(6);
         padding-right: rem(6);
 
-        background-color: c(banner, background-light);
+        background-color: c(banner, background-day);
 
         text-align: center;
+
+        // Conditions
+        .sun-night & {
+            background-color: c(banner, background-night);
+        }
     }
 
     &__banner-left,
@@ -22,7 +32,12 @@ height: rem(59);
 height: rem(72);
 width: rem(59);
 
-        fill: c(banner, background-light);
+        fill: c(banner, background-day);
+
+        // Conditions
+        .sun-night & {
+            fill: c(banner, background-night);
+        }
     }
 
     // Slight tweak to remove hairline gap on high-density displays
@@ -38,13 +53,18 @@ width: rem(59);
     &__title {
 font-size: 8pt;
         margin: 0;
-        padding-top: rem(8);
+        padding-top: rem(10);
         padding-bottom: rem(2);
 
-        color: c(type, dark);
-        @extend %font-tracking-m;
+        color: c(type, night);
+        @extend %font-tracking-slight;
         font-weight: $font-weight-light;
         text-transform: uppercase;
+
+        // Conditions
+        .sun-night & {
+            color: c(type, day);
+        }
     }
 
     &__list {
@@ -66,7 +86,12 @@ font-size: 15pt;
         }
 
         a {
-            color: c(type, dark);
+            color: c(type, night);
+
+            // Conditions
+            .sun-night & {
+                color: c(type, day);
+            }
         }
     }
 }

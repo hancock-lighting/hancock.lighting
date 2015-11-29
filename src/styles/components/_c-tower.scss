@@ -1,4 +1,11 @@
+// Component Styling -----------------------------------------------------------
 .c-tower {
+margin-left: rem(50); // Slight nudge
     width: 200px;
     z-index: z(c-tower);
+
+    // Breakpoints
+    @include media(">desk-small") {
+        width: 250px;
+    }
 }
