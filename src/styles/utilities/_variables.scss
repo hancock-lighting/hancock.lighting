@@ -1,7 +1,61 @@
-// File paths
+// File paths ------------------------------------------------------------------
 $path-to-images: "../../images";
+$path-to-fonts: "../../fonts";
 $path-to-scripts: "../../scripts";
-$path-to-styles: "../../scripts";
+$path-to-styles: "../../styles";
+
+
+// Breakpoints -----------------------------------------------------------------
+$breakpoint-wrist: 18.75em; // 300px;
+$breakpoint-palm: 23.75em; // 380px;
+$breakpoint-lap-small: 34.375em; // 550px;
+$breakpoint-lap-large: 48em; // 768px;
+$breakpoint-desk-small: 59.375em; // 950px;
+$breakpoint-desk-large: 75em; // 1200px;
+$breakpoint-wall: 83em; // 1328px;
+
+
+// Typography ------------------------------------------------------------------
+// Weights
+$font-weight-thin: 100;
+$font-weight-extra-light: 200;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+$font-weight-extra-bold: 800;
+$font-weight-black: 900;
 
 // Fonts
-$font-base: 'Poppins', sans-serif;
+$base-font-family: 'Poppins', sans-serif;
+$base-font-size: 16px !default;
+$base-font-weight: $font-weight-medium;
+$base-font-line-height: 1.4;
+
+// Sizes
+$font-size-giga: 1;
+$font-size-mega: 2;
+$font-size-alpha: 3;
+$font-size-beta: 4;
+$font-size-gamma: 5;
+$font-size-delta: 6;
+$font-size-epsilon: 7;
+$font-size-zeta: 8;
+$font-size-eta: 9;
+
+// Tracking
+$font-tracking-none: -9px;
+$font-tracking-xxs: -7px;
+$font-tracking-xs: -5px;
+$font-tracking-s: -3px;
+$font-tracking-m: 1px;
+$font-tracking-l: 3px;
+$font-tracking-xl: 5px;
+$font-tracking-xxl: 7px;
+$font-tracking-loose: 9px;
+
+
+// Animation -------------------------------------------------------------------
+$animation-ease: ease-in;
+$animation-duration: 0.2s;

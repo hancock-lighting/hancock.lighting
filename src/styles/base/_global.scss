@@ -1,29 +1,38 @@
-// Applies `border-box` to all HTML elements
+// Applies `border-box` to all HTML elements:
 // [1] https://github.com/AllThingsSmitty/css-protips#inherit-box-sizing
-html
-{
-background-color: pink; // Testing
+html {
     box-sizing: border-box; // [1]
-    height: 100%;
+    min-height: 100%;
     margin: 0;
-
-    @include rem-baseline;
 }
 
-// Applies `border-box` to all HTML elements
+
+// Applies `border-box` to all HTML elements:
 // [1] https://github.com/AllThingsSmitty/css-protips#inherit-box-sizing
-*,
-*:before,
-*:after
-{
+*, *:before,
+*:after {
     box-sizing: inherit; // [1]
 }
 
 
+// Applies defaults to all type
+html,
+body {
+    color: c(type, light);
+    font-family: $base-font-family;
+    font-weight: $base-font-weight;
+    font-size: $base-font-size;
+    line-height: $base-font-line-height;
+}
+
+
+// Remove text-shadow in selection highlight
+::selection { text-shadow: none; }
+
+
 // Applies defaults to all child elements, override as needed
 // [1] Better font rendering
-body
-{
+body {
     height: 100%;
     margin: 0;
 
@@ -31,10 +40,8 @@ body
     padding-top: 0;
     overflow-y: scroll;
 
-    color: color(type, light);
-    font-family: $font-base;
-    font-weight: 500;
-    line-height: 1;
+    font-size: 1em;
+
     -moz-osx-font-smoothing: grayscale; // [1]
     -webkit-font-smoothing: antialiased; // [1]
     text-rendering: optimizeLegibility; // [1]

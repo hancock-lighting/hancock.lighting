@@ -1,0 +1,52 @@
+.c-project-info {
+    z-index: z(c-project-info);
+
+    font-style: normal;
+    line-height: 0.8;
+    text-align: center;
+
+    &__by {
+font-size: 10pt;
+        margin-bottom: rem(-6);
+
+        @extend %font-tracking-m;
+        font-weight: $font-weight-light;
+        text-transform: uppercase;
+    }
+
+    &__authors {
+        margin-bottom: rem(20);
+
+        font-weight: $font-weight-light;
+
+        a {
+            font-weight: $font-weight-medium;
+
+            &:first-of-type {
+                margin-right: rem(2);
+            }
+
+            &:last-of-type {
+                margin-left: rem(3);
+            }
+        }
+    }
+
+    &__project-link {
+        width: rem(32);
+
+        fill: c(link, base);
+
+        transition: fill $animation-duration $animation-ease;
+
+        &:hover {
+            fill: c(link, hover);
+        }
+
+        &:active {
+            fill: c(link, active);
+
+            transition: none;
+        }
+    }
+}

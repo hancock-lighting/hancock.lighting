@@ -1,0 +1,16 @@
+.o-info {
+    align-items: center;
+    display: flex;
+    flex-direction: column ;
+    padding-top: rem(40);
+    padding-bottom: rem(80);
+    z-index: z(o-info);
+
+    background-color: c(time, night); // Fallback background color
+
+    @include media(">lap-large") {
+background-color: purple;
+width: 30vw;
+float: left;
+    }
+}

@@ -44,7 +44,9 @@ gulp.task('styles', function(){
         console.log(error.message);
         this.emit('end');
     }}))
+    //.pipe(sourcemaps.init())
     .pipe(sass())
+    //.pipe(sourcemaps.write('./maps'))
     .pipe(autoprefixer('last 2 versions'))
     .pipe(gulp.dest('dist/styles/'))
     .pipe(rename({suffix: '.min'}))
@@ -73,7 +75,7 @@ gulp.task('scripts', function(){
 gulp.task('dist', ['pages', 'images', 'styles', 'scripts']);
 
 gulp.task('default', ['dist', 'browser-sync'], function(){
+  gulp.watch("src/**/*.html", ['pages']);
   gulp.watch("src/styles/**/*.scss", ['styles']);
   gulp.watch("src/scripts/**/*.js", ['scripts']);
-  gulp.watch("src/**/*.html", ['pages']);
 });

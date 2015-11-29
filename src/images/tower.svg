@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 277.8 724.9">
+  <style>
+    .st0{display:none;} .st1{display:inline;fill:#4C4645;} .st2{display:inline;fill:#D7EDF0;} .st3{display:inline;fill:#E7BD66;} .st4{display:inline;} .st5{fill:#917441;} .st6{display:inline;fill:#26394B;} .st7{fill:#EFE7E6;} .st8{fill:#26394B;} .st9{fill:none;stroke:#EFE7E6;stroke-width:0.75;stroke-miterlimit:10;} .st10{fill:none;stroke:#EFE7E6;stroke-width:0.75;stroke-miterlimit:10;stroke-dasharray:1.9592,1.9592;} .st11{display:inline;opacity:0.35;fill:#F2D89D;} .st12{fill:#A8C1C1;} .st13{fill:#DDD4D3;} .st14{fill:#726866;} .st15{fill:#CCC5C4;} .st16{fill:none;stroke:#EFE7E6;stroke-miterlimit:10;} .st17{fill:none;stroke:#918684;stroke-miterlimit:10;} .st18{fill:#918684;} .st19{fill:#FFFFFF;} .st20{fill:none;stroke:#CCC5C4;stroke-miterlimit:10;} .st21{display:inline;fill:#FF9374;} .st22{display:inline;fill:#9FC7F1;} .st23{display:inline;fill:#E9E8E9;} .st24{display:inline;fill:#D9D8D6;} .st25{display:inline;fill:#AFB2B3;} .st26{display:inline;fill:#929493;} .st27{display:inline;fill:#696E71;} .st28{display:inline;fill:#F1F2F1;} .st29{display:inline;fill:#DBDCDE;} .st30{display:inline;fill:#B9BABC;} .st31{display:inline;fill:#A0A1A3;} .st32{display:inline;fill:#87888A;} .st33{display:inline;fill:#DDD4D3;} .st34{display:inline;fill:#726866;} .st35{display:inline;fill:#EFE7E6;} .st36{fill:#969292;} .st37{display:inline;fill:none;stroke:#969292;stroke-miterlimit:10;} .st38{display:inline;fill:none;stroke:#969292;stroke-width:2;stroke-miterlimit:10;} .st39{display:inline;fill:#FFFFFF;} .st40{display:inline;fill:#F03F35;}
+  </style>
+  <g id="tower">
+    <g id="column-left_2_">
+      <path class="st13" d="M50 551.7H10c-1.1 0-2 .9-2 2s.9 2 2 2h40c1.1 0 2-.9 2-2s-.9-2-2-2z"/>
+      <path class="st14" d="M40 566.4H20l-5-10.7h30z"/>
+      <path class="st13" d="M50 566.4H10c-1.1 0-2 .9-2 2s.9 2 2 2h40c1.1 0 2-.9 2-2s-.9-2-2-2z"/>
+      <path class="st14" d="M40 581.1H20l-5-10.7h30z"/>
+      <path class="st13" d="M50 581.1H10c-1.1 0-2 .9-2 2s.9 2 2 2h40c1.1 0 2-.9 2-2s-.9-2-2-2z"/>
+      <path class="st14" d="M40 595.7H20l-5-10.6h30z"/>
+      <path class="st13" d="M50 595.7H10c-1.1 0-2 .9-2 2s.9 2 2 2h40c1.1 0 2-.9 2-2s-.9-2-2-2zM20 533.4h20v16H20z"/>
+      <path class="st14" d="M23 549.4h14v2.3H23z"/>
+      <path class="st13" d="M10 601.7h40v66.2H10z"/>
+      <path class="st14" d="M13 599.7h34v2H13z"/>
+      <path class="st15" d="M5 667.9h50v15H5z"/>
+      <path class="st13" d="M7 682.9h46v18H7z"/>
+      <path class="st15" d="M0 700.9h60v24H0z"/>
+    </g>
+    <g id="column-right_2_">
+      <path class="st13" d="M267.8 551.7h-40c-1.1 0-2 .9-2 2s.9 2 2 2h40c1.1 0 2-.9 2-2s-.9-2-2-2z"/>
+      <path class="st14" d="M257.8 566.4h-20l-5-10.7h30z"/>
+      <path class="st13" d="M267.8 566.4h-40c-1.1 0-2 .9-2 2s.9 2 2 2h40c1.1 0 2-.9 2-2s-.9-2-2-2z"/>
+      <path class="st14" d="M257.8 581.1h-20l-5-10.7h30z"/>
+      <path class="st13" d="M267.8 581.1h-40c-1.1 0-2 .9-2 2s.9 2 2 2h40c1.1 0 2-.9 2-2s-.9-2-2-2z"/>
+      <path class="st14" d="M257.8 595.7h-20l-5-10.6h30z"/>
+      <path class="st13" d="M267.8 595.7h-40c-1.1 0-2 .9-2 2s.9 2 2 2h40c1.1 0 2-.9 2-2s-.9-2-2-2zM237.8 533.4h20v16h-20z"/>
+      <path class="st14" d="M240.8 549.4h14v2.3h-14z"/>
+      <path class="st13" d="M227.8 601.7h40v66.2h-40z"/>
+      <path class="st14" d="M230.8 599.7h34v2h-34z"/>
+      <path class="st15" d="M222.8 667.9h50v15h-50z"/>
+      <path class="st13" d="M224.8 682.9h46v18h-46z"/>
+      <path class="st15" d="M217.8 700.9h60v24h-60z"/>
+    </g>
+    <g id="column-bottom_2_">
+      <path id="base_2_" class="st13" d="M46.8 352.7h166V725h-166z"/>
+      <path class="st7" d="M176.8 452.7h36v32h-36zM176.8 410.7h36v32h-36zM176.8 496.4h36v32h-36zM176.8 538.4h36v32h-36zM176.8 623.3h36v32h-36zM176.8 581.3h36v32h-36zM176.8 667h36v32h-36zM46.8 452.7h9v32h-9zM46.8 410.7h9v32h-9zM46.8 496.4h9v32h-9zM46.8 538.4h9v32h-9zM46.8 623.3h9v32h-9zM46.8 581.3h9v32h-9zM46.8 667h9v32h-9z"/>
+      <path class="st14" d="M46.8 718.9h166v6h-166z"/>
+    </g>
+    <g id="bottom-column-cap_2_">
+      <path class="st15" d="M212.8 392.7h-166l-6-40h178z"/>
+      <path class="st16" d="M45.6 370.8h168.5M45.6 373.8h168.5"/>
+      <path class="st7" d="M132.4 361.7l-2.6 2.5-2.5-2.5h-3.5l2.2 15.1h7.6l2.3-15.1zM213.3 376.8h1.9l1.9-12.6-2.6-2.5H211l.7 4.4zM46.4 376.8h-2l-1.8-12.6 2.5-2.5h3.5l-.6 4.4zM160.5 361.7l-2.6 2.5-2.5-2.5h-3.5l2.2 15.1h7.6l2.3-15.1zM191.6 361.7l-2.6 2.5-2.6-2.5h-3.5l2.3 15.1h7.6l2.3-15.1zM73.2 361.7l-2.5 2.5-2.6-2.5h-3.5l2.3 15.1h7.6l2.2-15.1zM104.3 361.7l-2.6 2.5-2.5-2.5h-3.5l2.2 15.1h7.6l2.3-15.1z"/>
+    </g>
+    <g id="column-top_3_">
+      <path class="st14" d="M201.8 352.7h-144l4-6h136z"/>
+      <path class="st7" d="M61.8 328.7h136v18h-136zM61.8 238.7h136v28h-136z"/>
+      <g id="vents_2_">
+        <g id="vent-left_2_">
+          <path class="st17" d="M61.8 333.7h22M61.8 335.7h22M61.8 337.7h22M61.8 339.7h22M61.8 341.7h22"/>
+        </g>
+        <g id="vent-center_2_">
+          <path class="st17" d="M91.8 333.7h52M91.8 335.7h52M91.8 337.7h52M91.8 339.7h52M91.8 341.7h52"/>
+        </g>
+        <g id="vent-right_2_">
+          <path class="st17" d="M151.8 333.7h46M151.8 335.7h46M151.8 337.7h46M151.8 339.7h46M151.8 341.7h46"/>
+        </g>
+      </g>
+      <path class="st14" d="M61.8 247.7h136v2h-136zM61.8 251.7h136v2h-136z"/>
+      <path class="st15" d="M60.8 244.7h12v12h-12zM81.8 244.7h12v12h-12zM102.8 244.7h12v12h-12zM123.8 244.7h12v12h-12zM144.8 244.7h12v12h-12zM165.8 244.7h12v12h-12zM186.8 244.7h12v12h-12z"/>
+    </g>
+    <g id="antenna_2_">
+      <path class="st13" d="M120.8 129.3h18v32.3h-18z"/>
+      <path class="st18" d="M108.8 161.7h42v77h-42z"/>
+      <path class="st14" d="M156.8 161.7h-54c-1.1 0-2 .9-2 2s.9 2 2 2h54c1.1 0 2-.9 2-2s-.9-2-2-2zM156.8 185.7h-54c-1.1 0-2 .9-2 2s.9 2 2 2h54c1.1 0 2-.9 2-2s-.9-2-2-2zM156.8 209.7h-54c-1.1 0-2 .9-2 2s.9 2 2 2h54c1.1 0 2-.9 2-2s-.9-2-2-2z"/>
+      <path class="st19" d="M129.8 0l-3 129.3h6z"/>
+      <g>
+        <path class="st19" d="M118.8 125.3h22v4h-22z"/>
+        <circle class="st19" cx="118.8" cy="127.3" r="2"/>
+        <circle class="st19" cx="140.8" cy="127.3" r="2"/>
+      </g>
+    </g>
+    <g id="safety-rail_2_">
+      <path class="st20" d="M72.8 238.7v-14h114v14M156.8 238.7v-14M103.3 238.7v-14M129.5 238.7v-14"/>
+    </g>
+    <g id="beacon-bottom_20_">
+      <path class="st14" d="M75.8 667h72v32h-72z" id="beacon-base_23_"/>
+      <path class="st18" d="M75.8 667h12v32h-12z" id="beacon-indent_20_"/>
+      <path id="beacon-spur_17_" class="st18" d="M108.8 667h2v32h-2z"/>
+    </g>
+    <g id="beacon-bottom_19_">
+      <path class="st14" d="M75.8 623.3h72v32h-72z" id="beacon-base_22_"/>
+      <path class="st18" d="M75.8 623.3h12v32h-12z" id="beacon-indent_19_"/>
+      <path id="beacon-spur_16_" class="st18" d="M108.8 623.3h2v32h-2z"/>
+    </g>
+    <g id="beacon-bottom_18_">
+      <path class="st14" d="M75.8 581.3h72v32h-72z" id="beacon-base_21_"/>
+      <path class="st18" d="M75.8 581.3h12v32h-12z" id="beacon-indent_18_"/>
+      <path id="beacon-spur_15_" class="st18" d="M108.8 581.3h2v32h-2z"/>
+    </g>
+    <g id="beacon-bottom_17_">
+      <path class="st14" d="M75.8 538.4h72v32h-72z" id="beacon-base_20_"/>
+      <path class="st18" d="M75.8 538.4h12v32h-12z" id="beacon-indent_17_"/>
+      <path id="beacon-spur_14_" class="st18" d="M108.8 538.4h2v32h-2z"/>
+    </g>
+    <g id="beacon-bottom_16_">
+      <path class="st14" d="M75.8 496.4h72v32h-72z" id="beacon-base_19_"/>
+      <path class="st18" d="M75.8 496.4h12v32h-12z" id="beacon-indent_16_"/>
+      <path id="beacon-spur_13_" class="st18" d="M108.8 496.4h2v32h-2z"/>
+    </g>
+    <g id="beacon-bottom_15_">
+      <path class="st14" d="M75.8 452.7h72v32h-72z" id="beacon-base_18_"/>
+      <path class="st18" d="M75.8 452.7h12v32h-12z" id="beacon-indent_15_"/>
+      <path id="beacon-spur_12_" class="st18" d="M108.8 452.7h2v32h-2z"/>
+    </g>
+    <g id="beacon-bottom_14_">
+      <path class="st14" d="M75.8 410.7h72v32h-72z" id="beacon-base_17_"/>
+      <path class="st18" d="M75.8 410.7h12v32h-12z" id="beacon-indent_7_"/>
+      <path id="beacon-spur_11_" class="st18" d="M108.8 410.7h2v32h-2z"/>
+    </g>
+    <g id="beacon-top_2_">
+      <path class="st14" d="M61.8 266.7h136v62h-136z" id="beacon-base_8_"/>
+      <path id="beacon-spur_10_" class="st18" d="M146.8 266.7h2v62h-2z"/>
+      <path id="beacon-spur_9_" class="st18" d="M86.8 266.7h2v62h-2z"/>
+    </g>
+    <circle id="beacon-antenna_2_" class="st19" cx="129.8" cy="4" r="4"/>
+  </g>
+</svg>

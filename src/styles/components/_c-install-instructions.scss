@@ -1,0 +1,72 @@
+//%banner-height
+
+
+.c-install-instructions {
+    align-items: flex-end;
+    display: flex;
+    margin-bottom: rem(40);
+    z-index: z(c-install-instructions);
+
+    &__banner-center {
+height: rem(59);
+        padding-left: rem(6);
+        padding-right: rem(6);
+
+        background-color: c(banner, background-light);
+
+        text-align: center;
+    }
+
+    &__banner-left,
+    &__banner-right {
+height: rem(72);
+width: rem(59);
+
+        fill: c(banner, background-light);
+    }
+
+    // Slight tweak to remove hairline gap on high-density displays
+    &__banner-left {
+        margin-right: -0.025rem;
+    }
+
+    // Slight tweak to remove hairline gap on high-density displays
+    &__banner-right {
+        margin-left: -0.025rem;
+    }
+
+    &__title {
+font-size: 8pt;
+        margin: 0;
+        padding-top: rem(8);
+        padding-bottom: rem(2);
+
+        color: c(type, dark);
+        @extend %font-tracking-m;
+        font-weight: $font-weight-light;
+        text-transform: uppercase;
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+
+        list-style-type: none;
+
+        li {
+            display: inline;
+        }
+    }
+
+    &__list__item {
+font-size: 15pt;
+
+        &:last-of-type {
+            margin-left: rem(15);
+        }
+
+        a {
+            color: c(type, dark);
+        }
+    }
+}
