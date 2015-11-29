@@ -1,17 +1,32 @@
+// Object Styling --------------------------------------------------------------
 // [1] Aligns `c-tower` to the bottom center of the screen
 .o-skyline {
     align-items: center; // [1]
     display: flex; // [1]
     flex-direction: column-reverse; // [1]
-    height: 99vh;
     z-index: z(o-skyline);
 
     background-color: c(time, day); // Fallback background color
 
-    @include media(">lap-large") {
-background-color: lime;
-width: 68vw;
-height: 100vh;
-float: left;
+    transition: background-color $animation-duration-long $animation-ease;
+
+    // States
+    .sun-day & {
+        background-color: c(time, day);
+    }
+
+    .sun-night & {
+        background-color: c(time, night);
+    }
+
+    // Breakpoints
+    @include media(">desk-small") {
+        flex-basis: 65%;
+
+        transition: flex-basis $animation-duration-shortest $animation-ease;
+    }
+
+    @include media(">wall") {
+        flex-basis: 70%;
     }
 }

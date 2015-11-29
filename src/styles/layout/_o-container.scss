@@ -1,0 +1,10 @@
+// Object Styling --------------------------------------------------------------
+.o-container {
+    display: flex;
+    flex-direction: column;
+
+    // Breakpoints
+    @include media(">desk-small") {
+        flex-direction: row;
+    }
+}

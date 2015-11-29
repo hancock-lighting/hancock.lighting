@@ -1,11 +1,11 @@
+// Base Styling ------------------------------------------------------------------
 // Applies `border-box` to all HTML elements:
 // [1] https://github.com/AllThingsSmitty/css-protips#inherit-box-sizing
 html {
     box-sizing: border-box; // [1]
-    min-height: 100%;
     margin: 0;
+    overflow-y: scroll;
 }
-
 
 // Applies `border-box` to all HTML elements:
 // [1] https://github.com/AllThingsSmitty/css-protips#inherit-box-sizing
@@ -14,31 +14,28 @@ html {
     box-sizing: inherit; // [1]
 }
 
-
 // Applies defaults to all type
 html,
 body {
-    color: c(type, light);
-    font-family: $base-font-family;
-    font-weight: $base-font-weight;
-    font-size: $base-font-size;
-    line-height: $base-font-line-height;
-}
+    color: c(type, day);
+    font-family: $global-font-family;
+    font-weight: $global-font-weight;
+    font-size: $global-font-size;
+    line-height: $global-font-line-height;
 
+    // Conditions
+    &.sun-night {
+        color: c(type, night);
+    }
+}
 
 // Remove text-shadow in selection highlight
 ::selection { text-shadow: none; }
 
-
 // Applies defaults to all child elements, override as needed
 // [1] Better font rendering
 body {
-    height: 100%;
     margin: 0;
-
-    padding-bottom: 0;
-    padding-top: 0;
-    overflow-y: scroll;
 
     font-size: 1em;
 

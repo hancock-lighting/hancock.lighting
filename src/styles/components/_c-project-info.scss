@@ -1,23 +1,40 @@
+// Component Styling -----------------------------------------------------------
 .c-project-info {
+    margin-bottom: rem(100);
     z-index: z(c-project-info);
 
     font-style: normal;
     line-height: 0.8;
     text-align: center;
 
+    // Breakpoints
+    @include media(">desk-small") {
+        margin-bottom: 0;
+    }
+
     &__by {
 font-size: 10pt;
         margin-bottom: rem(-6);
 
-        @extend %font-tracking-m;
+        @extend %font-tracking-slight;
         font-weight: $font-weight-light;
         text-transform: uppercase;
+
+        // Conditions
+        .sun-night & {
+
+        }
     }
 
     &__authors {
         margin-bottom: rem(20);
 
         font-weight: $font-weight-light;
+
+        // Conditions
+        .sun-night & {
+
+        }
 
         a {
             font-weight: $font-weight-medium;
@@ -29,24 +46,34 @@ font-size: 10pt;
             &:last-of-type {
                 margin-left: rem(3);
             }
+
+            // Conditions
+            .sun-night & {
+
+            }
         }
     }
 
     &__project-link {
         width: rem(32);
 
-        fill: c(link, base);
+        fill: c(github, base-day);
 
-        transition: fill $animation-duration $animation-ease;
+        transition: all $animation-duration-shortest $animation-ease;
 
+        // States
         &:hover {
-            fill: c(link, hover);
+            transform: scale(1.2);
         }
 
         &:active {
-            fill: c(link, active);
-
+            transform: scale(0.9);
             transition: none;
+        }
+
+        // Conditions
+        .sun-night & {
+            fill: c(github, base-night);
         }
     }
 }

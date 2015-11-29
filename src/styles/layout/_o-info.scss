@@ -1,3 +1,4 @@
+// Object Styling --------------------------------------------------------------
 .o-info {
     align-items: center;
     display: flex;
@@ -8,9 +9,26 @@
 
     background-color: c(time, night); // Fallback background color
 
-    @include media(">lap-large") {
-background-color: purple;
-width: 30vw;
-float: left;
+    // States
+    .sun-day & {
+        background-color: c(time, night);
+    }
+
+    .sun-night & {
+        background-color: c(time, day);
+    }
+
+    // Breakpoints
+    @include media(">desk-small") {
+        flex-basis: 35%;
+        justify-content: center;
+        padding-top: 0;
+        padding-bottom: 0;
+
+        transition: flex-basis $animation-duration-shortest $animation-ease;
+    }
+
+    @include media(">wall") {
+        flex-basis: 30%;
     }
 }

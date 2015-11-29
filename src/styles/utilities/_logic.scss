@@ -28,7 +28,7 @@
 
 
 // PX to Rem -------------------------------------------------------------------
-$browser-context: $base-font-size;
+$browser-context: $global-font-size;
 
 @function rem($pixels, $context: $browser-context) {
     @if (unitless($pixels)) {

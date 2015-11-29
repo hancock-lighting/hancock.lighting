@@ -48,10 +48,10 @@
 // Tracking
 %font-disable-ligatures { font-feature-settings: normal; } // Disables ligatures on tracked type to prevent this: https://twitter.com/leaverou/status/485885496305127424
 
-%font-tracking-xxs { @extend %font-disable-ligatures; letter-spacing: $font-tracking-xxs; }
-%font-tracking-xs { @extend %font-disable-ligatures; letter-spacing: $font-tracking-xs; }
-%font-tracking-s { @extend %font-disable-ligatures; letter-spacing: $font-tracking-s; }
-%font-tracking-m { @extend %font-disable-ligatures; letter-spacing: $font-tracking-m; }
-%font-tracking-l { @extend %font-disable-ligatures; letter-spacing: $font-tracking-l; }
-%font-tracking-xl { @extend %font-disable-ligatures; letter-spacing: $font-tracking-xl; }
-%font-tracking-xxl { @extend %font-disable-ligatures; letter-spacing: $font-tracking-xxl; }
+%font-tracking-tightest { @extend %font-disable-ligatures; letter-spacing: $font-tracking-tightest; }
+%font-tracking-tighter { @extend %font-disable-ligatures; letter-spacing: $font-tracking-tighter; }
+%font-tracking-tight { @extend %font-disable-ligatures; letter-spacing: $font-tracking-tight; }
+%font-tracking-slight { @extend %font-disable-ligatures; letter-spacing: $font-tracking-slight; }
+%font-tracking-loose { @extend %font-disable-ligatures; letter-spacing: $font-tracking-loose; }
+%font-tracking-looser { @extend %font-disable-ligatures; letter-spacing: $font-tracking-looser; }
+%font-tracking-loosest { @extend %font-disable-ligatures; letter-spacing: $font-tracking-loosest; }

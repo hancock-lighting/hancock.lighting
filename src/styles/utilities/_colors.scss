@@ -4,15 +4,15 @@ $colors: (
 
     // Type
     type: (
-        light: hsla(7, 22%, 92%, 1),
-        dark:  hsla(209, 33%, 22%, 1)
+        day:   hsla(7, 22%, 92%, 1),
+        night: hsla(209, 33%, 22%, 1)
     ),
 
     // Links
     link: (
-        base:   hsla(360, 100%, 100%, 1),
-        hover:  darken(hsla(360, 100%, 100%, 1), 25%),
-        active: darken(hsla(360, 100%, 100%, 1), 50%),
+        base-day:   hsla(360, 100%, 100%, 1),
+        hover-day:  darken(hsla(360, 100%, 100%, 1), 25%),
+        active-day: darken(hsla(360, 100%, 100%, 1), 50%),
     ),
 
     // Time
@@ -29,10 +29,16 @@ $colors: (
 
     // Banner
     banner: (
-        background-dark:  hsla(209, 33%, 22%, 1),
-        background-light: hsla(187, 45%, 89%, 1),
-        type-dark:        hsla(209, 33%, 22%, 1),
-        type-light:       hsla(187, 45%, 89%, 1),
+        background-night: hsla(209, 33%, 22%, 1),
+        background-day:   hsla(187, 45%, 89%, 1),
+        type-night:       hsla(209, 33%, 22%, 1),
+        type-day:         hsla(187, 45%, 89%, 1),
+    ),
+
+    // GitHub
+    github: (
+        base-day:   hsla(187, 45%, 89%, 1),
+        base-night: hsla(209, 33%, 22%, 1)
     )
 );
 
