@@ -1,0 +1,16 @@
+a {
+    color: c(link, base);
+    text-decoration: none;
+
+    transition: color $animation-duration $animation-ease;
+
+    &:hover {
+        color: c(link, hover);
+    }
+
+    &:active {
+        color: c(link, active);
+
+        transition: none;
+    }
+}

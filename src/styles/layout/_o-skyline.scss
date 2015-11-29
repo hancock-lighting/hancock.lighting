@@ -1,0 +1,17 @@
+// [1] Aligns `c-tower` to the bottom center of the screen
+.o-skyline {
+    align-items: center; // [1]
+    display: flex; // [1]
+    flex-direction: column-reverse; // [1]
+    height: 99vh;
+    z-index: z(o-skyline);
+
+    background-color: c(time, day); // Fallback background color
+
+    @include media(">lap-large") {
+background-color: lime;
+width: 68vw;
+height: 100vh;
+float: left;
+    }
+}

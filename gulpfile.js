@@ -1,26 +1,34 @@
-var gulp = require('gulp'),
-    plumber = require('gulp-plumber'),
-    rename = require('gulp-rename');
-var autoprefixer = require('gulp-autoprefixer');
-var concat = require('gulp-concat');
-var jshint = require('gulp-jshint');
-var uglify = require('gulp-uglify');
-var imagemin = require('gulp-imagemin'),
-    cache = require('gulp-cache');
-var minifycss = require('gulp-minify-css');
-var sass = require('gulp-sass');
-var browserSync = require('browser-sync');
+var gulp         = require('gulp'),
+    autoprefixer = require('gulp-autoprefixer'),
+    browserSync  = require('browser-sync'),
+    cache        = require('gulp-cache'),
+    concat       = require('gulp-concat'),
+    imagemin     = require('gulp-imagemin'),
+    jshint       = require('gulp-jshint'),
+    minifycss    = require('gulp-minify-css'),
+    plumber      = require('gulp-plumber'),
+    rename       = require('gulp-rename'),
+    sass         = require('gulp-sass'),
+    sourcemaps   = require('gulp-sourcemaps'),
+    uglify       = require('gulp-uglify');
+
 
 gulp.task('browser-sync', function() {
   browserSync({
     server: {
-       baseDir: "./"
+       baseDir: "dist/"
     }
   });
 });
 
 gulp.task('bs-reload', function () {
   browserSync.reload();
+});
+
+gulp.task('pages', function(){
+  gulp.src(['src/**/*.html'])
+    .pipe(gulp.dest('dist/'))
+    .pipe(browserSync.reload({stream:true}));
 });
 
 gulp.task('images', function(){
@@ -36,7 +44,9 @@ gulp.task('styles', function(){
         console.log(error.message);
         this.emit('end');
     }}))
+    //.pipe(sourcemaps.init())
     .pipe(sass())
+    //.pipe(sourcemaps.write('./maps'))
     .pipe(autoprefixer('last 2 versions'))
     .pipe(gulp.dest('dist/styles/'))
     .pipe(rename({suffix: '.min'}))
@@ -62,8 +72,10 @@ gulp.task('scripts', function(){
     .pipe(browserSync.reload({stream:true}))
 });
 
-gulp.task('default', ['browser-sync'], function(){
+gulp.task('dist', ['pages', 'images', 'styles', 'scripts']);
+
+gulp.task('default', ['dist', 'browser-sync'], function(){
+  gulp.watch("src/**/*.html", ['pages']);
   gulp.watch("src/styles/**/*.scss", ['styles']);
   gulp.watch("src/scripts/**/*.js", ['scripts']);
-  gulp.watch("*.html", ['bs-reload']);
 });

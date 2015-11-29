@@ -1,0 +1,24 @@
+.c-poem {
+    margin: 0 0 rem(30) 0;
+    width: 90vw;
+    z-index: z(c-tower);
+
+    text-align: center;
+
+    &__lines {
+        margin-top: 0;
+        margin-bottom: rem(10);
+
+        line-height: 1.9;
+    }
+
+    &__more-info {
+font-size: 10pt;
+        font-weight: $font-weight-light;
+
+        border-bottom: 1px dashed;
+
+        @extend %font-tracking-l;
+        text-transform: uppercase;
+    }
+}
