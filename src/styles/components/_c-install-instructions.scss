@@ -1,5 +1,5 @@
 // Component Logic -------------------------------------------------------------
-$banner-distance-tweak: -0.047rem;
+$banner-distance-tweak: rem(-1);
 
 
 // Component Styling -----------------------------------------------------------
@@ -22,8 +22,8 @@ $banner-distance-tweak: -0.047rem;
 
     &__banner-center {
         height: rem(66);
-        padding-left: rem(6);
-        padding-right: rem(6);
+        padding-left: rem(7);
+        padding-right: rem(7);
 
         background-color: c(banner, background-day);
 
