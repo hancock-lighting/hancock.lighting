@@ -1,4 +1,6 @@
-//%banner-height
+// Component Logic -------------------------------------------------------------
+$banner-distance-tweak: -0.047rem;
+
 
 // Component Styling -----------------------------------------------------------
 .c-install-instructions {
@@ -7,13 +9,19 @@
     margin-bottom: rem(40);
     z-index: z(c-install-instructions);
 
+    transition: all $animation-duration-shortest $animation-ease;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
     // Breakpoints
     @include media(">desk-small") {
         margin-bottom: rem(60);
     }
 
     &__banner-center {
-height: rem(59);
+        height: rem(66);
         padding-left: rem(6);
         padding-right: rem(6);
 
@@ -29,8 +37,8 @@ height: rem(59);
 
     &__banner-left,
     &__banner-right {
-height: rem(72);
-width: rem(59);
+        height: rem(80);
+        width: rem(60);
 
         fill: c(banner, background-day);
 
@@ -42,18 +50,18 @@ width: rem(59);
 
     // Slight tweak to remove hairline gap on high-density displays
     &__banner-left {
-        margin-right: -0.025rem;
+        margin-right: $banner-distance-tweak;
     }
 
     // Slight tweak to remove hairline gap on high-density displays
     &__banner-right {
-        margin-left: -0.025rem;
+        margin-left: $banner-distance-tweak;
     }
 
     &__title {
 font-size: 8pt;
         margin: 0;
-        padding-top: rem(10);
+        padding-top: rem(12);
         padding-bottom: rem(2);
 
         color: c(type, night);

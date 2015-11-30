@@ -18,14 +18,14 @@ a {
 
     // Conditions
     .sun-night & {
-        color: black;
+        color: c(link, base-night);
 
         &:hover {
-            color: orange;
+            color: c(link, hover-night);
         }
 
         &:active {
-            color: lime;
+            color: c(link, active-night);
         }
     }
 }

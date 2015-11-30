@@ -4,41 +4,53 @@ $colors: (
 
     // Type
     type: (
-        day:   hsla(7, 22%, 92%, 1),
-        night: hsla(209, 33%, 22%, 1)
+        day:   #efe7e6,
+        night: #26394b
     ),
 
     // Links
     link: (
-        base-day:   hsla(360, 100%, 100%, 1),
-        hover-day:  darken(hsla(360, 100%, 100%, 1), 25%),
-        active-day: darken(hsla(360, 100%, 100%, 1), 50%),
+        base-day:     #efe7e6,
+        hover-day:    darken(#efe7e6, 25%),
+        active-day:   darken(#efe7e6, 50%),
+        base-night:   #26394b,
+        hover-night:  lighten(#26394b, 25%),
+        active-night: lighten(#26394b, 50%),
     ),
 
     // Time
     time: (
-        day:   hsla(187, 45%, 89%, 1),
-        night: hsla(209, 33%, 22%, 1)
+        day:   #d6edf0,
+        night: #26394b
     ),
 
     // Beacon
     beacon: (
-        red:  hsla(13, 100%, 73%, 1),
-        blue: hsla(211, 75%, 78%, 1)
+        red:  #ff9375,
+        blue: #9dc5f1
     ),
 
     // Banner
     banner: (
-        background-night: hsla(209, 33%, 22%, 1),
-        background-day:   hsla(187, 45%, 89%, 1),
-        type-night:       hsla(209, 33%, 22%, 1),
-        type-day:         hsla(187, 45%, 89%, 1),
+        background-night: #26394b,
+        background-day:   #d6edf0,
+        type-night:       #26394b,
+        type-day:         #d6edf0
     ),
 
     // GitHub
     github: (
-        base-day:   hsla(187, 45%, 89%, 1),
-        base-night: hsla(209, 33%, 22%, 1)
+        base-day:   #d6edf0,
+        base-night: #26394b
+    ),
+
+    // Grays
+    gray: (
+        lighter: #e9e8e9,
+        light:   #d9d8d6,
+        medium:  #afb2b3,
+        dark:    #929493,
+        darker:  #696e71
     )
 );
 
