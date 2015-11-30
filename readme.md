@@ -1,5 +1,6 @@
 # TODO
 
+- [ ] Figure out colum sizing issue
 - [ ] Turn tower into SVG
 - [ ] Add modular scale
 - [ ] Add weather effects
