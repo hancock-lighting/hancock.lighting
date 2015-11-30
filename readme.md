@@ -1,10 +1,11 @@
 # TODO
 
-- [ ] Figure out colum sizing issue
+- [x] Figure out colum sizing issue
 - [ ] Turn tower into SVG
-- [ ] Add modular scale
 - [ ] Add weather effects
+- [ ] Add skyline effects
 - [ ] Add better favicon/site pinning support
 - [ ] Add robots, humans, OG & other related info
+- [ ] Add modular scale
 - [ ] Add analytics
 - [ ] Remove unneeded JS from footer
