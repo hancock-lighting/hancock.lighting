@@ -1,5 +1,5 @@
 // Component Logic -------------------------------------------------------------
-$banner-distance-tweak: -0.0275rem;
+$banner-distance-tweak: -0.047rem;
 
 
 // Component Styling -----------------------------------------------------------
@@ -9,11 +9,11 @@ $banner-distance-tweak: -0.0275rem;
     margin-bottom: rem(40);
     z-index: z(c-install-instructions);
 
-    // transition: all $animation-duration-shortest $animation-ease;
-    //
-    // &:hover {
-    //     transform: scale(1.1);
-    // }
+    transition: all $animation-duration-shortest $animation-ease;
+
+    &:hover {
+        transform: scale(1.05);
+    }
 
     // Breakpoints
     @include media(">desk-small") {
