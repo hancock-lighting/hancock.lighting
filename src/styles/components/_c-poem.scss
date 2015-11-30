@@ -31,9 +31,23 @@ font-size: 9pt;
         @extend %font-tracking-loose;
         text-transform: uppercase;
 
+        // Nasty hack that clips the letter-spacing's trailing underline
+        &:after {
+            content: "";
+            position: absolute;
+            height: rem(25);
+            margin-left: rem(-4);
+            width: rem(10);
+
+            background-color: c(banner, background-night);
+        }
+
         // Conditions
         .sun-night & {
-
+            // Nasty hack that clips the letter-spacing's trailing underline
+            &:after {
+                background-color: c(banner, background-day);
+            }
         }
     }
 }
