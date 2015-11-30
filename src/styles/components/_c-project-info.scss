@@ -1,6 +1,5 @@
 // Component Styling -----------------------------------------------------------
 .c-project-info {
-    margin-bottom: rem(100);
     z-index: z(c-project-info);
 
     color: c(gray, light);
@@ -11,11 +10,6 @@
     // Conditions
     .sun-night & {
         color: c(gray, darker);
-    }
-
-    // Breakpoints
-    @include media(">desk-small") {
-        margin-bottom: 0;
     }
 
     &__by {
