@@ -26,7 +26,7 @@
 font-size: 9pt;
         font-weight: $font-weight-light;
 
-        border-bottom: 1px dashed;
+        border-bottom: 1px dashed c(gray, medium);
 
         @extend %font-tracking-loose;
         text-transform: uppercase;
