@@ -44,6 +44,17 @@ font-size: 9pt;
 
         // Conditions
         .sun-night & {
+            color: c(gray, darker);
+
+            // States
+            &:hover {
+                color: c(gray, dark);
+            }
+
+            &:active {
+                color: black;
+            }
+
             // Nasty hack that clips the letter-spacing's trailing underline
             &:after {
                 background-color: c(banner, background-day);
