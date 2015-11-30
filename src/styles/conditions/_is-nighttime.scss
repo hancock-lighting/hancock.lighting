@@ -1,4 +1,9 @@
 // Condition Styling -----------------------------------------------------------
 .sun-night {
     background: c(time, night); // Sets body background color for elastic scrolling bounce and flexbox rounding gaps
+
+    .o-skyline {
+        background: c(time, night) url(../images/background-skyline-night.svg) no-repeat bottom right;
+        background-size: 103% auto;
+    }
 }

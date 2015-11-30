@@ -7,8 +7,7 @@
     flex-direction: column-reverse; // [1]
     z-index: z(o-skyline);
 
-    background: c(time, day) url(../images/background-skyline-night.svg) no-repeat bottom right; // Fallback background color
-    background-size: 103% auto;
+    background-color: c(time, day); // Fallback background color
 
     transition: background-color $animation-duration-long $animation-ease;
 

@@ -1,4 +1,9 @@
 // Condition Styling -----------------------------------------------------------
 .sun-day {
     background: c(time, day); // Sets body background color for elastic scrolling bounce and flexbox rounding gaps
+
+    .o-skyline {
+        background: c(time, day) url(../images/background-skyline-day.svg) no-repeat bottom right;
+        background-size: 103% auto;
+    }
 }
