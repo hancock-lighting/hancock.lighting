@@ -1,12 +1,14 @@
 // Component Styling -----------------------------------------------------------
 .c-tower {
+    margin-top: rem(40);
 //margin-left: rem(50); // Slight nudge
-    width: 200px;
     z-index: z(c-tower);
 
     // Breakpoints
-    @include media(">desk-small") {
-//margin-left: rem(80); // Slight nudge
-        width: 250px;
-    }
+    //@include media(">palm") { margin-top: rem(40); }
+    @include media(">lap-small") { margin-top: rem(60); }
+    @include media(">lap-large") { margin-top: rem(70); }
+    @include media(">desk-small") { margin-top: rem(70); }
+    @include media(">desk-large") { margin-top: rem(70); }
+    @include media(">wall") { margin-top: rem(100); }
 }
