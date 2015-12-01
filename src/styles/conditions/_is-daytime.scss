@@ -3,7 +3,7 @@
     background: c(time, day); // Sets body background color for elastic scrolling bounce and flexbox rounding gaps
 
     .o-skyline {
-        background: c(time, day) url(../images/background-skyline-day.svg) no-repeat bottom right;
+        background: c(time, day) url(#{$path-to-images}/background-skyline-day.svg) $background-position;
         background-size: 103% auto;
     }
 }
