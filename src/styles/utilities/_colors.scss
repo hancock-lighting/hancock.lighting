@@ -26,8 +26,15 @@ $colors: (
 
     // Beacon
     beacon: (
-        red:  #ff9375,
-        blue: #9dc5f1
+        red-base:  #ff9375,
+        red-spur:  darken(#ff9375, 8%),
+        red-indent:  darken(#ff9375, 10%),
+        blue-base: #9dc5f1,
+        blue-spur: darken(#9dc5f1, 8%),
+        blue-indent: darken(#9dc5f1, 10%),
+        gray-base: #726866,
+        gray-spur: #918684,
+        gray-indent: #918684
     ),
 
     // Banner
