@@ -1,18 +1,28 @@
 // Condition Styling -----------------------------------------------------------
 .beacon-clouds {
-    // Loop that targets beacon SVG
-    @for $i from 1 through 7 {
-        #beacon-antenna { animation: flash-blue-base $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
-        #beacon-top-spur-left { fill: c(beacon, blue-spur); }
-        #beacon-top-spur-right { fill: c(beacon, blue-spur); }
-        #beacon-top-base { animation: flash-blue-base $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
-        #beacon-bottom-#{$i}-spur { fill: c(beacon, blue-spur); }
-        #beacon-bottom-#{$i}-indent { fill: c(beacon, blue-indent); }
-        #beacon-bottom-#{$i}-base { animation: flash-blue-base $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
-    }
+    .c-tower {
+        // Loop that targets beacon SVG
+        @for $i from 1 through 7 {
+            #beacon-antenna { animation: flash-blue-base $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+            #beacon-top-spur-left { animation: flash-blue-spur $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+            #beacon-top-spur-right { animation: flash-blue-spur $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+            #beacon-top-base { animation: flash-blue-base $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+            #beacon-bottom-#{$i}-spur { animation: flash-blue-spur $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+            #beacon-bottom-#{$i}-indent { animation: flash-blue-indent $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+            #beacon-bottom-#{$i}-base { animation: flash-blue-base $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+        }
 
-    // Animation
-    @keyframes "flash-blue-base" {
-        50% { fill: c(beacon, blue-base); }
+        // Animation
+        @keyframes "flash-blue-base" {
+            50% { fill: c(beacon, blue-base); }
+        }
+
+        @keyframes "flash-blue-spur" {
+            50% { fill: c(beacon, blue-spur); }
+        }
+
+        @keyframes "flash-blue-indent" {
+            50% { fill: c(beacon, blue-indent); }
+        }
     }
 }
