@@ -40,11 +40,11 @@ def getBeaconClass():
         return "sox-rainout"
     elif f['precipProbability']>config['precip_threshold']:
         if f['precipType'] in ['rain','hail']:
-            return 'rain'
+            return 'raining'
         else:
-            return 'snow'
+            return 'snowing'
     elif f['cloudCover']>config['cloud_threshold']:
-        return 'clouds'
+        return 'cloudy'
     else:
         return 'clear'
 
@@ -52,23 +52,23 @@ def getSunClass():
     f = getForecast()['daily']['data'][0]
     now = time.time()
     if now > f['sunriseTime'] and now < f['sunsetTime']:
-        return 'day'
+        return 'daytime'
     else:
-        return 'night'
+        return 'nighttime'
 
 def getClasses():
     """ Possible classes:
-    beacon-clear
-    beacon-clouds
-    beacon-rain
-    beacon-snow
-    beacon-sox-rainout
-    beacon-sox-champs
+    is-clear
+    is-cloudy
+    is-raining
+    is-snowing
+    is-sox-rainout
+    is-sox-champs
 
-    sun-day
-    sun-night
+    is-daytime
+    is-nighttime
     """
-    return ["beacon-"+getBeaconClass(),"sun-"+getSunClass()]
+    return ["is-"+getBeaconClass(),"is-"+getSunClass()]
 
 class MainPage(webapp2.RequestHandler):
     def get(self):
