@@ -13,16 +13,6 @@
         }
 
         // Animation
-        @keyframes "flash-blue-base" {
-            50% { fill: c(beacon, blue-base); }
-        }
-
-        @keyframes "flash-blue-spur" {
-            50% { fill: c(beacon, blue-spur); }
-        }
-
-        @keyframes "flash-blue-indent" {
-            50% { fill: c(beacon, blue-indent); }
-        }
+        @include beacon-flash(blue);
     }
 }

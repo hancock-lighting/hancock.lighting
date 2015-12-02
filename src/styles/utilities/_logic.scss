@@ -1,3 +1,17 @@
+// Beacon Flash ----------------------------------------------------------------
+@mixin beacon-flash($color) {
+    @keyframes flash-#{$color}-base {
+        50% { fill: c(beacon, #{$color}-base); }
+    }
+    @keyframes flash-#{$color}-spur {
+        50% { fill: c(beacon, #{$color}-spur); }
+    }
+    @keyframes flash-#{$color}-indent {
+        50% { fill: c(beacon, #{$color}-indent); }
+    }
+}
+
+
 // Clearfix ------------------------------------------------------------------
 // Written as a mixin so it can be declared within a media query
 @mixin clearfix {
@@ -27,7 +41,23 @@
 }
 
 
-// PX to Rem -------------------------------------------------------------------
+// PX to Em/Rem -------------------------------------------------------------------
+// Em
+$browser-context: $global-font-size;
+
+@function em($pixels, $context: $browser-context) {
+    @if (unitless($pixels)) {
+        $pixels: $pixels * 1px;
+    }
+
+    @if (unitless($context)) {
+        $context: $context * 1px;
+    }
+
+    @return $pixels / $context * 1em;
+}
+
+// Rem
 $browser-context: $global-font-size;
 
 @function rem($pixels, $context: $browser-context) {
@@ -41,7 +71,6 @@ $browser-context: $global-font-size;
 
     @return $pixels / $context * 1rem;
 }
-
 
 // Text Truncate ---------------------------------------------------------------
 // Written as a mixin so it can be declared within a media query. Requires the

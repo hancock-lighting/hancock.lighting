@@ -12,17 +12,7 @@
 //             #beacon-bottom-#{$i}-base { animation: flash-red-base $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
 //         }
 //
-//         // Animation
-//         @keyframes "flash-red-base" {
-//             50% { fill: c(beacon, red-base); }
-//         }
-//
-//         @keyframes "flash-red-spur" {
-//             50% { fill: c(beacon, red-spur); }
-//         }
-//
-//         @keyframes "flash-red-indent" {
-//             50% { fill: c(beacon, red-indent); }
-//         }
-//     }
+//        // Animation
+//        @include beacon-flash(red);
+//        }
 // }
