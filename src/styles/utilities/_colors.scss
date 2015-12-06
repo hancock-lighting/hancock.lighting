@@ -11,11 +11,11 @@ $colors: (
     // Links
     link: (
         base-day:     #efe7e6,
-        hover-day:    darken(#efe7e6, 25%),
-        active-day:   darken(#efe7e6, 50%),
+        hover-day:    mix(#efe7e6, black, 25%),
+        active-day:   mix(#efe7e6, black, 50%),
         base-night:   #26394b,
-        hover-night:  lighten(#26394b, 25%),
-        active-night: lighten(#26394b, 50%),
+        hover-night:  mix(#26394b, white, 25%),
+        active-night: mix(#26394b, white, 50%),
     ),
 
     // Time
@@ -26,14 +26,14 @@ $colors: (
 
     // Beacon
     beacon: (
-        red-base:  #ff9375,
-        red-spur:  darken(#ff9375, 8%),
-        red-indent:  darken(#ff9375, 10%),
-        blue-base: #9dc5f1,
-        blue-spur: darken(#9dc5f1, 8%),
-        blue-indent: darken(#9dc5f1, 10%),
-        gray-base: #726866,
-        gray-spur: #918684,
+        red-base:    #ff9375,
+        red-spur:    mix(#ff9375, black, 70%),
+        red-indent:  mix(#ff9375, black, 75%),
+        blue-base:   #9dc5f1,
+        blue-spur:   mix(#9dc5f1, black, 70%),
+        blue-indent: mix(#9dc5f1, black, 75%),
+        gray-base:   #726866,
+        gray-spur:   #918684,
         gray-indent: #918684
     ),
 

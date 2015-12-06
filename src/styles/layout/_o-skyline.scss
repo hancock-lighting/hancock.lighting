@@ -12,11 +12,11 @@
     transition: background-color $animation-duration-long $animation-ease;
 
     // States
-    .sun-day & {
+    .is-daytime & {
         background-color: c(time, day);
     }
 
-    .sun-night & {
+    .is-nighttime & {
         background-color: c(time, night);
     }
 

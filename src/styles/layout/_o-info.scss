@@ -10,11 +10,11 @@
     background-color: c(time, night); // Fallback background color
 
     // States
-    .sun-day & {
+    .is-daytime & {
         background-color: c(time, night);
     }
 
-    .sun-night & {
+    .is-nighttime & {
         background-color: c(time, day);
     }
 

@@ -4,6 +4,8 @@ $banner-distance-tweak: rem(-1);
 
 // Component Styling -----------------------------------------------------------
 .c-install-instructions {
+    @extend %font-component-size-reset;
+
     align-items: flex-end;
     display: flex;
     margin-bottom: rem(40);
@@ -30,7 +32,7 @@ $banner-distance-tweak: rem(-1);
         text-align: center;
 
         // Conditions
-        .sun-night & {
+        .is-nighttime & {
             background-color: c(banner, background-night);
         }
     }
@@ -43,7 +45,7 @@ $banner-distance-tweak: rem(-1);
         fill: c(banner, background-day);
 
         // Conditions
-        .sun-night & {
+        .is-nighttime & {
             fill: c(banner, background-night);
         }
     }
@@ -59,18 +61,19 @@ $banner-distance-tweak: rem(-1);
     }
 
     &__title {
-font-size: 8pt;
+        @extend %font-tracking-slight;
+
         margin: 0;
         padding-top: rem(12);
         padding-bottom: rem(2);
 
         color: c(type, night);
-        @extend %font-tracking-slight;
-        font-weight: $font-weight-light;
+        font-size: em(11);
         text-transform: uppercase;
+        font-weight: $font-weight-light;
 
         // Conditions
-        .sun-night & {
+        .is-nighttime & {
             color: c(type, day);
         }
     }
@@ -87,7 +90,7 @@ font-size: 8pt;
     }
 
     &__list__item {
-font-size: 15pt;
+        font-size: em(22);
 
         &:last-of-type {
             margin-left: rem(15);
@@ -97,7 +100,7 @@ font-size: 15pt;
             color: c(type, night);
 
             // Conditions
-            .sun-night & {
+            .is-nighttime & {
                 color: c(type, day);
             }
         }

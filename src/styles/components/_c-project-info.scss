@@ -1,5 +1,7 @@
 // Component Styling -----------------------------------------------------------
 .c-project-info {
+    @extend %font-component-size-reset;
+
     z-index: z(c-project-info);
 
     color: c(gray, light);
@@ -8,15 +10,16 @@
     text-align: center;
 
     // Conditions
-    .sun-night & {
+    .is-nighttime & {
         color: c(gray, darker);
     }
 
     &__by {
-font-size: 10pt;
+        @extend %font-tracking-slight;
+
         margin-bottom: rem(-6);
 
-        @extend %font-tracking-slight;
+        font-size: em(13);
         font-weight: $font-weight-light;
         text-transform: uppercase;
     }
@@ -57,7 +60,7 @@ font-size: 10pt;
         }
 
         // Conditions
-        .sun-night & {
+        .is-nighttime & {
             fill: c(github, base-night);
         }
     }

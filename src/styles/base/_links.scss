@@ -17,7 +17,7 @@ a {
     }
 
     // Conditions
-    .sun-night & {
+    .is-nighttime & {
         color: c(link, base-night);
 
         &:hover {
