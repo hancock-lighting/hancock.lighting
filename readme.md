@@ -1,7 +1,7 @@
 # TODO
 
 - [x] Figure out colum sizing issue
-- [ ] Turn tower into SVG
+- [x] Turn tower into SVG
 - [ ] Add weather effects
 - [ ] Add skyline effects
 - [ ] Add better favicon/site pinning support
