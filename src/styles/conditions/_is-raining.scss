@@ -1,0 +1,15 @@
+// Condition Styling -----------------------------------------------------------
+.is-raining {
+    .c-tower {
+        // Loop that targets beacon SVG
+        @for $i from 1 through 7 {
+            #beacon-antenna { fill: c(beacon, red-base); }
+            #beacon-top-spur-left { fill: c(beacon, red-spur); }
+            #beacon-top-spur-right { fill: c(beacon, red-spur); }
+            #beacon-top-base { fill: c(beacon, red-base); }
+            #beacon-bottom-#{$i}-spur { fill: c(beacon, red-spur); }
+            #beacon-bottom-#{$i}-indent { fill: c(beacon, red-indent); }
+            #beacon-bottom-#{$i}-base { fill: c(beacon, red-base); }
+        }
+    }
+}

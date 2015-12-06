@@ -1,0 +1,18 @@
+// Condition Styling -----------------------------------------------------------
+.is-nighttime {
+    background: c(time, night); // Sets body background color for elastic scrolling bounce and flexbox rounding gaps
+
+    .o-skyline {
+        background:
+            //url(#{$path-to-images}/condition-sun.svg) -2.75rem 1.25rem no-repeat,
+            url(#{$path-to-images}/background-skyline.svg) bottom left no-repeat;
+        background-size:
+            //25% auto,
+            103% auto;
+
+        // Breakpoints
+        // @include media(">lap-small") { background-size: 143% auto; }
+        // @include media(">lap-large") { background-size: 142% auto; }
+        // @include media(">desk-small") { background-size: 100% auto; }
+    }
+}

@@ -1,0 +1,13 @@
+// Condition Styling -----------------------------------------------------------
+.is-daytime {
+    background: c(time, day); // Sets body background color for elastic scrolling bounce and flexbox rounding gaps
+
+    .o-skyline {
+        background:
+            url(#{$path-to-images}/condition-sun.svg) -2.75rem 1.25rem no-repeat,
+            url(#{$path-to-images}/background-skyline.svg) bottom no-repeat;
+        background-size:
+            25% auto,
+            100% auto;
+    }
+}

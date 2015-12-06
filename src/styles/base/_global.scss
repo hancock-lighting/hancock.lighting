@@ -24,7 +24,7 @@ body {
     line-height: $global-font-line-height;
 
     // Conditions
-    &.sun-night {
+    &.is-nighttime {
         color: c(type, night);
     }
 }

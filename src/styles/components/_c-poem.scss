@@ -1,14 +1,11 @@
 // Component Styling -----------------------------------------------------------
 .c-poem {
+    @extend %font-component-size-reset;
+
     margin: 0 0 rem(30) 0;
     z-index: z(c-tower);
 
     text-align: center;
-
-    // Conditions
-    .sun-night & {
-
-    }
 
     // Breakpoints
     @include media(">desk-small") {
@@ -23,27 +20,28 @@
     }
 
     &__more-info {
-font-size: 9pt;
-        font-weight: $font-weight-light;
+        @extend %font-tracking-loose;
 
         border-bottom: 1px dashed c(gray, medium);
 
-        @extend %font-tracking-loose;
+        font-size: em(12);
+        font-weight: $font-weight-light;
         text-transform: uppercase;
 
-        // Nasty hack that clips the letter-spacing's trailing underline
+        // HACK: Clips the letter-spacing's trailing underline
         &:after {
-            content: "";
-            position: absolute;
             height: rem(25);
             margin-left: rem(-4);
+            position: absolute;
             width: rem(10);
 
             background-color: c(banner, background-night);
+
+            content: "";
         }
 
         // Conditions
-        .sun-night & {
+        .is-nighttime & {
             color: c(gray, darker);
 
             // States
@@ -55,7 +53,7 @@ font-size: 9pt;
                 color: black;
             }
 
-            // Nasty hack that clips the letter-spacing's trailing underline
+            // HACK: Cips the letter-spacing's trailing underline
             &:after {
                 background-color: c(banner, background-day);
             }

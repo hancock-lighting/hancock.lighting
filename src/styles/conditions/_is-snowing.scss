@@ -1,0 +1,18 @@
+// Condition Styling -----------------------------------------------------------
+// .TODO: Update class name {
+//     .c-tower {
+//         // Loop that targets beacon SVG
+//         @for $i from 1 through 7 {
+//             #beacon-antenna { animation: flash-red-base $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+//             #beacon-top-spur-left { animation: flash-red-spur $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+//             #beacon-top-spur-right { animation: flash-red-spur $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+//             #beacon-top-base { animation: flash-red-base $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+//             #beacon-bottom-#{$i}-spur { animation: flash-red-spur $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+//             #beacon-bottom-#{$i}-indent { animation: flash-red-indent $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+//             #beacon-bottom-#{$i}-base { animation: flash-red-base $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+//         }
+//
+//        // Animation
+//        @include beacon-flash(red);
+//        }
+// }

@@ -1,0 +1,18 @@
+// Condition Styling -----------------------------------------------------------
+.is-cloudy {
+    .c-tower {
+        // Loop that targets beacon SVG
+        @for $i from 1 through 7 {
+            #beacon-antenna { animation: flash-blue-base $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+            #beacon-top-spur-left { animation: flash-blue-spur $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+            #beacon-top-spur-right { animation: flash-blue-spur $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+            #beacon-top-base { animation: flash-blue-base $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+            #beacon-bottom-#{$i}-spur { animation: flash-blue-spur $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+            #beacon-bottom-#{$i}-indent { animation: flash-blue-indent $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+            #beacon-bottom-#{$i}-base { animation: flash-blue-base $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+        }
+
+        // Animation
+        @include beacon-flash(blue);
+    }
+}

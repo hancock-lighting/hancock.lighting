@@ -33,7 +33,14 @@
 
 
 // Conditions ------------------------------------------------------------------
-@import "conditions/is-night";
+@import "conditions/is-daytime";
+@import "conditions/is-nighttime";
+@import "conditions/is-clear";
+@import "conditions/is-cloudy";
+@import "conditions/is-raining";
+@import "conditions/is-raining";
+@import "conditions/is-snowing";
+@import "conditions/is-sox-champs";
 
 
 // Layout ----------------------------------------------------------------------
