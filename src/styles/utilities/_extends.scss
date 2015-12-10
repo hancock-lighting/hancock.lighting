@@ -45,11 +45,21 @@
 
 
 // Typography ------------------------------------------------------------------
-// Tracking
-%font-component-size-reset { font-size: 1em; }
+// Em Reset
+%font-reset-component-size { font-size: 1em; }
 
+// Ligatures and OpenType
 %font-disable-ligatures { font-feature-settings: normal; } // Disables ligatures on tracked type to prevent this: https://twitter.com/leaverou/status/485885496305127424
 
+// Kerning
+// Activates kerning, standard ligatures and contextual alteratives
+%font-enable-kerning { font-kerning: normal; }
+%font-enable-ligatures { font-variant-ligatures: common-ligatures, contextual; }
+
+// %font-contextual-alteratives { }
+// font-feature-settings: "kern", "liga", "clig", "calt";
+
+// Tracking
 %font-tracking-tightest { @extend %font-disable-ligatures; letter-spacing: $font-tracking-tightest; }
 %font-tracking-tighter { @extend %font-disable-ligatures; letter-spacing: $font-tracking-tighter; }
 %font-tracking-tight { @extend %font-disable-ligatures; letter-spacing: $font-tracking-tight; }

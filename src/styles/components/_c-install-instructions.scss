@@ -72,6 +72,8 @@ $banner-distance-tweak: rem(-1);
         text-transform: uppercase;
         font-weight: $font-weight-light;
 
+        cursor: default;
+
         // Conditions
         .is-nighttime & {
             color: c(type, day);

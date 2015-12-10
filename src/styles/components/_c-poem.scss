@@ -7,11 +7,6 @@
 
     text-align: center;
 
-    // Breakpoints
-    @include media(">desk-small") {
-        margin-bottom: rem(40);
-    }
-
     &__lines {
         margin-top: 0;
         margin-bottom: rem(10);
