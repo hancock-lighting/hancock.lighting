@@ -43,7 +43,7 @@
 
 // PX to Em/Rem -------------------------------------------------------------------
 // Em
-$browser-context: $global-font-size;
+$browser-context: $global-type-size;
 
 @function em($pixels, $context: $browser-context) {
     @if (unitless($pixels)) {
@@ -58,7 +58,7 @@ $browser-context: $global-font-size;
 }
 
 // Rem
-$browser-context: $global-font-size;
+$browser-context: $global-type-size;
 
 @function rem($pixels, $context: $browser-context) {
     @if (unitless($pixels)) {

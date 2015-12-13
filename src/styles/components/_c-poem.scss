@@ -1,6 +1,6 @@
 // Component Styling -----------------------------------------------------------
 .c-poem {
-    @extend %font-component-size-reset;
+    @extend %type-component-size-reset;
 
     margin: 0 0 rem(30) 0;
     z-index: z(c-tower);
@@ -15,7 +15,7 @@
     }
 
     &__more-info {
-        @extend %font-tracking-loose;
+        @extend %type-tracking-loose;
 
         border-bottom: 1px dashed c(gray, medium);
 

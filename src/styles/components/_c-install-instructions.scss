@@ -4,7 +4,7 @@ $banner-distance-tweak: rem(-1);
 
 // Component Styling -----------------------------------------------------------
 .c-install-instructions {
-    @extend %font-component-size-reset;
+    @extend %type-component-size-reset;
 
     align-items: flex-end;
     display: flex;
@@ -61,7 +61,7 @@ $banner-distance-tweak: rem(-1);
     }
 
     &__title {
-        @extend %font-tracking-slight;
+        @extend %type-tracking-slight;
 
         margin: 0;
         padding-top: rem(12);
