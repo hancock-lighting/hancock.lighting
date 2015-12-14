@@ -1,7 +1,7 @@
 <svg id="background-skyline-day" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 372 127">
   <defs>
     <style>
-      .cls-1{filter: url(#AI_GaussianBlur_1);} .st0{fill:#26394b;enable-background:new ;}
+      .cls-1{filter: url(#AI_GaussianBlur_1);} .st0{fill:#a8afb7;enable-background:new ;}
     </style>
     <filter id="AI_GaussianBlur_1" name="AI_GaussianBlur_1">
       <feGaussianBlur stdDeviation="0.65"/>

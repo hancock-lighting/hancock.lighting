@@ -4,7 +4,7 @@
         .cls-1{filter: url(#AI_GaussianBlur_1);} .st0{fill:#26394b;}
       </style>
       <filter id="AI_GaussianBlur_1" name="AI_GaussianBlur_1">
-        <feGaussianBlur stdDeviation="1"/>
+        <feGaussianBlur stdDeviation="0.65"/>
       </filter>
     </defs>
     <g class="cls-1">

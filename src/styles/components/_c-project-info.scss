@@ -1,6 +1,6 @@
 // Component Styling -----------------------------------------------------------
 .c-project-info {
-    @extend %type-component-size-reset;
+    @extend %font-set-component-size;
 
     z-index: z(c-project-info);
 
@@ -15,7 +15,7 @@
     }
 
     &__by {
-        @extend %type-tracking-slight;
+        @extend %font-tracking-slight;
 
         margin-bottom: rem(-6);
 

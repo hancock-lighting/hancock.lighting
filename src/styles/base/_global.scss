@@ -35,6 +35,9 @@ body {
 // Applies defaults to all child elements, override as needed
 // [1] Better font rendering
 body {
+    @extend %font-ligatures-common;
+    @extend %font-kerning;
+
     margin: 0;
 
     font-size: 1em;

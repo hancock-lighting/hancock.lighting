@@ -4,34 +4,26 @@
     &.is-daytime {
         .o-skyline {
             background:
-              url(#{$path-to-images}/condition-clouds-day.svg) bottom rem(-3px) center no-repeat, // [1]
-              url(#{$path-to-images}/background-skyline-day.svg) bottom rem(-3px) left rem(-3) no-repeat; // [1]
+              url(#{$path-to-images}/background-skyline-day.svg) bottom rem(-3px) left rem(-3) no-repeat, // [1]
+              url(#{$path-to-images}/condition-clouds-day.svg) bottom rem(-3px) center no-repeat; // [1]
 
             background-size:
-              101%, // [1]
-              102%; // [1]
+              102%, // Skyline, [1]
+              101%; // Clouds, [1]
         }
     }
 
     &.is-nighttime {
         .o-skyline {
             background:
-              //url(#{$path-to-images}/rain.gif) center center no-repeat, // [1]
               url(#{$path-to-images}/background-skyline-night.svg) bottom rem(-3px) left rem(-3) no-repeat, // [1]
               url(#{$path-to-images}/condition-clouds-night.svg) bottom rem(-3px) center no-repeat, // [1]
               url(#{$path-to-images}/condition-stars.svg) top center no-repeat;
 
             background-size:
-              //cover,
               102%, // Skyline, [1]
               101%, // Clouds, [1]
               auto; // Stars
-
-            background-blend-mode:
-              //screen, // Rain
-              normal, // Skyline
-              //normal, // Clouds
-              normal; // Stars
         }
     }
 

@@ -3,11 +3,11 @@
     // [1] Hides blurry edges
     &.is-daytime {
         .o-skyline {
-            // background:
-            //   url(#{$path-to-images}/background-skyline-day.svg) bottom rem(-3px) left rem(-3) no-repeat; // [1]
-            //
-            // background-size:
-            //   102%; // [1]
+            background:
+              url(#{$path-to-images}/background-skyline-day.svg) bottom rem(-3px) left rem(-3) no-repeat; // [1]
+
+            background-size:
+              102%; // Skyline, [1]
         }
     }
 
