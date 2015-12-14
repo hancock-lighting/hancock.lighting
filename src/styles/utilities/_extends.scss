@@ -45,9 +45,11 @@
 
 
 // Typography ------------------------------------------------------------------
+// http://practice.typekit.com/lesson/caring-about-opentype-features/
 // http://utility-opentype.kennethormandy.com
 
 // Em Reset
+// https://css-tricks.com/rems-ems/
 %font-set-component-size { font-size: 1em; }
 
 // Ligatures and OpenType
@@ -101,6 +103,14 @@
 %font-case-sensitive-forms {
     -webkit-font-feature-settings: "case";
     font-feature-settings: "case";
+}
+
+%font-kerning {
+    font-kerning: normal;
+    -moz-font-feature-settings: "kern";
+    -ms-font-feature-settings: "kern";
+    -webkit-font-feature-settings: "kern";
+    font-feature-settings: "kern";
 }
 
 // Mitigate spacing issues between specific combinations of letters within a
