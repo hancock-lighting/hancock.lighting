@@ -355,32 +355,31 @@
 }
 
 // Adds additional flare, best applied conservatively
-// Listed out like this until Sass supports printing %placeholders inside a loop
-%font-swash-01 { -webkit-font-feature-settings: "swsh" 1; font-feature-settings: "swsh" 1 }
-%font-swash-02 { -webkit-font-feature-settings: "swsh" 2; font-feature-settings: "swsh" 2 }
-%font-swash-03 { -webkit-font-feature-settings: "swsh" 3; font-feature-settings: "swsh" 3 }
+@for $swsh from 1 through 3 {
+    %font-swash-0#{$swsh} {
+        -webkit-font-feature-settings: "swsh" $swsh;
+        font-feature-settings: "swsh" $swsh;
+    }
+}
 
-%font-salt-01 { -webkit-font-feature-settings: "salt" 1; font-feature-settings: "salt" 1 }
-%font-salt-02 { -webkit-font-feature-settings: "salt" 2; font-feature-settings: "salt" 2 }
-%font-salt-03 { -webkit-font-feature-settings: "salt" 3; font-feature-settings: "salt" 3 }
+@for $salt from 1 through 3 {
+    %font-salt-0#{$salt} {
+        -webkit-font-feature-settings: "salt" $salt;
+        font-feature-settings: "salt" $salt;
+    }
+}
 
-%font-ss-01 { -webkit-font-feature-settings: "ss01"; font-feature-settings: "ss01" }
-%font-ss-02 { -webkit-font-feature-settings: "ss02"; font-feature-settings: "ss02" }
-%font-ss-03 { -webkit-font-feature-settings: "ss03"; font-feature-settings: "ss03" }
-%font-ss-04 { -webkit-font-feature-settings: "ss04"; font-feature-settings: "ss04" }
-%font-ss-05 { -webkit-font-feature-settings: "ss05"; font-feature-settings: "ss05" }
-%font-ss-06 { -webkit-font-feature-settings: "ss06"; font-feature-settings: "ss06" }
-%font-ss-07 { -webkit-font-feature-settings: "ss07"; font-feature-settings: "ss07" }
-%font-ss-08 { -webkit-font-feature-settings: "ss08"; font-feature-settings: "ss08" }
-%font-ss-09 { -webkit-font-feature-settings: "ss09"; font-feature-settings: "ss09" }
-%font-ss-10 { -webkit-font-feature-settings: "ss10"; font-feature-settings: "ss10" }
-%font-ss-11 { -webkit-font-feature-settings: "ss11"; font-feature-settings: "ss11" }
-%font-ss-12 { -webkit-font-feature-settings: "ss12"; font-feature-settings: "ss12" }
-%font-ss-13 { -webkit-font-feature-settings: "ss13"; font-feature-settings: "ss13" }
-%font-ss-14 { -webkit-font-feature-settings: "ss14"; font-feature-settings: "ss14" }
-%font-ss-15 { -webkit-font-feature-settings: "ss15"; font-feature-settings: "ss15" }
-%font-ss-16 { -webkit-font-feature-settings: "ss16"; font-feature-settings: "ss16" }
-%font-ss-17 { -webkit-font-feature-settings: "ss17"; font-feature-settings: "ss17" }
-%font-ss-18 { -webkit-font-feature-settings: "ss18"; font-feature-settings: "ss18" }
-%font-ss-19 { -webkit-font-feature-settings: "ss19"; font-feature-settings: "ss19" }
-%font-ss-20 { -webkit-font-feature-settings: "ss20"; font-feature-settings: "ss20" }
+@for $ss from 1 through 20 {
+    @if $ss < 10 {
+        %font-ss-0#{$ss} {
+            -webkit-font-feature-settings: ss0 + $ss;
+            font-feature-settings: ss0 + $ss;
+        }
+    }
+    @else {
+        %font-ss-#{$ss} {
+            -webkit-font-feature-settings: ss + $ss;
+            font-feature-settings: ss + $ss;
+        }
+    }
+}
