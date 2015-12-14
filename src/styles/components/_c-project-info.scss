@@ -1,6 +1,6 @@
 // Component Styling -----------------------------------------------------------
 .c-project-info {
-    @extend %font-component-size-reset;
+    @extend %font-set-component-size;
 
     z-index: z(c-project-info);
 

@@ -2,6 +2,7 @@
 $path-to-images: "../images";
 $path-to-fonts: "../fonts";
 $path-to-scripts: "../scripts";
+$path-to-static: "../static";
 $path-to-styles: "../styles";
 
 
@@ -48,10 +49,10 @@ $font-tracking-looser: 5px;
 $font-tracking-loosest: 7px;
 
 // Global
-$global-font-family: 'Poppins', sans-serif;
-$global-font-size: 16px !default;
-$global-font-weight: $font-weight-medium;
-$global-font-line-height: 1.4;
+$global-type-family: 'Poppins', sans-serif;
+$global-type-size: 16px !default;
+$global-type-weight: $font-weight-medium;
+$global-type-line-height: 1.4;
 
 
 // Animation -------------------------------------------------------------------
@@ -65,8 +66,4 @@ $animation-duration-longest: 0.9s;
 
 // Flash
 $flash-iteration: infinite;
-$flash-duration-and-ease: 4s linear;
-
-
-// Backgrounds -----------------------------------------------------------------
-//$background-position: no-repeat bottom right;
+$flash-duration-and-ease: 4s ease-in;

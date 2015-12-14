@@ -11,11 +11,11 @@ $colors: (
     // Links
     link: (
         base-day:     #efe7e6,
-        hover-day:    mix(#efe7e6, black, 25%),
-        active-day:   mix(#efe7e6, black, 50%),
+        hover-day:    darken(#efe7e6, 15%),
+        active-day:   #d6edf0,
         base-night:   #26394b,
-        hover-night:  mix(#26394b, white, 25%),
-        active-night: mix(#26394b, white, 50%),
+        hover-night:  lighten(#26394b, 25%),
+        active-night: #26394b,
     ),
 
     // Time

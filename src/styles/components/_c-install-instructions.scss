@@ -4,7 +4,7 @@ $banner-distance-tweak: rem(-1);
 
 // Component Styling -----------------------------------------------------------
 .c-install-instructions {
-    @extend %font-component-size-reset;
+    @extend %font-set-component-size;
 
     align-items: flex-end;
     display: flex;
@@ -71,6 +71,8 @@ $banner-distance-tweak: rem(-1);
         font-size: em(11);
         text-transform: uppercase;
         font-weight: $font-weight-light;
+
+        cursor: default;
 
         // Conditions
         .is-nighttime & {

@@ -18,10 +18,10 @@ html {
 html,
 body {
     color: c(type, day);
-    font-family: $global-font-family;
-    font-weight: $global-font-weight;
-    font-size: $global-font-size;
-    line-height: $global-font-line-height;
+    font-family: $global-type-family;
+    font-weight: $global-type-weight;
+    font-size: $global-type-size;
+    line-height: $global-type-line-height;
 
     // Conditions
     &.is-nighttime {
@@ -35,6 +35,9 @@ body {
 // Applies defaults to all child elements, override as needed
 // [1] Better font rendering
 body {
+    @extend %font-ligatures-common;
+    @extend %font-kerning;
+
     margin: 0;
 
     font-size: 1em;

@@ -1,16 +1,11 @@
 // Component Styling -----------------------------------------------------------
 .c-poem {
-    @extend %font-component-size-reset;
+    @extend %font-set-component-size;
 
     margin: 0 0 rem(30) 0;
     z-index: z(c-tower);
 
     text-align: center;
-
-    // Breakpoints
-    @include media(">desk-small") {
-        margin-bottom: rem(40);
-    }
 
     &__lines {
         margin-top: 0;

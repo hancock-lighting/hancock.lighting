@@ -1,5 +1,33 @@
 // Condition Styling -----------------------------------------------------------
 .is-cloudy {
+    // [1] Hides blurry edges
+    &.is-daytime {
+        .o-skyline {
+            background:
+              url(#{$path-to-images}/background-skyline-day.svg) bottom rem(-3px) left rem(-3) no-repeat, // [1]
+              url(#{$path-to-images}/condition-clouds-day.svg) bottom rem(-3px) center no-repeat; // [1]
+
+            background-size:
+              102%, // Skyline, [1]
+              101%; // Clouds, [1]
+        }
+    }
+
+    &.is-nighttime {
+        .o-skyline {
+            background:
+              url(#{$path-to-images}/background-skyline-night.svg) bottom rem(-3px) left rem(-3) no-repeat, // [1]
+              url(#{$path-to-images}/condition-clouds-night.svg) bottom rem(-3px) center no-repeat, // [1]
+              url(#{$path-to-images}/condition-stars.svg) top center no-repeat;
+
+            background-size:
+              102%, // Skyline, [1]
+              101%, // Clouds, [1]
+              auto; // Stars
+        }
+    }
+
+    // Animates the tower
     .c-tower {
         // Loop that targets beacon SVG
         @for $i from 1 through 7 {
@@ -12,7 +40,7 @@
             #beacon-bottom-#{$i}-base { animation: flash-blue-base $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
         }
 
-        // Animation
+        // Animation logic
         @include beacon-flash(blue);
     }
 }

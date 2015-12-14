@@ -1,18 +1,11 @@
 // Condition Styling -----------------------------------------------------------
 .is-nighttime {
-    background: c(time, night); // Sets body background color for elastic scrolling bounce and flexbox rounding gaps
+    background: linear-gradient(to bottom, c(time, night) 0%, mix(c(time, night), white, 75%) 100%);
 
-    .o-skyline {
-        background:
-            //url(#{$path-to-images}/condition-sun.svg) -2.75rem 1.25rem no-repeat,
-            url(#{$path-to-images}/background-skyline.svg) bottom left no-repeat;
-        background-size:
-            //25% auto,
-            103% auto;
+    // TODO: Add star twinkle
 
-        // Breakpoints
-        // @include media(">lap-small") { background-size: 143% auto; }
-        // @include media(">lap-large") { background-size: 142% auto; }
-        // @include media(">desk-small") { background-size: 100% auto; }
-    }
+    // Breakpoints
+    // @include media(">lap-small") { background-size: 143% auto; }
+    // @include media(">lap-large") { background-size: 142% auto; }
+    // @include media(">desk-small") { background-size: 100% auto; }
 }
