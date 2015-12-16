@@ -4,10 +4,11 @@
   "license": "MIT",
   "version": "1.0.0",
   "author": "Eric Bailey",
-  "contributors": [{
-    "name": "Daniel McLaughlin, @mclaughlin",
-    "name": "Eric Bailey, @ericwbailey"
-  }],
+  "contributors": [
+    {
+      "name": "Eric Bailey, @ericwbailey"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "https://bitbucket.org/danielsmc/weatherbeacon"
@@ -22,6 +23,7 @@
     "gulp-autoprefixer": "3.1.0",
     "gulp-cache": "0.4.0",
     "gulp-concat": "2.6.0",
+    "gulp-gae": "0.0.4",
     "gulp-imagemin": "2.4.0",
     "gulp-jshint": "1.11.2",
     "gulp-minify-css": "1.2.1",

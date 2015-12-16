@@ -86,7 +86,7 @@ class Script(webapp2.RequestHandler):
 class SetKey(webapp2.RequestHandler):
     def post(self):
         ApiKey.get_or_insert('key',key=self.request.get('key'))
-        self.response.write("you did it")
+        self.redirect("/")
 
 
 application = webapp2.WSGIApplication([
