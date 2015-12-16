@@ -29,71 +29,83 @@ gulp.task('gae-serve', function () {
     .pipe(gae('dev_appserver.py', [], {}));
 });
 
-gulp.task('backend', function(){
-  gulp.src(['src/backend/**/*'])
-    .pipe(gulp.dest('dist/'));
+var pipelines = {
+  backend: {
+    src: "src/backend/**/*",
+    dest: "dist",
+    munges: []
+  },
+  static: {
+    src: "src/static/**/*",
+    dest: "dist/static",
+    munges: []
+  },
+  templates: {
+    src: "src/templates/**/*",
+    dest: "dist/templates",
+    munges: []
+  },
+  images: {
+    src: "src/images/**/*",
+    dest: "dist/static/images",
+    munges: [
+              ["cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))"]
+            ]
+  },
+  styles: {
+    src: "src/styles/**/*.scss",
+    dest: "dist/static/styles",
+    munges: [
+              ["sass()",
+               "autoprefixer('last 2 versions')"],
+              ["rename({suffix: '.min'})",
+               "minifycss()"]
+            ]
+  },
+  scripts: {
+    src: "src/scripts/**/*.js",
+    dest: "dist/static/scripts",
+    munges: [
+              ["jshint()",
+               "jshint.reporter('default')",
+               "concat('main.js')"],
+              ["rename({suffix: '.min'})",
+               "uglify()"]
+            ]
+  },
+};
+
+var pipeline_names = Object.keys(pipelines);
+
+pipeline_names.forEach(function(pn) {
+  gulp.task(pn, function() {
+    var p = pipelines[pn];
+    var g = gulp.src(p.src)
+                .pipe(plumber({
+                  errorHandler: function (error) {
+                    console.log(error.message);
+                    this.emit('end');
+                  }}));
+    if (p.munges.length) {
+      p.munges.forEach(function(m) {
+        m.forEach(function(step) {
+          g = g.pipe(eval(step));
+        });
+        g = g.pipe(gulp.dest(p.dest));
+      });
+    } else {
+      g = g.pipe(gulp.dest(p.dest));
+    }
+    g = g.pipe(browserSync.reload({stream:true}));
+  });
 });
 
-gulp.task('static', function(){
-  gulp.src(['src/static/**/*'])
-    .pipe(gulp.dest('dist/static'))
-    .pipe(browserSync.reload({stream:true}));
-});
+gulp.task('pipelines',pipeline_names);
 
-gulp.task('templates', function(){
-  gulp.src(['src/templates/**/*'])
-    .pipe(gulp.dest('dist/templates'))
-    .pipe(browserSync.reload({stream:true}));
-});
+gulp.task('watch-pipelines',function() {
+  pipeline_names.forEach(function(pn) {
+    gulp.watch(pipelines[pn].src,[pn]);
+  });
+})
 
-gulp.task('images', function(){
-  gulp.src('src/images/**/*')
-    .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
-    .pipe(gulp.dest('dist/static/images/'));
-});
-
-gulp.task('styles', function(){
-  gulp.src(['src/styles/**/*.scss'])
-    .pipe(plumber({
-      errorHandler: function (error) {
-        console.log(error.message);
-        this.emit('end');
-    }}))
-    //.pipe(sourcemaps.init())
-    .pipe(sass())
-    //.pipe(sourcemaps.write('./maps'))
-    .pipe(autoprefixer('last 2 versions'))
-    .pipe(gulp.dest('dist/static/styles/'))
-    .pipe(rename({suffix: '.min'}))
-    .pipe(minifycss())
-    .pipe(gulp.dest('dist/static/styles/'))
-    .pipe(browserSync.reload({stream:true}))
-});
-
-gulp.task('scripts', function(){
-  return gulp.src('src/scripts/**/*.js')
-    .pipe(plumber({
-      errorHandler: function (error) {
-        console.log(error.message);
-        this.emit('end');
-    }}))
-    .pipe(jshint())
-    .pipe(jshint.reporter('default'))
-    .pipe(concat('main.js'))
-    .pipe(gulp.dest('dist/static/scripts/'))
-    .pipe(rename({suffix: '.min'}))
-    .pipe(uglify())
-    .pipe(gulp.dest('dist/static/scripts/'))
-    .pipe(browserSync.reload({stream:true}))
-});
-
-gulp.task('dist', ['backend', 'static', 'templates', 'images', 'styles', 'scripts']);
-
-gulp.task('default', ['dist', 'gae-serve', 'browser-sync'], function(){
-  gulp.watch("src/backend/**/*", ['backend']);
-  gulp.watch("src/static/**/*", ['static']);
-  gulp.watch("src/templates/**/*", ['templates']);
-  gulp.watch("src/styles/**/*.scss", ['styles']);
-  gulp.watch("src/scripts/**/*.js", ['scripts']);
-  gulp.watch("src/images/**/*.js", ['images']);
-});
+gulp.task('default', ['pipelines', 'watch-pipelines', 'gae-serve', 'browser-sync']);
