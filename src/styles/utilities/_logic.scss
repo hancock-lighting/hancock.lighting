@@ -1,13 +1,13 @@
 // Beacon Flash ----------------------------------------------------------------
 @mixin beacon-flash($color) {
     @keyframes flash-#{$color}-base {
-        50% { fill: c(beacon, #{$color}-base); }
+        75% { fill: c(beacon, #{$color}-base); }
     }
     @keyframes flash-#{$color}-spur {
-        50% { fill: c(beacon, #{$color}-spur); }
+        75% { fill: c(beacon, #{$color}-spur); }
     }
     @keyframes flash-#{$color}-indent {
-        50% { fill: c(beacon, #{$color}-indent); }
+        75% { fill: c(beacon, #{$color}-indent); }
     }
 }
 
