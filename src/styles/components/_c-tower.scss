@@ -5,6 +5,5 @@
     z-index: z(c-tower);
 
     // Breakpoints
-    @include media(">lap-small") { margin-top: rem(60); }
     @include media(">lap-large") { margin-top: rem(70); }
 }
