@@ -21,14 +21,14 @@
     }
 
     // Breakpoints
-    @include media(">desk-small") {
+    @media screen and (min-width: $breakpoint-desk-small) {
         flex-basis: 65%;
         height: 100vh;
 
         transition: flex-basis $animation-duration-shortest $animation-ease;
     }
 
-    @include media(">wall") {
+    @media screen and (min-width: $breakpoint-wall) {
         flex-basis: 70%;
     }
 }

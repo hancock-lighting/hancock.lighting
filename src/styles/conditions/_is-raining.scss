@@ -5,7 +5,7 @@
         .o-skyline {
             background:
               url(#{$path-to-images}/rain-day.gif) center center no-repeat, // [1]
-              url(#{$path-to-images}/background-skyline-day.svg) bottom rem(-3px) left rem(-3) no-repeat; // [1]
+              url(#{$path-to-images}/background-skyline-day.svg) bottom rem(-3) left rem(-3) no-repeat; // [1]
 
             background-size:
               cover, // Rain
@@ -20,19 +20,29 @@
     &.is-nighttime {
         .o-skyline {
             background:
-              url(#{$path-to-images}/rain-night.gif) center center no-repeat, // [1]
-              url(#{$path-to-images}/background-skyline-night.svg) bottom rem(-3px) left rem(-3) no-repeat, // [1]
-              url(#{$path-to-images}/condition-stars.svg) top center no-repeat;
+              url(#{$path-to-images}/rain-night.gif) no-repeat, // [1]
+              url(#{$path-to-images}/background-skyline-night.svg) no-repeat, // [1]
+              url(#{$path-to-images}/condition-stars.svg) no-repeat;
 
             background-size:
               cover, // Rain
-              102%, // Skyline, [1]
-              auto; // Stars
+              250%; // Skyline, [1]
 
             background-blend-mode:
               screen, // Rain
               normal, // Skyline
               normal; // Stars
+
+            background-position:
+              center center, // Rain
+              bottom rem(-3) right rem(-190) no-repeat, // Skyline
+              bottom rem(-3) left rem(-3); // Stars
+
+            @media (min-width: 32em) {
+                background-size:
+                  cover,
+                  100%;
+            }
         }
     }
 

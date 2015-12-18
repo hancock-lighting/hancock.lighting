@@ -5,5 +5,5 @@
     z-index: z(c-tower);
 
     // Breakpoints
-    @include media(">lap-large") { margin-top: rem(70); }
+    @media screen and (min-width: $breakpoint-lap-large) { margin-top: rem(70); }
 }

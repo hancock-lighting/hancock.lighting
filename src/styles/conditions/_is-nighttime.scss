@@ -5,7 +5,7 @@
     // TODO: Add star twinkle
 
     // Breakpoints
-    // @include media(">lap-small") { background-size: 143% auto; }
-    // @include media(">lap-large") { background-size: 142% auto; }
-    // @include media(">desk-small") { background-size: 100% auto; }
+    // @media screen and (min-width: $breakpoint-lap-small") { background-size: 143% auto; }
+    // @media screen and (min-width: $breakpoint-lap-large") { background-size: 142% auto; }
+    // @media screen and (min-width: $breakpoint-desk-small") { background-size: 100% auto; }
 }
