@@ -105,6 +105,12 @@
     font-feature-settings: "case";
 }
 
+// Use `&shy;` to  insert a hyphenation hint
+%font-hyphenation {
+    word-break: break-word;
+    hyphens: auto;
+}
+
 %font-kerning {
     font-kerning: normal;
     -moz-font-feature-settings: "kern";
