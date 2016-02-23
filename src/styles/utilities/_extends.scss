@@ -10,7 +10,7 @@
 
 // Hide only visually, but have it available for screen readers:
 // http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
-.visuallyhidden
+.visuallyhidden,
 %visuallyhidden {
     border: 0;
     clip: rect(0 0 0 0);
@@ -103,6 +103,12 @@
 %font-case-sensitive-forms {
     -webkit-font-feature-settings: "case";
     font-feature-settings: "case";
+}
+
+// Use `&shy;` to  insert a hyphenation hint
+%font-hyphenation {
+    word-break: break-word;
+    hyphens: auto;
 }
 
 %font-kerning {
@@ -312,6 +318,12 @@
         -webkit-font-feature-settings: "smcp" 0, "c2sc", "smcp", "c2sc";
         font-feature-settings: "smcp" 0, "c2sc", "smcp", "c2sc";
     }
+}
+
+%font-smoothing {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
 
 %font-subscript {

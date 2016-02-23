@@ -17,13 +17,11 @@
         .o-skyline {
             background:
               url(#{$path-to-images}/snow.gif) center center no-repeat, // [1]
-              url(#{$path-to-images}/background-skyline-night.svg) bottom rem(-3px) left rem(-3) no-repeat, // [1]
-              url(#{$path-to-images}/condition-stars.svg) top center no-repeat;
+              url(#{$path-to-images}/background-skyline-night.svg) bottom rem(-3px) left rem(-3) no-repeat; // [1]
 
             background-size:
               cover, // Snow
-              102%, // Skyline, [1]
-              auto; // Stars
+              102%; // Skyline, [1]
         }
     }
 
@@ -32,11 +30,11 @@
         // Loop that targets beacon SVG
         @for $i from 1 through 7 {
             #beacon-antenna { animation: flash-red-base $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
-            #beacon-top-spur-left { animation: flash-red-spur $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
-            #beacon-top-spur-right { animation: flash-red-spur $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+            //#beacon-top-spur-left { animation: flash-red-spur $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+            //#beacon-top-spur-right { animation: flash-red-spur $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
             #beacon-top-base { animation: flash-red-base $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
-            #beacon-bottom-#{$i}-spur { animation: flash-red-spur $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
-            #beacon-bottom-#{$i}-indent { animation: flash-red-indent $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+            //#beacon-bottom-#{$i}-spur { animation: flash-red-spur $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+            //#beacon-bottom-#{$i}-indent { animation: flash-red-indent $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
             #beacon-bottom-#{$i}-base { animation: flash-red-base $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
         }
 

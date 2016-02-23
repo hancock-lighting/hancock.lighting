@@ -6,16 +6,6 @@ $path-to-static: "../static";
 $path-to-styles: "../styles";
 
 
-// Breakpoints -----------------------------------------------------------------
-$breakpoint-wrist: 18.75em; // 300px;
-$breakpoint-palm: 23.75em; // 380px;
-$breakpoint-lap-small: 34.375em; // 550px;
-$breakpoint-lap-large: 48em; // 768px;
-$breakpoint-desk-small: 59.375em; // 950px;
-$breakpoint-desk-large: 75em; // 1200px;
-$breakpoint-wall: 83em; // 1328px;
-
-
 // Typography ------------------------------------------------------------------
 // Weights
 $font-weight-thin: 100;
@@ -66,4 +56,43 @@ $animation-duration-longest: 0.9s;
 
 // Flash
 $flash-iteration: infinite;
-$flash-duration-and-ease: 4s ease-in;
+$flash-duration-and-ease: 3s ease-in;
+
+
+// Breakpoints -----------------------------------------------------------------
+// Manually creating breakpoint variables until Sass supports dynamic variable
+// creation.
+$bp-100: 6.25em; // 100px @ `$global-type-size`
+$bp-150: 9.375em; // 150px @ `$global-type-size`
+$bp-200: 12.5em; // 200px @ `$global-type-size`
+$bp-250: 15.625em; // 250px @ `$global-type-size`
+$bp-300: 18.75em; // 300px @ `$global-type-size`
+$bp-350: 21.875em; // 350px @ `$global-type-size`
+$bp-400: 25em; // 400px @ `$global-type-size`
+$bp-450: 28.125em; // 450px @ `$global-type-size`
+$bp-500: 31.25em; // 500px @ `$global-type-size`
+$bp-550: 34.375em; // 550px @ `$global-type-size`
+$bp-600: 37.5em; // 600px @ `$global-type-size`
+$bp-650: 40.625em; // 650px @ `$global-type-size`
+$bp-700: 43.75em; // 700px @ `$global-type-size`
+$bp-750: 46.875em; // 750px @ `$global-type-size`
+$bp-800: 50em; // 800px @ `$global-type-size`
+$bp-850: 53.125em; // 850px @ `$global-type-size`
+$bp-900: 56.25em; // 900px @ `$global-type-size`
+$bp-950: 59.375em; // 950px @ `$global-type-size`
+$bp-1000: 62.5em; // 1000px @ `$global-type-size`
+$bp-1050: 65.625em; // 1050px @ `$global-type-size`
+$bp-1100: 68.75em; // 1100px @ `$global-type-size`
+$bp-1150: 71.875em; // 1150px @ `$global-type-size`
+$bp-1200: 75em; // 1200px @ `$global-type-size`
+$bp-1250: 78.125em; // 1250px @ `$global-type-size`
+$bp-1300: 81.25em; // 1300px @ `$global-type-size`
+$bp-1350: 84.375em; // 1350px @ `$global-type-size`
+$bp-1400: 87.5em; // 1400px @ `$global-type-size`
+$bp-1450: 90.625em; // 1450px @ `$global-type-size`
+$bp-1500: 93.75em; // 1500px @ `$global-type-size`
+$bp-1550: 71.875em; // 1550px @ `$global-type-size`
+$bp-1600: 100em; // 1600px @ `$global-type-size`
+
+
+//screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx)

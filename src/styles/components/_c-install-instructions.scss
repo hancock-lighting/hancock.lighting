@@ -18,7 +18,7 @@ $banner-distance-tweak: rem(-1);
     }
 
     // Breakpoints
-    @include media(">desk-small") {
+    @media screen and (min-width: $bp-800) { // and (min-height:700px) {
         margin-bottom: rem(60);
     }
 

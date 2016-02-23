@@ -4,26 +4,55 @@
     &.is-daytime {
         .o-skyline {
             background:
-              url(#{$path-to-images}/background-skyline-day.svg) bottom rem(-3px) left rem(-3) no-repeat, // [1]
-              url(#{$path-to-images}/condition-clouds-day.svg) bottom rem(-3px) center no-repeat; // [1]
+              url(#{$path-to-images}/flarg-day.svg) repeat-x, // [1]
+              url(#{$path-to-images}/condition-clouds-day.svg) repeat-x; // [1]
 
             background-size:
-              102%, // Skyline, [1]
-              101%; // Clouds, [1]
+              32%, // Skyline, [1]
+              30%; // Clouds, [1]
+
+            background-position:
+              bottom rem(-3) left rem(-3), // Skyline
+              bottom center; // Clouds
         }
     }
 
     &.is-nighttime {
         .o-skyline {
             background:
-              url(#{$path-to-images}/background-skyline-night.svg) bottom rem(-3px) left rem(-3) no-repeat, // [1]
-              url(#{$path-to-images}/condition-clouds-night.svg) bottom rem(-3px) center no-repeat, // [1]
-              url(#{$path-to-images}/condition-stars.svg) top center no-repeat;
+              url(#{$path-to-images}/background-skyline-night.svg) no-repeat, // [1]
+              url(#{$path-to-images}/condition-clouds-night.svg) no-repeat, // [1]
+              url(#{$path-to-images}/condition-stars.svg) no-repeat;
 
             background-size:
-              102%, // Skyline, [1]
-              101%, // Clouds, [1]
-              auto; // Stars
+              148%, // Skyline, [1]
+              110%, // Clouds, [1]
+              110%; // Stars
+
+            background-position:
+              bottom, // Skyline
+              bottom rem(40) center, // Clouds
+              top center; // Stars
+
+            // Breakpoints
+//            @media screen and (min-width: $breakpoint-palm) and (min-height: $breakpoint-palm) {
+//                background-size:
+//                  162%, // Skyline,
+//                  120%, // Clouds,
+//                  105%; // Stars
+
+//                  background-position:
+//                    bottom, // Skyline
+//                    bottom rem(60) center, // Clouds
+//                    top center; // Stars
+//            }
+
+//            @media screen and (min-width: $breakpoint-lap-large) and (min-height: $breakpoint-lap-large) {
+//                background-size:
+//                  262%, // Skyline,
+//                  130%, // Clouds,
+//                  105%; // Stars
+//            }
         }
     }
 

@@ -1,35 +1,52 @@
 <!doctype html>
 <html class="no-js" lang="en-US">
 <head>
+
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-
     <title>hancock.lighting</title>
     <meta name="description" content="Steady blue, clear view. Flashing blue, clouds due. Steady red, rain ahead. Flashing red, snow instead.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/styles/main.min.css">
 
-    <!-- Start of Open Graph Info -->
     <meta property="og:site_name" content="hancock.lighting"/>
-    <meta property="og:url" content="http://hancock.lighting/"/>
     <meta property="og:description" content="Steady blue, clear view. Flashing blue, clouds due. Steady red, rain ahead. Flashing red, snow instead."/>
+    <meta property="og:url" content="http://hancock.lighting/"/>
     <meta property="og:type" content="article"/>
-    <!-- <meta property="og:image" content="http://www.mysite.com/articleimage.jpg"/> -->
-    <!-- 1200 x 630 -->
-    <!-- og:image:width and og:image:height Open Graph tags -->
-    <!-- DO I NEED THIS <meta property="fb:app_id" content="1234567890987654321"/> -->
-    <!-- End of Open Graph Info -->
-
-    <!-- Start of Twitter Card Info -->
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@hancocklighting" />
+    <meta property="og:image" content="http://hancock.lighting/static/favicons/card-facebook.png?v=201512132228"/>
+    <meta property="og:image:width" content="599"/>
+    <meta property="og:image:height" content="314"/>
     <meta name="twitter:title" content="hancock.lighting" />
     <meta name="twitter:description" content="Steady blue, clear view. Flashing blue, clouds due. Steady red, rain ahead. Flashing red, snow instead." />
-    <!-- <meta name="twitter:image" content="https://farm6.staticflickr.com/5510/14338202952_93595258ff_z.jpg" /> -->
-    <!-- End of Twitter Card Info -->
+    <meta name="twitter:site" content="@HancockLighting" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:image" content="http://hancock.lighting/static/favicons/card-twitter.png?v=201512132228" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/static/favicons/apple-touch-icon-57x57.png?v=201512132228">
+    <link rel="apple-touch-icon" sizes="60x60" href="/static/favicons/apple-touch-icon-60x60.png?v=201512132228">
+    <link rel="apple-touch-icon" sizes="72x72" href="/static/favicons/apple-touch-icon-72x72.png?v=201512132228">
+    <link rel="apple-touch-icon" sizes="76x76" href="/static/favicons/apple-touch-icon-76x76.png?v=201512132228">
+    <link rel="apple-touch-icon" sizes="114x114" href="/static/favicons/apple-touch-icon-114x114.png?v=201512132228">
+    <link rel="apple-touch-icon" sizes="120x120" href="/static/favicons/apple-touch-icon-120x120.png?v=201512132228">
+    <link rel="apple-touch-icon" sizes="144x144" href="/static/favicons/apple-touch-icon-144x144.png?v=201512132228">
+    <link rel="apple-touch-icon" sizes="152x152" href="/static/favicons/apple-touch-icon-152x152.png?v=201512132228">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/favicons/apple-touch-icon-180x180.png?v=201512132228">
 
-    <link rel="stylesheet" href="/styles/main.min.css">
+    <link rel="icon" type="image/png" href="/static/favicons/favicon-32x32.png" sizes="32x32">
+
+    <link rel="icon" type="image/png" href="/static/favicons/android-chrome-192x192.png?v=201512132228" sizes="192x192">
+
+    <link rel="icon" type="image/png" href="/static/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/static/favicons/favicon-16x16.png" sizes="16x16">
+
+    <link rel="manifest" href="manifest.json?v=201512132228">
+    <link rel="mask-icon" href="/static/favicons/safari-pinned-tab.svg?v=201512132228" color="#9dc5f1">
+
+    <link rel="shortcut icon" href="/static/favicons/favicon.ico">
+
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="/static/favicons/mstile-144x144.png?v=201512132228">
+    <meta name="theme-color" content="#ffffff">
 
     <link rel="prefetch" href="images/rain-day.gif">
     <link rel="prefetch" href="images/rain-night.gif">
@@ -39,12 +56,20 @@
     <link rel="prefetch" href="images/condition-clouds-day.svg">
     <link rel="prefetch" href="images/condition-clouds-night.svg">
     <link rel="prefetch" href="images/condition-stars.svg">
+
 </head>
 <body class="{{ classes|join(" ") }}">
+
+    <h1 class="visuallyhidden">
+        hancock.lighting
+    </h1>
 
     <!-- Start of `o-container` -->
     <div class="o-container">
         <main class="o-skyline">
+            <h2 class="visuallyhidden">
+                Boston Skyline
+            </h2>
             <svg xmlns="http://www.w3.org/2000/svg"
               id="beacon"
               class="c-tower"
@@ -211,6 +236,9 @@
         </main>
 
         <aside class="o-info">
+            <h2 class="visuallyhidden">
+                Information
+            </h2>
             <!-- Start of `c-poem` -->
             <figure class="c-poem">
                 <p class="c-poem__lines">

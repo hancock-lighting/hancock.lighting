@@ -27,14 +27,14 @@ $colors: (
     // Beacon
     beacon: (
         red-base:    #ff9375,
-        red-spur:    mix(#ff9375, black, 70%),
-        red-indent:  mix(#ff9375, black, 75%),
+        red-spur:    lighten(#8a8a8a, 20%),
+        red-indent:  lighten(#8a8a8a, 20%),
         blue-base:   #9dc5f1,
-        blue-spur:   mix(#9dc5f1, black, 70%),
-        blue-indent: mix(#9dc5f1, black, 75%),
-        gray-base:   #726866,
-        gray-spur:   #918684,
-        gray-indent: #918684
+        blue-spur:   lighten(#8a8a8a, 20%),
+        blue-indent: lighten(#8a8a8a, 20%),
+        gray-base:   #6c6c6c,
+        gray-spur:   #8a8a8a,
+        gray-indent: #8a8a8a
     ),
 
     // Banner

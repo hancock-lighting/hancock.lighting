@@ -7,6 +7,15 @@ html {
     overflow-y: scroll;
 }
 
+// Triggers browser hyphenation based off of declared language:
+// http://thenewcode.com/429/Classic-Typography-Effects-Hyphenation
+html {
+    &:lang(en-US) {
+        @extend %font-hyphenation;
+    }
+}
+
+
 // Applies `border-box` to all HTML elements:
 // [1] https://github.com/AllThingsSmitty/css-protips#inherit-box-sizing
 *, *:before,
@@ -37,12 +46,9 @@ body {
 body {
     @extend %font-ligatures-common;
     @extend %font-kerning;
+    @extend %font-smoothing;
 
     margin: 0;
 
     font-size: 1em;
-
-    -moz-osx-font-smoothing: grayscale; // [1]
-    -webkit-font-smoothing: antialiased; // [1]
-    text-rendering: optimizeLegibility; // [1]
 }

@@ -3,7 +3,7 @@
     align-items: center;
     display: flex;
     flex-direction: column ;
-    padding-top: rem(40);
+    padding-top: rem(80);
     padding-bottom: rem(100);
     z-index: z(o-info);
 
@@ -19,7 +19,7 @@
     }
 
     // Breakpoints
-    @include media(">desk-small") {
+    @media screen and (min-width: $bp-900) {
         flex-basis: 35%;
         justify-content: center;
         padding-top: 0;
@@ -28,7 +28,30 @@
         transition: flex-basis $animation-duration-shortest $animation-ease;
     }
 
-    @include media(">wall") {
+    @media screen and (min-width: $bp-1100) {
         flex-basis: 30%;
     }
+
+
+
+@media screen and (min-height: $bp-100) { color: #f40f0f !important; }
+@media screen and (min-height: $bp-200) { color: #fcfa00 !important; }
+@media screen and (min-height: $bp-300) { color: #36f40f !important; }
+@media screen and (min-height: $bp-400) { color: #0ff4df !important; }
+@media screen and (min-height: $bp-500) { color: #0f2cf4 !important; }
+@media screen and (min-height: $bp-600) { color: #a30ff4 !important; }
+@media screen and (min-height: $bp-700) { color: #f40f0f !important; }
+@media screen and (min-height: $bp-800) { color: #fcfa00 !important; }
+@media screen and (min-height: $bp-900) { color: #36f40f !important; }
+@media screen and (min-height: $bp-1000) { color: #0ff4df !important; }
+@media screen and (min-height: $bp-1100) { color: #0f2cf4 !important; }
+@media screen and (min-height: $bp-1200) { color: #a30ff4 !important; }
+@media screen and (min-height: $bp-1300) { color: #f40f0f !important; }
+@media screen and (min-height: $bp-1400) { color: #fcfa00 !important; }
+@media screen and (min-height: $bp-1500) { color: #36f40f !important; }
+@media screen and (min-height: $bp-1600) { color: #0ff4df !important; }
+
+
+
+
 }
