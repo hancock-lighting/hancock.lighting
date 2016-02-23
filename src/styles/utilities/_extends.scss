@@ -320,6 +320,12 @@
     }
 }
 
+%font-smoothing {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
 %font-subscript {
     text-transform: lowercase;
     font-size: inherit;

@@ -4,22 +4,73 @@
     &.is-daytime {
         .o-skyline {
             background:
-              url(#{$path-to-images}/background-skyline-day.svg) bottom rem(-3px) left rem(-3) no-repeat; // [1]
+              url(#{$path-to-images}/background-skyline-day.svg) no-repeat; // [1]
 
             background-size:
-              102%; // Skyline, [1]
+//              220%; // Skyline, [1]
+                cover;
+
+            background-position:
+              bottom rem(-3) center; // [1]
+
+            // Breakpoints
+            // 0-100 width
+            @media screen and (min-height: $bp-100) { background-size: 360%; }
+
+            // 100-200 width
+            @media screen and (min-width: $bp-100) { background-size: 130%; }
+            @media screen and (min-width: $bp-100) and (min-height: $bp-100) { background-size: 160%; }
+            @media screen and (min-width: $bp-100) and (min-height: $bp-150) { background-size: 200%; }
+            @media screen and (min-width: $bp-100) and (min-height: $bp-200) { background-size: 280%; }
+            @media screen and (min-width: $bp-100) and (min-height: $bp-250) { background-size: 320%; }
+            @media screen and (min-width: $bp-100) and (min-height: $bp-350) { background-size: 420%; }
+            @media screen and (min-width: $bp-100) and (min-height: $bp-400) { background-size: 500%; }
+            @media screen and (min-width: $bp-100) and (min-height: $bp-500) { background-size: 580%; }
+
+            // 200-300 width
+            @media screen and (min-width: $bp-200) { background-position: bottom rem(-22) center; }
+
+            // 300-400 width
+            @media screen and (min-width: $bp-300) { background-position: bottom rem(-36) center; }
+
+
+
+
+
+
         }
     }
 
     &.is-nighttime {
         .o-skyline {
             background:
-              url(#{$path-to-images}/background-skyline-night.svg) bottom rem(-3px) left rem(-3) no-repeat, // [1]
+              url(#{$path-to-images}/background-skyline-night.svg) no-repeat,
               url(#{$path-to-images}/condition-stars.svg) top center no-repeat;
 
             background-size:
-              102%, // Skyline, [1]
-              auto; // Stars
+              230%, // Skyline, [1]
+              120%; // Stars
+
+            background-position:
+              bottom rem(-3) left rem(-3), // Skyline [1]
+              top center; // Stars
+
+            // Breakpoints
+            // 0-100 width
+
+
+
+
+
+
+
+            //@include mq($from: bp-700) { background-size: 37%, 90%; background-position: bottom rem(-20) center, top rem(-100) center; }
+
+            // FOO
+            //@include mq($from: bp-100) { background-size: 125%, 110%; }
+
+
+
         }
     }
 

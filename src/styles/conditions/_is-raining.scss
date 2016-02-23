@@ -37,12 +37,6 @@
               center center, // Rain
               bottom rem(-3) right rem(-190) no-repeat, // Skyline
               bottom rem(-3) left rem(-3); // Stars
-
-            @media (min-width: 32em) {
-                background-size:
-                  cover,
-                  100%;
-            }
         }
     }
 
