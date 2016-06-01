@@ -22,23 +22,25 @@ JINJA_ENVIRONMENT = jinja2.Environment(
 class ApiKey(ndb.Model):
     key = ndb.StringProperty()
 
+def isDev():
+    return os.environ.get('SERVER_SOFTWARE','').startswith('Development')
+
 def getForecast():
-    api_key = ApiKey.get_by_id('key').key
-    url = "https://api.forecast.io/forecast/%s/%s,%s" % (api_key,config['lat'],config['lng'])
     result = memcache.get('json')
     if result is not None:
         return result
+    key_obj = ApiKey.get_by_id('key')
+    if isDev() and key_obj is None:
+        url = "https://weather-beacon.appspot.com/forecast.json"
+    else:
+        api_key = key_obj.key
+        url = "https://api.forecast.io/forecast/%s/%s,%s" % (api_key,config['lat'],config['lng'])
     result = json.loads(urlfetch.fetch(url, headers = {'Cache-Control' : 'max-age=0'}).content)
     memcache.add(key='json',value=result,time=600)
     return result
 
-def getBeaconClass():
-    f = getForecast()['currently']
-    if False:
-        return "sox-champs"
-    elif False:
-        return "sox-rainout"
-    elif f['precipProbability']>config['precip_threshold']:
+def describeConditions(f):
+    if f['precipProbability']>config['precip_threshold']:
         if f['precipType'] in ['rain','hail']:
             return 'raining'
         else:
@@ -47,6 +49,14 @@ def getBeaconClass():
         return 'cloudy'
     else:
         return 'clear'
+
+def getBeaconClass():
+    if False:
+        return "sox-champs"
+    elif False:
+        return "sox-rainout"
+    else:
+        return describeConditions(getForecast()['currently'])
 
 def getSunClass():
     f = getForecast()['daily']['data'][0]
@@ -72,9 +82,17 @@ def getClasses():
 
 class MainPage(webapp2.RequestHandler):
     def get(self):
-        classes = getClasses()
+        if isDev() and self.request.get('classes'):
+            classes = self.request.get('classes').split(" ")
+        else:
+            classes = getClasses()
         template = JINJA_ENVIRONMENT.get_template('index.html')
         self.response.write(template.render({'classes':classes}))
+
+class ForecastJson(webapp2.RequestHandler):
+    def get(self):
+        self.response.headers['Content-Type'] = 'application/json'
+        self.response.write(json.dumps(getForecast()))
 
 class Script(webapp2.RequestHandler):
     def get(self):
@@ -91,6 +109,7 @@ class SetKey(webapp2.RequestHandler):
 
 application = webapp2.WSGIApplication([
     ('/', MainPage),
+    ('/forecast.json', ForecastJson),
     ('/script.js', Script),
     ('/set_key', SetKey),
     ], debug=True)
