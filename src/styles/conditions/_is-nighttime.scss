@@ -1,11 +1,7 @@
 // Condition Styling -----------------------------------------------------------
 .is-nighttime {
-    background: linear-gradient(to bottom, c(time, night) 0%, mix(c(time, night), white, 75%) 100%);
+    background-color: black;
+    //background: linear-gradient(to bottom, c(time, night) 0%, mix(c(time, night), white, 75%) 100%);
 
     // TODO: Add star twinkle
-
-    // Breakpoints
-    // @media screen and (min-width: $breakpoint-lap-small") { background-size: 143% auto; }
-    // @media screen and (min-width: $breakpoint-lap-large") { background-size: 142% auto; }
-    // @media screen and (min-width: $breakpoint-desk-small") { background-size: 100% auto; }
 }

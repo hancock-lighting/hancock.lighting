@@ -43,11 +43,11 @@
     }
 
     &__project-link {
-        width: rem(32);
+        width: rem(40);
 
         fill: c(github, base-day);
 
-        transition: all $animation-duration-shortest $animation-ease;
+        transition: transform 200ms $animation-ease;
 
         // States
         &:hover {

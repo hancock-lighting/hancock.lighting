@@ -1,0 +1,32 @@
+// Object Styling --------------------------------------------------------------
+.l-info {
+    align-items: center;
+    display: flex;
+    flex-direction: column ;
+    padding-top: rem(80);
+    padding-bottom: rem(100);
+    z-index: z(o-info);
+
+    background-color: c(time, night); // Fallback background color
+
+    // States
+    .is-daytime & {
+        background-color: c(time, night);
+    }
+
+    .is-nighttime & {
+        background-color: c(time, day);
+    }
+
+    // Breakpoints
+    @media screen and (min-width: $bp-950) {
+        flex-basis: 35%;
+        justify-content: center;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    @media screen and (min-width: $bp-1100) {
+        flex-basis: 30%;
+    }
+}

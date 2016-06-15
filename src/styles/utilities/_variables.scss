@@ -45,8 +45,15 @@ $global-type-weight: $font-weight-medium;
 $global-type-line-height: 1.4;
 
 
+// Images ----------------------------------------------------------------------
+
+// Backgrounds
+$background-size-skyline: 102%;
+$background-size-stars: 120%;
+
+
 // Animation -------------------------------------------------------------------
-$animation-ease: ease-in;
+$animation-ease: cubic-bezier(0.785, 0.135, 0.15, 0.86);
 $animation-duration-shortest: 0.1s;
 $animation-duration-shorter: 0.2s;
 $animation-duration-short: 0.3s;
@@ -93,6 +100,3 @@ $bp-1450: 90.625em; // 1450px @ `$global-type-size`
 $bp-1500: 93.75em; // 1500px @ `$global-type-size`
 $bp-1550: 71.875em; // 1550px @ `$global-type-size`
 $bp-1600: 100em; // 1600px @ `$global-type-size`
-
-
-//screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx)

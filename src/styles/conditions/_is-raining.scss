@@ -2,7 +2,7 @@
 .is-raining {
     // [1] Hides blurry edges
     &.is-daytime {
-        .o-skyline {
+        .l-skyline {
             background:
               url(#{$path-to-images}/rain-day.gif) center center no-repeat, // [1]
               url(#{$path-to-images}/background-skyline-day.svg) bottom rem(-3) left rem(-3) no-repeat; // [1]
@@ -18,7 +18,7 @@
     }
 
     &.is-nighttime {
-        .o-skyline {
+        .l-skyline {
             background:
               url(#{$path-to-images}/rain-night.gif) no-repeat, // [1]
               url(#{$path-to-images}/background-skyline-night.svg) no-repeat, // [1]

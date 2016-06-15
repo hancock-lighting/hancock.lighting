@@ -2,7 +2,7 @@
 .is-snowing {
     // [1] Hides blurry edges
     &.is-daytime {
-        .o-skyline {
+        .l-skyline {
             background:
               url(#{$path-to-images}/snow.gif) center center no-repeat, // [1]
               url(#{$path-to-images}/background-skyline-day.svg) bottom rem(-3px) left rem(-3) no-repeat; // [1]
@@ -14,7 +14,7 @@
     }
 
     &.is-nighttime {
-        .o-skyline {
+        .l-skyline {
             background:
               url(#{$path-to-images}/snow.gif) center center no-repeat, // [1]
               url(#{$path-to-images}/background-skyline-night.svg) bottom rem(-3px) left rem(-3) no-repeat; // [1]

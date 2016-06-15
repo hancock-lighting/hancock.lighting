@@ -1,6 +1,11 @@
 // Condition Styling -----------------------------------------------------------
 .is-daytime {
-    background-color: black;
-    //background: linear-gradient(to bottom, mix(#9dc5f1, black, 85%), c(time, day) 90%);
-    // TODO: Vertical MQs?
+
+    // 0-500 height
+    background: linear-gradient(to bottom, mix(#9dc5f1, black, 85%), c(time, day) 45%);
+
+    // >500 height (2col @ $bp-950)
+    @media screen and (min-height: $bp-500) {
+        background: linear-gradient(to bottom, mix(#9dc5f1, black, 85%), c(time, day) 90%);
+    }
 }

@@ -1,10 +1,10 @@
 // Object Styling --------------------------------------------------------------
-.o-container {
+.l-container {
     display: flex;
     flex-direction: column;
 
     // Breakpoints
-    @media screen and (min-width: $bp-900) {
+    @media screen and (min-width: $bp-950) and (min-height: $bp-500) {
         flex-direction: row;
     }
 }
