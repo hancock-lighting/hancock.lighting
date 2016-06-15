@@ -14,8 +14,9 @@
               cover;
 
             // Breakpoints
+            // [1] Skyline distance from bottom
 
-        // >200 height
+        // >200 height                                                                                  // ↓ [1]
             @media screen and (min-height: $bp-200) and (min-width: $bp-400) { background-position: bottom rem(-160) center; }
             @media screen and (min-height: $bp-200) and (min-width: $bp-450) { background-position: bottom rem(-180) center; }
             @media screen and (min-height: $bp-200) and (min-width: $bp-500) { background-position: bottom rem(-190) center; }
@@ -305,23 +306,89 @@
               url(#{$path-to-images}/background-skyline-night.svg) no-repeat,
               url(#{$path-to-images}/condition-stars.svg) top center no-repeat;
 
-            background-size:
-              $background-size-skyline, // Skyline, [1]
-              120%; // Stars
-
             background-position:
-              bottom rem(-3) left rem(-3), // Skyline [1]
+              bottom rem(-140) center, // Skyline [1]
               top center; // Stars
 
+            background-size:
+              $background-size-skyline, // Skyline, [1]
+              $background-size-stars; // Stars
+
             // Breakpoints
-            @media screen and (min-height: $bp-200) and (min-width: $bp-400) { background-position: bottom rem(-300) center, top center; }
+            // [1] Skyline distance from bottom
+            // [2] Stars positon from top
+
+        // >200 height                                                                                       // ↓ [1]              // ↓ [2]
+            @media screen and (min-height: $bp-200) and (min-width: $bp-400) { background-position: bottom rem(-285) center, top rem(-100) center; }
 
 
 
 
-//@include mq($from: bp-700) { background-size: 37%, 90%; background-position: bottom rem(-20) center, top center; }
 
-//@media screen and (min-height: $bp-200) and (min-width: $bp-400) { background-position: bottom rem(-160) center; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //
+        // // >250 height
+        //     @media screen and (min-height: $bp-250) and (min-width: $bp-400) { background-position: bottom rem(-155) center, top rem(-40) center; }
+        //
+        // // >300 height
+        //     @media screen and (min-height: $bp-300) and (min-width: $bp-400) { background-position: bottom rem(-150) center, top rem(-30) center; }
+        //
+        // // >350 height
+        //     @media screen and (min-height: $bp-350) and (min-width: $bp-400) { background-position: bottom rem(-145) center, top rem(-90) center; }
+        //
+        // // >400 height
+        //     @media screen and (min-height: $bp-400) and (min-width: $bp-400) { background-position: bottom rem(-140) center, top rem(-90) center; }
+        //
+        // // >450 height
+        //     @media screen and (min-height: $bp-450) and (min-width: $bp-400) { background-position: bottom rem(-135) center, top rem(-90) center; }
+        //
+        // // >500 height
+        //     @media screen and (min-height: $bp-500) and (min-width: $bp-400) { background-position: bottom rem(-130) center, top rem(-90) center; }
+        //
+        // // >550 height
+        //     @media screen and (min-height: $bp-550) and (min-width: $bp-400) { background-position: bottom rem(-125) center, top rem(-90) center; }
+        //
+        // // >600 height
+        //     @media screen and (min-height: $bp-600) and (min-width: $bp-400) { background-position: bottom rem(-120) center, top rem(-90) center; }
+        //
+        // // >650 height
+        //     @media screen and (min-height: $bp-650) and (min-width: $bp-400) { background-position: bottom rem(-115) center, top rem(-90) center; }
+        //
+
+
+
+
+
+
+
+
+
 
 
 
