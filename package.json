@@ -1,17 +1,26 @@
 {
-  "name": "Weatherbeacon",
-  "description": "A Gulp file and project generator.",
+  "name": "hancock.lighting",
+  "description": "Steady blue, clear view. Flashing blue, clouds due. Steady red, rain ahead. Flashing red, snow instead.",
+  "homepage": "https://github.com/ericwbailey/hancock.lighting/",
+  "version": "0.1.0",
   "license": "MIT",
-  "version": "1.0.0",
-  "author": "Eric Bailey",
-  "contributors": [
-    {
-      "name": "Eric Bailey, @ericwbailey"
-    }
-  ],
+  "author": {
+    "name": "Eric Bailey",
+    "email": "eric.w.bailey@gmail.com",
+    "url": "http://ericwbailey.com"
+  },
+  "contributors": {
+    "name": "Daniel McLaughlin",
+    "email": "eric.w.bailey@gmail.com",
+    "url": "http://danielmclaughl.in/"
+  },
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/danielsmc/weatherbeacon"
+    "url": "git://github.com/ericwbailey/hancock.lighting.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ericwbailey/hancock.lighting/issues",
+    "email": "eric.w.bailey@gmail.com"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

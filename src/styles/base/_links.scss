@@ -3,7 +3,7 @@ a {
     color: c(link, base-day);
     text-decoration: none;
 
-    transition: color $animation-duration-shortest $animation-ease;
+    transition: color $animation-duration-shortest ease-in-out;
 
     // States
     &:hover {

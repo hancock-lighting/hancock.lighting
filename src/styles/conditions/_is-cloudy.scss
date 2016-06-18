@@ -1,5 +1,23 @@
 // Condition Styling -----------------------------------------------------------
 .is-cloudy {
+
+    // Colors and animates the tower
+    .c-tower {
+        // Loop that targets beacon SVG
+        @for $i from 1 through 7 {
+            #beacon-antenna { animation: flash-blue-base $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+            #beacon-top-spur-left { animation: flash-blue-spur $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+            #beacon-top-spur-right { animation: flash-blue-spur $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+            #beacon-top-base { animation: flash-blue-base $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+            #beacon-bottom-#{$i}-spur { animation: flash-blue-spur $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+            #beacon-bottom-#{$i}-indent { animation: flash-blue-indent $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+            #beacon-bottom-#{$i}-base { animation: flash-blue-base $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+        }
+
+        // Animation logic
+        @include beacon-flash(blue);
+    }
+
     // [1] Hides blurry edges
     &.is-daytime {
         .l-skyline {
@@ -24,52 +42,17 @@
               url(#{$path-to-images}/condition-clouds-night.svg) no-repeat, // [1]
               url(#{$path-to-images}/condition-stars.svg) no-repeat;
 
-            background-size:
-              148%, // Skyline, [1]
-              110%, // Clouds, [1]
-              110%; // Stars
-
             background-position:
               bottom, // Skyline
               bottom rem(40) center, // Clouds
               top center; // Stars
 
-            // Breakpoints
-//            @media screen and (min-width: $breakpoint-palm) and (min-height: $breakpoint-palm) {
-//                background-size:
-//                  162%, // Skyline,
-//                  120%, // Clouds,
-//                  105%; // Stars
-
-//                  background-position:
-//                    bottom, // Skyline
-//                    bottom rem(60) center, // Clouds
-//                    top center; // Stars
-//            }
-
-//            @media screen and (min-width: $breakpoint-lap-large) and (min-height: $breakpoint-lap-large) {
-//                background-size:
-//                  262%, // Skyline,
-//                  130%, // Clouds,
-//                  105%; // Stars
-//            }
+            background-size:
+              148%, // Skyline, [1]
+              110%, // Clouds, [1]
+              110%; // Stars
         }
     }
 
-    // Animates the tower
-    .c-tower {
-        // Loop that targets beacon SVG
-        @for $i from 1 through 7 {
-            #beacon-antenna { animation: flash-blue-base $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
-            #beacon-top-spur-left { animation: flash-blue-spur $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
-            #beacon-top-spur-right { animation: flash-blue-spur $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
-            #beacon-top-base { animation: flash-blue-base $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
-            #beacon-bottom-#{$i}-spur { animation: flash-blue-spur $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
-            #beacon-bottom-#{$i}-indent { animation: flash-blue-indent $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
-            #beacon-bottom-#{$i}-base { animation: flash-blue-base $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
-        }
 
-        // Animation logic
-        @include beacon-flash(blue);
-    }
 }

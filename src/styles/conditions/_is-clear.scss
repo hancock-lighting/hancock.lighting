@@ -1,5 +1,22 @@
 // Condition Styling -----------------------------------------------------------
+// NOTE: Since the background SVG scales proportionately to the viewport, and
+// since the tower art
 .is-clear {
+
+    // Colors the tower
+    .c-tower {
+        // Loop that targets beacon SVG
+        @for $i from 1 through 7 {
+            #beacon-antenna { fill: c(beacon, blue-base); }
+            #beacon-top-spur-left { fill: c(beacon, blue-spur); }
+            #beacon-top-spur-right { fill: c(beacon, blue-spur); }
+            #beacon-top-base { fill: c(beacon, blue-base); }
+            #beacon-bottom-#{$i}-spur { fill: c(beacon, blue-spur); }
+            #beacon-bottom-#{$i}-indent { fill: c(beacon, blue-indent); }
+            #beacon-bottom-#{$i}-base { fill: c(beacon, blue-base); }
+        }
+    }
+
     // [1] Hides blurry edges
     &.is-daytime {
         .l-skyline {
@@ -13,290 +30,43 @@
               $background-size-skyline, // Skyline, [1]
               cover;
 
-            // Breakpoints
-            // [1] Skyline distance from bottom
+              // Breakpoints
+              // [2] Skyline distance from bottom
 
-        // >200 height                                                                                  // ↓ [1]
-            @media screen and (min-height: $bp-200) and (min-width: $bp-400) { background-position: bottom rem(-160) center; }
-            @media screen and (min-height: $bp-200) and (min-width: $bp-450) { background-position: bottom rem(-180) center; }
-            @media screen and (min-height: $bp-200) and (min-width: $bp-500) { background-position: bottom rem(-190) center; }
-            @media screen and (min-height: $bp-200) and (min-width: $bp-550) { background-position: bottom rem(-200) center; }
-            @media screen and (min-height: $bp-200) and (min-width: $bp-600) { background-position: bottom rem(-220) center; }
-            @media screen and (min-height: $bp-200) and (min-width: $bp-650) { background-position: bottom rem(-245) center; }
-            @media screen and (min-height: $bp-200) and (min-width: $bp-700) { background-position: bottom rem(-260) center; }
-            @media screen and (min-height: $bp-200) and (min-width: $bp-750) { background-position: bottom rem(-280) center; }
-            @media screen and (min-height: $bp-200) and (min-width: $bp-800) { background-position: bottom rem(-290) center; }
-            // 75% background size adjust
-            @media screen and (min-height: $bp-200) and (min-width: $bp-850) { background-position: bottom rem(-265) center; background-size: ($background-size-skyline - 27), cover; }
-            @media screen and (min-height: $bp-200) and (min-width: $bp-900) { background-position: bottom rem(-280) center; background-size: ($background-size-skyline - 27), cover; }
-            @media screen and (min-height: $bp-200) and (min-width: $bp-950) { background-position: bottom rem(-295) center; background-size: ($background-size-skyline - 27), cover; }
-            // 80% background size adjust
-            @media screen and (min-height: $bp-200) and (min-width: $bp-1000) { background-position: bottom rem(-310) center; background-size: ($background-size-skyline - 22), cover; }
-            @media screen and (min-height: $bp-200) and (min-width: $bp-1050) { background-position: bottom rem(-365) center; background-size: ($background-size-skyline - 22), cover; }
-            @media screen and (min-height: $bp-200) and (min-width: $bp-1100) { background-position: bottom rem(-390) center; background-size: ($background-size-skyline - 22), cover; }
-            @media screen and (min-height: $bp-200) and (min-width: $bp-1150) { background-position: bottom rem(-410) center; background-size: ($background-size-skyline - 22), cover; }
-            // 75% background size adjust
-            @media screen and (min-height: $bp-200) and (min-width: $bp-1200) { background-position: bottom rem(-395) center; background-size: ($background-size-skyline - 27), cover; }
-            @media screen and (min-height: $bp-200) and (min-width: $bp-1250) { background-position: bottom rem(-425) center; background-size: ($background-size-skyline - 27), cover; }
-            @media screen and (min-height: $bp-200) and (min-width: $bp-1300) { background-position: bottom rem(-445) center; background-size: ($background-size-skyline - 27), cover; }
-            @media screen and (min-height: $bp-200) and (min-width: $bp-1350) { background-position: bottom rem(-460) center; background-size: ($background-size-skyline - 27), cover; }
-            // 65% background size adjust
-            @media screen and (min-height: $bp-200) and (min-width: $bp-1400) { background-position: bottom rem(-405) center; background-size: ($background-size-skyline - 37), cover; }
-            @media screen and (min-height: $bp-200) and (min-width: $bp-1450) { background-position: bottom rem(-425) center; background-size: ($background-size-skyline - 37), cover; }
-            @media screen and (min-height: $bp-200) and (min-width: $bp-1500) { background-position: bottom rem(-440) center; background-size: ($background-size-skyline - 37), cover; }
-            @media screen and (min-height: $bp-200) and (min-width: $bp-1550) { background-position: bottom rem(-465) center; background-size: ($background-size-skyline - 37), cover; }
-            @media screen and (min-height: $bp-200) and (min-width: $bp-1600) { background-position: bottom rem(-470) center; background-size: ($background-size-skyline - 37), cover; }
+              // Extra small height                                                                          ↓ [2]
+              @media screen and (min-width: $bp-400) and (min-height: $bp-150) { background-position: bottom rem(-135) center; }
+              @media screen and (min-width: $bp-450) and (min-height: $bp-150) { background-position: bottom rem(-160) center; }
+              @media screen and (min-width: $bp-500) and (min-height: $bp-150) { background-position: bottom rem(-180) center; }
+              @media screen and (min-width: $bp-550) and (min-height: $bp-150) { background-position: bottom rem(-195) center; }
+              @media screen and (min-width: $bp-600) and (min-height: $bp-150) { background-position: bottom rem(-215) center; }
+              @media screen and (min-width: $bp-650) and (min-height: $bp-150) { background-position: bottom rem(-235) center; }
+              @media screen and (min-width: $bp-700) and (min-height: $bp-150) { background-position: bottom rem(-255) center; }
+              @media screen and (min-width: $bp-750) and (min-height: $bp-150) { background-position: bottom rem(-270) center; background-size: 90%, cover; }
+              @media screen and (min-width: $bp-800) and (min-height: $bp-150) { background-position: bottom rem(-280) center; background-size: 85%, cover; }
+              @media screen and (min-width: $bp-850) and (min-height: $bp-150) { background-position: bottom rem(-290) center; }
+              @media screen and (min-width: $bp-900) and (min-height: $bp-150) { background-position: bottom rem(-300) center; background-size: 80%, cover; }
+              @media screen and (min-width: $bp-950) and (min-height: $bp-150) { background-position: bottom rem(-315) center; }
+              @media screen and (min-width: $bp-1000) and (min-height: $bp-150) { background-position: bottom rem(-340) center; }
+              @media screen and (min-width: $bp-1050) and (min-height: $bp-150) { background-position: bottom rem(-365) center; }
+              @media screen and (min-width: $bp-1100) and (min-height: $bp-150) { background-position: bottom rem(-345) center; background-size: 75%, cover; }
+              @media screen and (min-width: $bp-1150) and (min-height: $bp-150) { background-position: bottom rem(-345) center; background-size: 70%, cover; }
+              @media screen and (min-width: $bp-1200) and (min-height: $bp-150) { background-position: bottom rem(-330) center; background-size: 65%, cover; }
+              @media screen and (min-width: $bp-1250) and (min-height: $bp-150) { background-position: bottom rem(-355) center; }
+              @media screen and (min-width: $bp-1300) and (min-height: $bp-150) { background-position: bottom rem(-325) center, top rem(-70) center; background-size: 60%, cover; }
+              @media screen and (min-width: $bp-1350) and (min-height: $bp-150) { background-position: bottom rem(-355) center; }
+              @media screen and (min-width: $bp-1400) and (min-height: $bp-150) { background-position: bottom rem(-360) center; }
 
-        // >250 height
-            @media screen and (min-height: $bp-250) and (min-width: $bp-400) { background-position: bottom rem(-155) center; }
-            @media screen and (min-height: $bp-250) and (min-width: $bp-450) { background-position: bottom rem(-175) center; }
-            @media screen and (min-height: $bp-250) and (min-width: $bp-500) { background-position: bottom rem(-185) center; }
-            @media screen and (min-height: $bp-250) and (min-width: $bp-550) { background-position: bottom rem(-200) center; }
-            @media screen and (min-height: $bp-250) and (min-width: $bp-600) { background-position: bottom rem(-220) center; }
-            @media screen and (min-height: $bp-250) and (min-width: $bp-650) { background-position: bottom rem(-245) center; }
-            @media screen and (min-height: $bp-250) and (min-width: $bp-700) { background-position: bottom rem(-260) center; }
-            @media screen and (min-height: $bp-250) and (min-width: $bp-750) { background-position: bottom rem(-280) center; }
-            @media screen and (min-height: $bp-250) and (min-width: $bp-800) { background-position: bottom rem(-290) center; }
-            // 75% background size adjust
-            @media screen and (min-height: $bp-250) and (min-width: $bp-850) { background-position: bottom rem(-240) center; }
-            @media screen and (min-height: $bp-250) and (min-width: $bp-900) { background-position: bottom rem(-255) center; }
-            @media screen and (min-height: $bp-250) and (min-width: $bp-950) { background-position: bottom rem(-270) center; }
-            // 80% background size adjust
-            @media screen and (min-height: $bp-250) and (min-width: $bp-1000) { background-position: bottom rem(-315) center; }
-            @media screen and (min-height: $bp-250) and (min-width: $bp-1050) { background-position: bottom rem(-330) center; }
-            @media screen and (min-height: $bp-250) and (min-width: $bp-1100) { background-position: bottom rem(-360) center; }
-            @media screen and (min-height: $bp-250) and (min-width: $bp-1150) { background-position: bottom rem(-380) center; }
-            // 75% background size adjust
-            @media screen and (min-height: $bp-250) and (min-width: $bp-1200) { background-position: bottom rem(-370) center; }
-            @media screen and (min-height: $bp-250) and (min-width: $bp-1250) { background-position: bottom rem(-390) center; }
-            @media screen and (min-height: $bp-250) and (min-width: $bp-1300) { background-position: bottom rem(-410) center; }
-            @media screen and (min-height: $bp-250) and (min-width: $bp-1350) { background-position: bottom rem(-435) center; }
-            // 65% background size adjust
-            @media screen and (min-height: $bp-250) and (min-width: $bp-1400) { background-position: bottom rem(-375) center; }
-            @media screen and (min-height: $bp-250) and (min-width: $bp-1450) { background-position: bottom rem(-390) center; }
-            @media screen and (min-height: $bp-250) and (min-width: $bp-1500) { background-position: bottom rem(-410) center; }
-            @media screen and (min-height: $bp-250) and (min-width: $bp-1550) { background-position: bottom rem(-430) center; }
-            @media screen and (min-height: $bp-250) and (min-width: $bp-1600) { background-position: bottom rem(-445) center; }
-
-        // >300 height
-            @media screen and (min-height: $bp-300) and (min-width: $bp-400) { background-position: bottom rem(-150) center; }
-            @media screen and (min-height: $bp-300) and (min-width: $bp-450) { background-position: bottom rem(-170) center; }
-            @media screen and (min-height: $bp-300) and (min-width: $bp-500) { background-position: bottom rem(-180) center; }
-            @media screen and (min-height: $bp-300) and (min-width: $bp-550) { background-position: bottom rem(-200) center; }
-            @media screen and (min-height: $bp-300) and (min-width: $bp-600) { background-position: bottom rem(-220) center; }
-            @media screen and (min-height: $bp-300) and (min-width: $bp-650) { background-position: bottom rem(-245) center; }
-            @media screen and (min-height: $bp-300) and (min-width: $bp-700) { background-position: bottom rem(-260) center; }
-            @media screen and (min-height: $bp-300) and (min-width: $bp-750) { background-position: bottom rem(-280) center; }
-            @media screen and (min-height: $bp-300) and (min-width: $bp-800) { background-position: bottom rem(-290) center; }
-            // 85% background size adjust
-            @media screen and (min-height: $bp-300) and (min-width: $bp-850) { background-position: bottom rem(-270) center; background-size: ($background-size-skyline - 17), cover; }
-            @media screen and (min-height: $bp-300) and (min-width: $bp-900) { background-position: bottom rem(-285) center; background-size: ($background-size-skyline - 17), cover; }
-            @media screen and (min-height: $bp-300) and (min-width: $bp-950) { background-position: bottom rem(-300) center; background-size: ($background-size-skyline - 17), cover; }
-            @media screen and (min-height: $bp-300) and (min-width: $bp-1000) { background-position: bottom rem(-315) center; background-size: ($background-size-skyline - 17), cover; }
-            @media screen and (min-height: $bp-300) and (min-width: $bp-1050) { background-position: bottom rem(-340) center; background-size: ($background-size-skyline - 17), cover; }
-            @media screen and (min-height: $bp-300) and (min-width: $bp-1100) { background-position: bottom rem(-365) center; background-size: ($background-size-skyline - 17), cover; }
-            @media screen and (min-height: $bp-300) and (min-width: $bp-1150) { background-position: bottom rem(-385) center; background-size: ($background-size-skyline - 17), cover; }
-            // 75% background size adjust
-            @media screen and (min-height: $bp-300) and (min-width: $bp-1200) { background-position: bottom rem(-340) center; background-size: ($background-size-skyline - 27), cover; }
-            @media screen and (min-height: $bp-300) and (min-width: $bp-1250) { background-position: bottom rem(-365) center; background-size: ($background-size-skyline - 27), cover; }
-            @media screen and (min-height: $bp-300) and (min-width: $bp-1300) { background-position: bottom rem(-380) center; background-size: ($background-size-skyline - 27), cover; }
-            @media screen and (min-height: $bp-300) and (min-width: $bp-1350) { background-position: bottom rem(-410) center; background-size: ($background-size-skyline - 27), cover; }
-            // 65% background size adjust
-            @media screen and (min-height: $bp-300) and (min-width: $bp-1400) { background-position: bottom rem(-355) center; background-size: ($background-size-skyline - 37), cover; }
-            @media screen and (min-height: $bp-300) and (min-width: $bp-1450) { background-position: bottom rem(-365) center; background-size: ($background-size-skyline - 37), cover; }
-            @media screen and (min-height: $bp-300) and (min-width: $bp-1500) { background-position: bottom rem(-380) center; background-size: ($background-size-skyline - 37), cover; }
-            @media screen and (min-height: $bp-300) and (min-width: $bp-1550) { background-position: bottom rem(-410) center; background-size: ($background-size-skyline - 37), cover; }
-            @media screen and (min-height: $bp-300) and (min-width: $bp-1600) { background-position: bottom rem(-420) center; background-size: ($background-size-skyline - 37), cover; }
-
-        // >350 height
-            @media screen and (min-height: $bp-350) and (min-width: $bp-400) { background-position: bottom rem(-145) center; }
-            @media screen and (min-height: $bp-350) and (min-width: $bp-450) { background-position: bottom rem(-165) center; }
-            @media screen and (min-height: $bp-350) and (min-width: $bp-500) { background-position: bottom rem(-185) center; }
-            @media screen and (min-height: $bp-350) and (min-width: $bp-550) { background-position: bottom rem(-200) center; }
-            @media screen and (min-height: $bp-350) and (min-width: $bp-600) { background-position: bottom rem(-220) center; }
-            @media screen and (min-height: $bp-350) and (min-width: $bp-650) { background-position: bottom rem(-245) center; }
-            @media screen and (min-height: $bp-350) and (min-width: $bp-700) { background-position: bottom rem(-280) center; }
-            @media screen and (min-height: $bp-350) and (min-width: $bp-800) { background-position: bottom rem(-290) center; }
-            @media screen and (min-height: $bp-350) and (min-width: $bp-850) { background-position: bottom rem(-270) center; }
-            @media screen and (min-height: $bp-350) and (min-width: $bp-900) { background-position: bottom rem(-285) center; }
-            @media screen and (min-height: $bp-350) and (min-width: $bp-950) { background-position: bottom rem(-300) center; }
-            @media screen and (min-height: $bp-350) and (min-width: $bp-1000) { background-position: bottom rem(-310) center; }
-            @media screen and (min-height: $bp-350) and (min-width: $bp-1050) { background-position: bottom rem(-330) center; }
-            @media screen and (min-height: $bp-350) and (min-width: $bp-1100) { background-position: bottom rem(-340) center; }
-            @media screen and (min-height: $bp-350) and (min-width: $bp-1150) { background-position: bottom rem(-360) center; }
-            @media screen and (min-height: $bp-350) and (min-width: $bp-1200) { background-position: bottom rem(-330) center; }
-            @media screen and (min-height: $bp-350) and (min-width: $bp-1250) { background-position: bottom rem(-345) center; }
-            @media screen and (min-height: $bp-350) and (min-width: $bp-1300) { background-position: bottom rem(-350) center; }
-            @media screen and (min-height: $bp-350) and (min-width: $bp-1350) { background-position: bottom rem(-380) center; }
-            @media screen and (min-height: $bp-350) and (min-width: $bp-1400) { background-position: bottom rem(-335) center; }
-            @media screen and (min-height: $bp-350) and (min-width: $bp-1450) { background-position: bottom rem(-365) center; }
-            @media screen and (min-height: $bp-350) and (min-width: $bp-1500) { background-position: bottom rem(-380) center; }
-            @media screen and (min-height: $bp-350) and (min-width: $bp-1550) { background-position: bottom rem(-410) center; }
-            @media screen and (min-height: $bp-350) and (min-width: $bp-1600) { background-position: bottom rem(-420) center; }
-
-        // >400 height
-            @media screen and (min-height: $bp-400) and (min-width: $bp-400) { background-position: bottom rem(-140) center; }
-            @media screen and (min-height: $bp-400) and (min-width: $bp-450) { background-position: bottom rem(-160) center; }
-            @media screen and (min-height: $bp-400) and (min-width: $bp-500) { background-position: bottom rem(-180) center; }
-            @media screen and (min-height: $bp-400) and (min-width: $bp-550) { background-position: bottom rem(-200) center; }
-            @media screen and (min-height: $bp-400) and (min-width: $bp-600) { background-position: bottom rem(-220) center; }
-            @media screen and (min-height: $bp-400) and (min-width: $bp-650) { background-position: bottom rem(-245) center; }
-            @media screen and (min-height: $bp-400) and (min-width: $bp-700) { background-position: bottom rem(-260) center; }
-            @media screen and (min-height: $bp-400) and (min-width: $bp-750) { background-position: bottom rem(-280) center; }
-            @media screen and (min-height: $bp-400) and (min-width: $bp-800) { background-position: bottom rem(-290) center; }
-            @media screen and (min-height: $bp-400) and (min-width: $bp-850) { background-position: bottom rem(-270) center; }
-            @media screen and (min-height: $bp-400) and (min-width: $bp-900) { background-position: bottom rem(-285) center; }
-            @media screen and (min-height: $bp-400) and (min-width: $bp-950) { background-position: bottom rem(-300) center; }
-            @media screen and (min-height: $bp-400) and (min-width: $bp-1000) { background-position: bottom rem(-310) center; }
-            @media screen and (min-height: $bp-400) and (min-width: $bp-1050) { background-position: bottom rem(-330) center; }
-            @media screen and (min-height: $bp-400) and (min-width: $bp-1100) { background-position: bottom rem(-340) center; }
-            @media screen and (min-height: $bp-400) and (min-width: $bp-1150) { background-position: bottom rem(-360) center; }
-            @media screen and (min-height: $bp-400) and (min-width: $bp-1200) { background-position: bottom rem(-330) center; }
-            @media screen and (min-height: $bp-400) and (min-width: $bp-1250) { background-position: bottom rem(-345) center; }
-            @media screen and (min-height: $bp-400) and (min-width: $bp-1300) { background-position: bottom rem(-350) center; }
-            @media screen and (min-height: $bp-400) and (min-width: $bp-1350) { background-position: bottom rem(-380) center; }
-            @media screen and (min-height: $bp-400) and (min-width: $bp-1400) { background-position: bottom rem(-335) center; }
-            @media screen and (min-height: $bp-400) and (min-width: $bp-1450) { background-position: bottom rem(-365) center; }
-            @media screen and (min-height: $bp-400) and (min-width: $bp-1500) { background-position: bottom rem(-380) center; }
-            @media screen and (min-height: $bp-400) and (min-width: $bp-1550) { background-position: bottom rem(-410) center; }
-            @media screen and (min-height: $bp-400) and (min-width: $bp-1600) { background-position: bottom rem(-420) center; }
-
-        // >450 height
-            @media screen and (min-height: $bp-450) and (min-width: $bp-400) { background-position: bottom rem(-135) center; }
-            @media screen and (min-height: $bp-450) and (min-width: $bp-450) { background-position: bottom rem(-155) center; }
-            @media screen and (min-height: $bp-450) and (min-width: $bp-500) { background-position: bottom rem(-180) center; }
-            @media screen and (min-height: $bp-450) and (min-width: $bp-550) { background-position: bottom rem(-200) center; }
-            @media screen and (min-height: $bp-450) and (min-width: $bp-600) { background-position: bottom rem(-220) center; }
-            @media screen and (min-height: $bp-450) and (min-width: $bp-650) { background-position: bottom rem(-245) center; }
-            @media screen and (min-height: $bp-450) and (min-width: $bp-700) { background-position: bottom rem(-260) center; }
-            @media screen and (min-height: $bp-450) and (min-width: $bp-750) { background-position: bottom rem(-280) center; }
-            @media screen and (min-height: $bp-450) and (min-width: $bp-800) { background-position: bottom rem(-290) center; }
-            @media screen and (min-height: $bp-450) and (min-width: $bp-850) { background-position: bottom rem(-270) center; }
-            @media screen and (min-height: $bp-450) and (min-width: $bp-900) { background-position: bottom rem(-285) center; }
-            @media screen and (min-height: $bp-450) and (min-width: $bp-950) { background-position: bottom rem(-300) center; }
-            @media screen and (min-height: $bp-450) and (min-width: $bp-1000) { background-position: bottom rem(-310) center; }
-            @media screen and (min-height: $bp-450) and (min-width: $bp-1050) { background-position: bottom rem(-330) center; }
-            @media screen and (min-height: $bp-450) and (min-width: $bp-1100) { background-position: bottom rem(-340) center; }
-            @media screen and (min-height: $bp-450) and (min-width: $bp-1150) { background-position: bottom rem(-360) center; }
-            @media screen and (min-height: $bp-450) and (min-width: $bp-1200) { background-position: bottom rem(-330) center; }
-            @media screen and (min-height: $bp-450) and (min-width: $bp-1250) { background-position: bottom rem(-345) center; }
-            @media screen and (min-height: $bp-450) and (min-width: $bp-1300) { background-position: bottom rem(-350) center; }
-            @media screen and (min-height: $bp-450) and (min-width: $bp-1350) { background-position: bottom rem(-380) center; }
-            @media screen and (min-height: $bp-450) and (min-width: $bp-1400) { background-position: bottom rem(-335) center; }
-            @media screen and (min-height: $bp-450) and (min-width: $bp-1450) { background-position: bottom rem(-365) center; }
-            @media screen and (min-height: $bp-450) and (min-width: $bp-1500) { background-position: bottom rem(-380) center; }
-            @media screen and (min-height: $bp-450) and (min-width: $bp-1550) { background-position: bottom rem(-410) center; }
-            @media screen and (min-height: $bp-450) and (min-width: $bp-1600) { background-position: bottom rem(-420) center; }
-
-        // >500 height (2col @ $bp-950)
-            @media screen and (min-height: $bp-500) and (min-width: $bp-400) { background-position: bottom rem(-130) center; }
-            @media screen and (min-height: $bp-500) and (min-width: $bp-450) { background-position: bottom rem(-150) center; }
-            @media screen and (min-height: $bp-500) and (min-width: $bp-500) { background-position: bottom rem(-185) center; }
-            @media screen and (min-height: $bp-500) and (min-width: $bp-550) { background-position: bottom rem(-200) center; }
-            @media screen and (min-height: $bp-500) and (min-width: $bp-600) { background-position: bottom rem(-220) center; }
-            @media screen and (min-height: $bp-500) and (min-width: $bp-650) { background-position: bottom rem(-245) center; }
-            @media screen and (min-height: $bp-500) and (min-width: $bp-700) { background-position: bottom rem(-260) center; }
-            @media screen and (min-height: $bp-500) and (min-width: $bp-750) { background-position: bottom rem(-280) center; }
-            @media screen and (min-height: $bp-500) and (min-width: $bp-800) { background-position: bottom rem(-290) center; }
-            // 100% background size adjust
-            @media screen and (min-height: $bp-500) and (min-width: $bp-850) { background-position: bottom rem(-320) center; background-size: $background-size-skyline, cover; }
-            @media screen and (min-height: $bp-500) and (min-width: $bp-900) { background-position: bottom rem(-330) center; background-size: $background-size-skyline, cover; }
-            // 2col starts here
-            @media screen and (min-height: $bp-500) and (min-width: $bp-950) { background-position: bottom rem(-220) center; background-size: $background-size-skyline, cover; }
-            @media screen and (min-height: $bp-500) and (min-width: $bp-1000) { background-position: bottom rem(-230) center; background-size: $background-size-skyline, cover; }
-            @media screen and (min-height: $bp-500) and (min-width: $bp-1050) { background-position: bottom rem(-240) center; background-size: $background-size-skyline, cover; }
-            @media screen and (min-height: $bp-500) and (min-width: $bp-1100) { background-position: bottom rem(-280) center; background-size: $background-size-skyline, cover; }
-            @media screen and (min-height: $bp-500) and (min-width: $bp-1150) { background-position: bottom rem(-290) center; background-size: $background-size-skyline, cover; }
-            @media screen and (min-height: $bp-500) and (min-width: $bp-1200) { background-position: bottom rem(-300) center; background-size: $background-size-skyline, cover; }
-            @media screen and (min-height: $bp-500) and (min-width: $bp-1250) { background-position: bottom rem(-320) center; background-size: $background-size-skyline, cover; }
-            @media screen and (min-height: $bp-500) and (min-width: $bp-1300) { background-position: bottom rem(-330) center; background-size: $background-size-skyline, cover; }
-            @media screen and (min-height: $bp-500) and (min-width: $bp-1350) { background-position: bottom rem(-350) center; background-size: $background-size-skyline, cover; }
-            @media screen and (min-height: $bp-500) and (min-width: $bp-1400) { background-position: bottom rem(-360) center; background-size: $background-size-skyline, cover; }
-            @media screen and (min-height: $bp-500) and (min-width: $bp-1450) { background-position: bottom rem(-370) center; background-size: $background-size-skyline, cover; }
-            @media screen and (min-height: $bp-500) and (min-width: $bp-1500) { background-position: bottom rem(-390) center; background-size: $background-size-skyline, cover; }
-            @media screen and (min-height: $bp-500) and (min-width: $bp-1550) { background-position: bottom rem(-400) center; background-size: $background-size-skyline, cover; }
-            @media screen and (min-height: $bp-500) and (min-width: $bp-1600) { background-position: bottom rem(-410) center; background-size: $background-size-skyline, cover; }
-
-        // >550 height
-            @media screen and (min-height: $bp-550) and (min-width: $bp-400) { background-position: bottom rem(-125) center; }
-            @media screen and (min-height: $bp-550) and (min-width: $bp-450) { background-position: bottom rem(-145) center; }
-            @media screen and (min-height: $bp-550) and (min-width: $bp-500) { background-position: bottom rem(-185) center; }
-            @media screen and (min-height: $bp-550) and (min-width: $bp-550) { background-position: bottom rem(-200) center; }
-            @media screen and (min-height: $bp-550) and (min-width: $bp-600) { background-position: bottom rem(-220) center; }
-            @media screen and (min-height: $bp-550) and (min-width: $bp-650) { background-position: bottom rem(-245) center; }
-            @media screen and (min-height: $bp-550) and (min-width: $bp-700) { background-position: bottom rem(-260) center; }
-            @media screen and (min-height: $bp-550) and (min-width: $bp-750) { background-position: bottom rem(-280) center; }
-            @media screen and (min-height: $bp-550) and (min-width: $bp-800) { background-position: bottom rem(-290) center; }
-            @media screen and (min-height: $bp-550) and (min-width: $bp-850) { background-position: bottom rem(-320) center; }
-            @media screen and (min-height: $bp-550) and (min-width: $bp-900) { background-position: bottom rem(-330) center; }
-            @media screen and (min-height: $bp-550) and (min-width: $bp-950) { background-position: bottom rem(-220) center; }
-            @media screen and (min-height: $bp-550) and (min-width: $bp-1000) { background-position: bottom rem(-230) center; }
-            @media screen and (min-height: $bp-550) and (min-width: $bp-1050) { background-position: bottom rem(-240) center; }
-            @media screen and (min-height: $bp-550) and (min-width: $bp-1100) { background-position: bottom rem(-280) center; }
-            @media screen and (min-height: $bp-550) and (min-width: $bp-1150) { background-position: bottom rem(-290) center; }
-            @media screen and (min-height: $bp-550) and (min-width: $bp-1200) { background-position: bottom rem(-300) center; }
-            @media screen and (min-height: $bp-550) and (min-width: $bp-1250) { background-position: bottom rem(-320) center; }
-            @media screen and (min-height: $bp-550) and (min-width: $bp-1300) { background-position: bottom rem(-330) center; }
-            @media screen and (min-height: $bp-550) and (min-width: $bp-1350) { background-position: bottom rem(-350) center; }
-            @media screen and (min-height: $bp-550) and (min-width: $bp-1400) { background-position: bottom rem(-360) center; }
-            @media screen and (min-height: $bp-550) and (min-width: $bp-1450) { background-position: bottom rem(-370) center; }
-            @media screen and (min-height: $bp-550) and (min-width: $bp-1500) { background-position: bottom rem(-390) center; }
-            @media screen and (min-height: $bp-550) and (min-width: $bp-1550) { background-position: bottom rem(-400) center; }
-            @media screen and (min-height: $bp-550) and (min-width: $bp-1600) { background-position: bottom rem(-410) center; }
-
-        // >600 height (background-size adjustment)
-            @media screen and (min-height: $bp-600) and (min-width: $bp-400) { background-position: bottom rem(-120) center; }
-            @media screen and (min-height: $bp-600) and (min-width: $bp-450) { background-position: bottom rem(-140) center; }
-            @media screen and (min-height: $bp-600) and (min-width: $bp-500) { background-position: bottom rem(-185) center; }
-            @media screen and (min-height: $bp-600) and (min-width: $bp-550) { background-position: bottom rem(-200) center; }
-            @media screen and (min-height: $bp-600) and (min-width: $bp-600) { background-position: bottom rem(-220) center; }
-            @media screen and (min-height: $bp-600) and (min-width: $bp-650) { background-position: bottom rem(-245) center; }
-            @media screen and (min-height: $bp-600) and (min-width: $bp-700) { background-position: bottom rem(-260) center; }
-            @media screen and (min-height: $bp-600) and (min-width: $bp-750) { background-position: bottom rem(-280) center; }
-            @media screen and (min-height: $bp-600) and (min-width: $bp-800) { background-position: bottom rem(-290) center; }
-            @media screen and (min-height: $bp-600) and (min-width: $bp-850) { background-position: bottom rem(-320) center; }
-            @media screen and (min-height: $bp-600) and (min-width: $bp-900) { background-position: bottom rem(-330) center; }
-            @media screen and (min-height: $bp-600) and (min-width: $bp-950) { background-position: bottom rem(-220) center; }
-            @media screen and (min-height: $bp-600) and (min-width: $bp-1000) { background-position: bottom rem(-230) center; }
-            @media screen and (min-height: $bp-600) and (min-width: $bp-1050) { background-position: bottom rem(-240) center; }
-            @media screen and (min-height: $bp-600) and (min-width: $bp-1100) { background-position: bottom rem(-280) center; }
-            @media screen and (min-height: $bp-600) and (min-width: $bp-1150) { background-position: bottom rem(-290) center; }
-            @media screen and (min-height: $bp-600) and (min-width: $bp-1200) { background-position: bottom rem(-300) center; }
-            @media screen and (min-height: $bp-600) and (min-width: $bp-1250) { background-position: bottom rem(-320) center; }
-            @media screen and (min-height: $bp-600) and (min-width: $bp-1300) { background-position: bottom rem(-330) center; }
-            @media screen and (min-height: $bp-600) and (min-width: $bp-1350) { background-position: bottom rem(-350) center; }
-            @media screen and (min-height: $bp-600) and (min-width: $bp-1400) { background-position: bottom rem(-360) center; }
-            @media screen and (min-height: $bp-600) and (min-width: $bp-1450) { background-position: bottom rem(-370) center; }
-            @media screen and (min-height: $bp-600) and (min-width: $bp-1500) { background-position: bottom rem(-390) center; }
-            @media screen and (min-height: $bp-600) and (min-width: $bp-1550) { background-position: bottom rem(-400) center; }
-            @media screen and (min-height: $bp-600) and (min-width: $bp-1600) { background-position: bottom rem(-410) center; }
-
-        // >650 height
-            @media screen and (min-height: $bp-650) and (min-width: $bp-400) { background-position: bottom rem(-115) center; }
-            @media screen and (min-height: $bp-650) and (min-width: $bp-450) { background-position: bottom rem(-135) center; }
-            @media screen and (min-height: $bp-650) and (min-width: $bp-500) { background-position: bottom rem(-180) center; }
-            @media screen and (min-height: $bp-650) and (min-width: $bp-550) { background-position: bottom rem(-200) center; }
-            @media screen and (min-height: $bp-650) and (min-width: $bp-600) { background-position: bottom rem(-220) center; }
-            @media screen and (min-height: $bp-650) and (min-width: $bp-650) { background-position: bottom rem(-245) center; }
-            @media screen and (min-height: $bp-650) and (min-width: $bp-700) { background-position: bottom rem(-260) center; }
-            @media screen and (min-height: $bp-650) and (min-width: $bp-750) { background-position: bottom rem(-280) center; }
-            @media screen and (min-height: $bp-650) and (min-width: $bp-800) { background-position: bottom rem(-290) center; }
-            @media screen and (min-height: $bp-650) and (min-width: $bp-850) { background-position: bottom rem(-320) center; }
-            @media screen and (min-height: $bp-650) and (min-width: $bp-900) { background-position: bottom rem(-330) center; }
-            @media screen and (min-height: $bp-650) and (min-width: $bp-950) { background-position: bottom rem(-220) center; }
-            @media screen and (min-height: $bp-650) and (min-width: $bp-1000) { background-position: bottom rem(-230) center; }
-            @media screen and (min-height: $bp-650) and (min-width: $bp-1050) { background-position: bottom rem(-240) center; }
-            @media screen and (min-height: $bp-650) and (min-width: $bp-1100) { background-position: bottom rem(-280) center; }
-            @media screen and (min-height: $bp-650) and (min-width: $bp-1150) { background-position: bottom rem(-290) center; }
-            @media screen and (min-height: $bp-650) and (min-width: $bp-1200) { background-position: bottom rem(-300) center; }
-            @media screen and (min-height: $bp-650) and (min-width: $bp-1250) { background-position: bottom rem(-320) center; }
-            @media screen and (min-height: $bp-650) and (min-width: $bp-1300) { background-position: bottom rem(-330) center; }
-            @media screen and (min-height: $bp-650) and (min-width: $bp-1350) { background-position: bottom rem(-350) center; }
-            @media screen and (min-height: $bp-650) and (min-width: $bp-1400) { background-position: bottom rem(-360) center; }
-            @media screen and (min-height: $bp-650) and (min-width: $bp-1450) { background-position: bottom rem(-370) center; }
-            @media screen and (min-height: $bp-650) and (min-width: $bp-1500) { background-position: bottom rem(-390) center; }
-            @media screen and (min-height: $bp-650) and (min-width: $bp-1550) { background-position: bottom rem(-400) center; }
-            @media screen and (min-height: $bp-650) and (min-width: $bp-1600) { background-position: bottom rem(-410) center; }
+              // Small height, 2 col adjustments
+              @media screen and (min-width: $bp-950) and (min-height: $bp-450) { background-position: bottom rem(-220) center; background-size: $background-size-skyline, cover; }
+              @media screen and (min-width: $bp-1000) and (min-height: $bp-450) { background-position: bottom rem(-230) center; }
+              @media screen and (min-width: $bp-1050) and (min-height: $bp-450) { background-position: bottom rem(-240) center; }
+              @media screen and (min-width: $bp-1100) and (min-height: $bp-450) { background-position: bottom rem(-270) center; }
+              @media screen and (min-width: $bp-1150) and (min-height: $bp-450) { background-position: bottom rem(-280) center; }
+              @media screen and (min-width: $bp-1200) and (min-height: $bp-450) { background-position: bottom rem(-300) center; }
+              @media screen and (min-width: $bp-1250) and (min-height: $bp-450) { background-position: bottom rem(-310) center; }
+              @media screen and (min-width: $bp-1300) and (min-height: $bp-450) { background-position: bottom rem(-320) center; }
+              @media screen and (min-width: $bp-1350) and (min-height: $bp-450) { background-position: bottom rem(-335) center; }
+              @media screen and (min-width: $bp-1400) and (min-height: $bp-450) { background-position: bottom rem(-350) center; }
         }
     }
 
@@ -315,71 +85,43 @@
               $background-size-stars; // Stars
 
             // Breakpoints
-            // [1] Skyline distance from bottom
-            // [2] Stars positon from top
+            // [2] Skyline distance from bottom
+            // [3] Star's positon from top
 
-        // >200 height                                                                                       // ↓ [1]              // ↓ [2]
-            @media screen and (min-height: $bp-200) and (min-width: $bp-400) { background-position: bottom rem(-285) center, top rem(-100) center; }
+            // Extra small height                                                                          ↓ [2]             ↓ [3]
+            @media screen and (min-width: $bp-400) and (min-height: $bp-150) { background-position: bottom rem(-135) center, top center; }
+            @media screen and (min-width: $bp-450) and (min-height: $bp-150) { background-position: bottom rem(-160) center, top center; }
+            @media screen and (min-width: $bp-500) and (min-height: $bp-150) { background-position: bottom rem(-180) center, top center; }
+            @media screen and (min-width: $bp-550) and (min-height: $bp-150) { background-position: bottom rem(-195) center, top center; }
+            @media screen and (min-width: $bp-600) and (min-height: $bp-150) { background-position: bottom rem(-215) center, top center; }
+            @media screen and (min-width: $bp-650) and (min-height: $bp-150) { background-position: bottom rem(-235) center, top center; }
+            @media screen and (min-width: $bp-700) and (min-height: $bp-150) { background-position: bottom rem(-255) center, top center; }
+            @media screen and (min-width: $bp-750) and (min-height: $bp-150) { background-position: bottom rem(-270) center, top rem(-50) center; background-size: 90%, $background-size-stars; }
+            @media screen and (min-width: $bp-800) and (min-height: $bp-150) { background-position: bottom rem(-280) center, top rem(-50) center; background-size: 85%, $background-size-stars; }
+            @media screen and (min-width: $bp-850) and (min-height: $bp-150) { background-position: bottom rem(-290) center, top rem(-50) center; }
+            @media screen and (min-width: $bp-900) and (min-height: $bp-150) { background-position: bottom rem(-300) center, top rem(-50) center; background-size: 80%, $background-size-stars; }
+            @media screen and (min-width: $bp-950) and (min-height: $bp-150) { background-position: bottom rem(-315) center, top rem(-50) center; }
+            @media screen and (min-width: $bp-1000) and (min-height: $bp-150) { background-position: bottom rem(-340) center, top rem(-50) center; }
+            @media screen and (min-width: $bp-1050) and (min-height: $bp-150) { background-position: bottom rem(-365) center, top rem(-50) center; }
+            @media screen and (min-width: $bp-1100) and (min-height: $bp-150) { background-position: bottom rem(-345) center, top rem(-50) center; background-size: 75%, $background-size-stars; }
+            @media screen and (min-width: $bp-1150) and (min-height: $bp-150) { background-position: bottom rem(-345) center, top rem(-50) center; background-size: 70%, $background-size-stars; }
+            @media screen and (min-width: $bp-1200) and (min-height: $bp-150) { background-position: bottom rem(-330) center, top rem(-50) center; background-size: 65%, $background-size-stars; }
+            @media screen and (min-width: $bp-1250) and (min-height: $bp-150) { background-position: bottom rem(-355) center, top rem(-50) center; }
+            @media screen and (min-width: $bp-1300) and (min-height: $bp-150) { background-position: bottom rem(-325) center, top rem(-70) center; background-size: 60%, $background-size-stars; }
+            @media screen and (min-width: $bp-1350) and (min-height: $bp-150) { background-position: bottom rem(-355) center, top rem(-50) center; }
+            @media screen and (min-width: $bp-1400) and (min-height: $bp-150) { background-position: bottom rem(-360) center, top rem(-50) center; }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        //
-        // // >250 height
-        //     @media screen and (min-height: $bp-250) and (min-width: $bp-400) { background-position: bottom rem(-155) center, top rem(-40) center; }
-        //
-        // // >300 height
-        //     @media screen and (min-height: $bp-300) and (min-width: $bp-400) { background-position: bottom rem(-150) center, top rem(-30) center; }
-        //
-        // // >350 height
-        //     @media screen and (min-height: $bp-350) and (min-width: $bp-400) { background-position: bottom rem(-145) center, top rem(-90) center; }
-        //
-        // // >400 height
-        //     @media screen and (min-height: $bp-400) and (min-width: $bp-400) { background-position: bottom rem(-140) center, top rem(-90) center; }
-        //
-        // // >450 height
-        //     @media screen and (min-height: $bp-450) and (min-width: $bp-400) { background-position: bottom rem(-135) center, top rem(-90) center; }
-        //
-        // // >500 height
-        //     @media screen and (min-height: $bp-500) and (min-width: $bp-400) { background-position: bottom rem(-130) center, top rem(-90) center; }
-        //
-        // // >550 height
-        //     @media screen and (min-height: $bp-550) and (min-width: $bp-400) { background-position: bottom rem(-125) center, top rem(-90) center; }
-        //
-        // // >600 height
-        //     @media screen and (min-height: $bp-600) and (min-width: $bp-400) { background-position: bottom rem(-120) center, top rem(-90) center; }
-        //
-        // // >650 height
-        //     @media screen and (min-height: $bp-650) and (min-width: $bp-400) { background-position: bottom rem(-115) center, top rem(-90) center; }
-        //
+            // Small height, 2 col adjustments
+            @media screen and (min-width: $bp-950) and (min-height: $bp-450) { background-position: bottom rem(-220) center, top center; background-size: $background-size-skyline, $background-size-stars; }
+            @media screen and (min-width: $bp-1000) and (min-height: $bp-450) { background-position: bottom rem(-230) center, top center; }
+            @media screen and (min-width: $bp-1050) and (min-height: $bp-450) { background-position: bottom rem(-240) center, top center; }
+            @media screen and (min-width: $bp-1100) and (min-height: $bp-450) { background-position: bottom rem(-270) center, top center; }
+            @media screen and (min-width: $bp-1150) and (min-height: $bp-450) { background-position: bottom rem(-280) center, top center; }
+            @media screen and (min-width: $bp-1200) and (min-height: $bp-450) { background-position: bottom rem(-300) center, top center; }
+            @media screen and (min-width: $bp-1250) and (min-height: $bp-450) { background-position: bottom rem(-310) center, top center; }
+            @media screen and (min-width: $bp-1300) and (min-height: $bp-450) { background-position: bottom rem(-320) center, top center; }
+            @media screen and (min-width: $bp-1350) and (min-height: $bp-450) { background-position: bottom rem(-335) center, top center; }
+            @media screen and (min-width: $bp-1400) and (min-height: $bp-450) { background-position: bottom rem(-350) center, top center; }
 
 
 
@@ -396,19 +138,24 @@
 
 
 
-        }
-    }
 
-    .c-tower {
-        // Loop that targets beacon SVG
-        @for $i from 1 through 7 {
-            #beacon-antenna { fill: c(beacon, blue-base); }
-            #beacon-top-spur-left { fill: c(beacon, blue-spur); }
-            #beacon-top-spur-right { fill: c(beacon, blue-spur); }
-            #beacon-top-base { fill: c(beacon, blue-base); }
-            #beacon-bottom-#{$i}-spur { fill: c(beacon, blue-spur); }
-            #beacon-bottom-#{$i}-indent { fill: c(beacon, blue-indent); }
-            #beacon-bottom-#{$i}-base { fill: c(beacon, blue-base); }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         }
     }
 }

@@ -2,7 +2,7 @@
 .c-poem {
     @extend %font-set-component-size;
 
-    margin: 0 0 rem(30) 0;
+    margin: 0 0 rem(60) 0;
     z-index: z(c-tower);
 
     text-align: center;
@@ -23,6 +23,8 @@
         font-weight: $font-weight-light;
         text-transform: uppercase;
 
+        transition: border-color $animation-duration-shorter ease-in-out;
+
         // HACK: Clips the letter-spacing's trailing underline
         &:after {
             height: rem(25);
@@ -33,6 +35,11 @@
             background-color: c(banner, background-night);
 
             content: "";
+        }
+
+        // States
+        &:hover {
+            border-color: transparent;
         }
 
         // Conditions
@@ -48,7 +55,7 @@
                 color: black;
             }
 
-            // HACK: Cips the letter-spacing's trailing underline
+            // HACK: Clips the letter-spacing's trailing underline
             &:after {
                 background-color: c(banner, background-day);
             }
