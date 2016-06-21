@@ -2,7 +2,7 @@
 .c-poem {
     @extend %font-set-component-size;
 
-    margin: 0 0 rem(60) 0;
+    margin-top: 20vh;
     z-index: z(c-tower);
 
     text-align: center;
@@ -12,6 +12,22 @@
         margin-bottom: rem(10);
 
         line-height: 1.9;
+
+        transition: font-size $animation-duration-short $animation-ease;
+
+        // Breakpoints
+        // @media screen and (min-width: $bp-1500) {
+        //     font-size: em(20);
+        //     line-height: 2.1;
+        // }
+        //
+        // @media screen and (min-width: $bp-1800) {
+        //     font-size: em(24);
+        // }
+        //
+        // @media screen and (min-width: $bp-2400) {
+        //     font-size: em(28);
+        // }
     }
 
     &__more-info {

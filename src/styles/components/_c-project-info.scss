@@ -7,6 +7,7 @@
     color: c(gray, light);
     font-style: normal;
     line-height: 0.8;
+    margin-bottom: 8vh;
     text-align: center;
 
     // Conditions
@@ -43,6 +44,8 @@
     }
 
     &__project-link {
+        margin-left: rem(4);
+        margin-right: rem(4);
         width: rem(40);
 
         fill: c(github, base-day);

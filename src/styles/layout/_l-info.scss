@@ -19,14 +19,10 @@
     }
 
     // Breakpoints
-    @media screen and (min-width: $bp-950) {
+    @media screen and (min-width: $layout-width-m) {
         flex-basis: 35%;
-        justify-content: center;
+        justify-content: space-between;
         padding-top: 0;
         padding-bottom: 0;
-    }
-
-    @media screen and (min-width: $bp-1100) {
-        flex-basis: 30%;
     }
 }

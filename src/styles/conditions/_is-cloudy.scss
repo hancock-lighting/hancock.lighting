@@ -22,16 +22,23 @@
     &.is-daytime {
         .l-skyline {
             background:
-              url(#{$path-to-images}/flarg-day.svg) repeat-x, // [1]
-              url(#{$path-to-images}/condition-clouds-day.svg) repeat-x; // [1]
-
-            background-size:
-              32%, // Skyline, [1]
-              30%; // Clouds, [1]
+              url(#{$path-to-images}/background-skyline-day.svg) no-repeat,
+              url(#{$path-to-images}/condition-clouds-day.svg) repeat-x;
 
             background-position:
-              bottom rem(-3) left rem(-3), // Skyline
-              bottom center; // Clouds
+              bottom rem(-140) center, // Skyline, [1]
+              bottom left; // Clouds
+
+            background-size:
+              $background-size-skyline, // Skyline, [1]
+              $background-size-clouds; // Clouds, [1]
+
+            // Breakpoints
+            // [2] Skyline distance from bottom
+            // NOTE: Custom crops are needed to keep the background's height
+            // proportional to the viewport.
+
+            // Extra small height                                                                          ↓ [2]
         }
     }
 

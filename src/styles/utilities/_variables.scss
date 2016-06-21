@@ -48,8 +48,10 @@ $global-type-line-height: 1.4;
 // Images ----------------------------------------------------------------------
 
 // Backgrounds
+$background-size-clouds: 101%;
 $background-size-skyline: 102%;
-$background-size-stars: 105%;
+$background-size-stars-s: 57%;
+$background-size-stars-l: 98%;
 
 
 // Animation -------------------------------------------------------------------
@@ -100,3 +102,116 @@ $bp-1450: 90.625em; // 1450px @ `$global-type-size`
 $bp-1500: 93.75em; // 1500px @ `$global-type-size`
 $bp-1550: 71.875em; // 1550px @ `$global-type-size`
 $bp-1600: 100em; // 1600px @ `$global-type-size`
+$bp-1650: 103.125em; // 1650px @ `$global-type-size`
+$bp-1700: 106.25em; // 1700px @ `$global-type-size`
+$bp-1750: 109.375em; // 1750px @ `$global-type-size`
+$bp-1800: 112.5em; // 1800px @ `$global-type-size`
+$bp-1850: 115.625em; // 1850px @ `$global-type-size`
+$bp-1900: 118.75em; // 1900px @ `$global-type-size`
+$bp-1950: 121.875em; // 1950px @ `$global-type-size`
+$bp-2000: 125em; // 2000px @ `$global-type-size`
+$bp-2050: 128.125em; // 2050px @ `$global-type-size`
+$bp-2100: 131.25em; // 2100px @ `$global-type-size`
+$bp-2150: 134.375em; // 2150px @ `$global-type-size`
+$bp-2200: 137.5em; // 2200px @ `$global-type-size`
+$bp-2250: 140.625em; // 2250px @ `$global-type-size`
+$bp-2300: 143.75em; // 2300px @ `$global-type-size`
+$bp-2350: 146.875em; // 2350px @ `$global-type-size`
+$bp-2400: 150em; // 2400px @ `$global-type-size`
+$bp-2450: 153.125em; // 2450px @ `$global-type-size`
+$bp-2500: 156.25em; // 2500px @ `$global-type-size`
+
+
+// Background Positions --------------------------------------------------------
+// Layout, Height
+$layout-height-xs: $bp-250;
+$layout-height-s: 28.0625em; // 449px @ `$global-type-size`
+$layout-height-m: $bp-450;
+
+// Layout, Width
+$layout-width-m: $bp-1050;
+$layout-width-l: $bp-1100;
+
+// Declaring rem values without using rem() function so variable prints properly
+// Skyline, Extra small height
+$skyline-position-xs-400: bottom -8.4375rem center; // -135px / `$global-type-size`
+$skyline-position-xs-450: bottom -10rem; //  center-160px / `$global-type-size`
+$skyline-position-xs-500: bottom -11.25rem center; // -180px / `$global-type-size`
+$skyline-position-xs-550: bottom -12.1875rem center; // -195px / `$global-type-size`
+$skyline-position-xs-600: bottom -13.4375rem center; // -215px / `$global-type-size`
+$skyline-position-xs-650: bottom -14.6875rem center; // -235px / `$global-type-size`
+$skyline-position-xs-700: bottom -15.9375rem center; // -255px / `$global-type-size`
+$skyline-position-xs-750: bottom -16.875rem center; // -270px / `$global-type-size`
+$skyline-position-xs-800: bottom -17.5rem center; // -280px / `$global-type-size`
+$skyline-position-xs-850: bottom -18.125rem center; // -290px / `$global-type-size`
+$skyline-position-xs-900: bottom -18.75rem center; // -300px / `$global-type-size`
+$skyline-position-xs-950: bottom -19.6875rem center; // -315px / `$global-type-size`
+$skyline-position-xs-1000: bottom -21.25rem center; // -340px / `$global-type-size`
+$skyline-position-xs-1050: bottom -22.8125rem center; // -365px / `$global-type-size`
+$skyline-position-xs-1100: bottom -21.5625rem center; // -345px / `$global-type-size`
+$skyline-position-xs-1150: bottom -21.5625rem center; // -345px / `$global-type-size`
+$skyline-position-xs-1200: bottom -20.625rem center; // -330px / `$global-type-size`
+$skyline-position-xs-1250: bottom -22.1875rem center; // -355px / `$global-type-size`
+$skyline-position-xs-1300: bottom -20.3125rem center; // -325px / `$global-type-size`
+$skyline-position-xs-1350: bottom -22.1875rem center; // -355px / `$global-type-size`
+$skyline-position-xs-1400: bottom -22.5rem center; // -360px / `$global-type-size`
+$skyline-position-xs-1450: bottom -24.6875rem center; // -395px / `$global-type-size`
+$skyline-position-xs-1500: bottom -25.3125rem center; // -405px / `$global-type-size`
+$skyline-position-xs-1550: bottom -26.25rem center; // -420px / `$global-type-size`
+$skyline-position-xs-1600: bottom -24.375rem center; // -390px / `$global-type-size`
+$skyline-position-xs-1650: bottom -25.625rem center; // -410px / `$global-type-size`
+$skyline-position-xs-1700: bottom -26.5625rem center; // -425px / `$global-type-size`
+$skyline-position-xs-1750: bottom -27.5rem center; // -440px / `$global-type-size`
+$skyline-position-xs-1800: bottom -28.4375rem center; // -455px / `$global-type-size`
+$skyline-position-xs-1850: bottom -29.375rem center; // -470px / `$global-type-size`
+$skyline-position-xs-1900: bottom -27.1875rem center; // -435px / `$global-type-size`
+$skyline-position-xs-1950: bottom -27.8125rem center; // -445px / `$global-type-size`
+$skyline-position-xs-2000: bottom -28.75rem center; // -460px / `$global-type-size`
+$skyline-position-xs-2050: bottom -29.375rem center; // -470px / `$global-type-size`
+$skyline-position-xs-2100: bottom -30.625rem center; // -490px / `$global-type-size`
+$skyline-position-xs-2150: bottom -27.1875rem center; // -435px / `$global-type-size`
+$skyline-position-xs-2200: bottom -27.8125rem center; // -445px / `$global-type-size`
+$skyline-position-xs-2250: bottom -29.0625rem center; // -465px / `$global-type-size`
+$skyline-position-xs-2300: bottom -29.6875rem center; // -475px / `$global-type-size`
+$skyline-position-xs-2350: bottom -26.25rem center; // -420px / `$global-type-size`
+$skyline-position-xs-2400: bottom -26.875rem center; // -430px / `$global-type-size`
+$skyline-position-xs-2450: bottom -27.8125rem center; // -445px / `$global-type-size`
+$skyline-position-xs-2500: bottom -28.4375rem center; // -455px / `$global-type-size`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Skyline, Medium height
+$skyline-position-m-950: bottom -13.75rem center; // -220px / `$global-type-size`
+$skyline-position-m-1000: bottom -14.375rem center; // -230px / `$global-type-size`
+$skyline-position-m-1050: bottom -15rem center; // -240px / `$global-type-size`
+$skyline-position-m-1100: bottom -16.875rem center; // -270px / `$global-type-size`
+$skyline-position-m-1150: bottom -17.5rem center; // -280px / `$global-type-size`
+$skyline-position-m-1200: bottom -18.75rem center; // -300px / `$global-type-size`
+$skyline-position-m-1250: bottom -19.375rem center; // -310px / `$global-type-size`
+$skyline-position-m-1300: bottom -20rem center; // -320px / `$global-type-size`
+$skyline-position-m-1350: bottom -20.9375rem center; // -335px / `$global-type-size`
+$skyline-position-m-1400: bottom -21.875rem center; // -350px / `$global-type-size`

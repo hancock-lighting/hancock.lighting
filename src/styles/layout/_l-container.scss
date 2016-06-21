@@ -4,7 +4,7 @@
     flex-direction: column;
 
     // Breakpoints
-    @media screen and (min-width: $bp-950) and (min-height: $bp-450) {
+    @media screen and (min-width: $layout-width-m) and (min-height: $layout-height-m) {
         flex-direction: row;
     }
 }
