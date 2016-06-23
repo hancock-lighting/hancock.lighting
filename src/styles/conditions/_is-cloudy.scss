@@ -23,43 +23,45 @@
         .l-skyline {
             background:
               url(#{$path-to-images}/background-skyline-day.svg) no-repeat,
-              url(#{$path-to-images}/condition-clouds-day.svg) repeat-x;
+              url(#{$path-to-images}/condition-clouds-day.svg) no-repeat;
 
             background-position:
-              bottom rem(-140) center, // Skyline, [1]
-              bottom left; // Clouds
+              bottom rem(-2) center, // Skyline [1]
+              bottom center; // Clouds
 
             background-size:
               $background-size-skyline, // Skyline, [1]
               $background-size-clouds; // Clouds, [1]
 
             // Breakpoints
-            // [2] Skyline distance from bottom
-            // NOTE: Custom crops are needed to keep the background's height
-            // proportional to the viewport.
+            @include skyline-position(cloudy-day);
 
-            // Extra small height                                                                          ↓ [2]
+            //@media screen and (min-height: $layout-height-m) { background-size: $background-size-skyline, $background-size-clouds; }
         }
     }
 
     &.is-nighttime {
         .l-skyline {
             background:
-              url(#{$path-to-images}/background-skyline-night.svg) no-repeat, // [1]
-              url(#{$path-to-images}/condition-clouds-night.svg) no-repeat, // [1]
-              url(#{$path-to-images}/condition-stars.svg) no-repeat;
+              url(#{$path-to-images}/background-skyline-night.svg) no-repeat,
+              url(#{$path-to-images}/condition-clouds-night.svg) no-repeat,
+              url(#{$path-to-images}/condition-stars.svg) top center repeat;
 
             background-position:
-              bottom, // Skyline
-              bottom rem(40) center, // Clouds
-              top center; // Stars
+              bottom rem(-2) center, // Skyline [1]
+              bottom center, // Clouds
+              top rem(-20) center; // Stars
 
             background-size:
-              148%, // Skyline, [1]
-              110%, // Clouds, [1]
-              110%; // Stars
+              $background-size-skyline, // Skyline, [1]
+              $background-size-clouds, // Clouds, [1]
+              $background-size-stars-s; // Stars removed at extra small height
+
+            // Breakpoints
+            @include skyline-position(cloudy-night);
+
+            // Normal star size at larger breakpoints
+            @media screen and (min-height: $layout-height-m) { background-size: $background-size-skyline, $background-size-clouds, $background-size-stars-l; }
         }
     }
-
-
 }

@@ -1,31 +1,7 @@
 // Condition Styling -----------------------------------------------------------
 .is-snowing {
-    // [1] Hides blurry edges
-    &.is-daytime {
-        .l-skyline {
-            background:
-              url(#{$path-to-images}/snow.gif) center center no-repeat, // [1]
-              url(#{$path-to-images}/background-skyline-day.svg) bottom rem(-3px) left rem(-3) no-repeat; // [1]
 
-            background-size:
-              cover, // Snow
-              102%; // Skyline; [1]
-        }
-    }
-
-    &.is-nighttime {
-        .l-skyline {
-            background:
-              url(#{$path-to-images}/snow.gif) center center no-repeat, // [1]
-              url(#{$path-to-images}/background-skyline-night.svg) bottom rem(-3px) left rem(-3) no-repeat; // [1]
-
-            background-size:
-              cover, // Snow
-              102%; // Skyline, [1]
-        }
-    }
-
-    // Animates the tower
+    // Colors and animates the tower
     .c-tower {
         // Loop that targets beacon SVG
         @for $i from 1 through 7 {
@@ -40,5 +16,45 @@
 
         // Animation logic
         @include beacon-flash(red);
+    }
+
+    // [1] Hides blurry edges
+    &.is-daytime {
+        .l-skyline {
+            background:
+              url(#{$path-to-images}/snow.gif) center center no-repeat,
+              url(#{$path-to-images}/background-skyline-day.svg) no-repeat;
+
+            background-position:
+              center center, // Rain
+              bottom rem(-2) center; // Skyline [1]
+
+            background-size:
+              cover, // Rain
+              $background-size-skyline; // Skyline, [1]
+
+            // Breakpoints
+            @include skyline-position(snowing);
+        }
+    }
+
+    // [1] Hides blurry edges
+    &.is-nighttime {
+        .l-skyline {
+            background:
+              url(#{$path-to-images}/snow.gif) center center no-repeat,
+              url(#{$path-to-images}/background-skyline-night.svg) no-repeat;
+
+            background-position:
+              center center, // Rain
+              bottom rem(-2) center; // Skyline [1]
+
+            background-size:
+              cover, // Rain
+              $background-size-skyline; // Skyline, [1]
+
+            // Breakpoints
+            @include skyline-position(snowing);
+        }
     }
 }

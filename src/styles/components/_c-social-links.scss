@@ -1,0 +1,29 @@
+// Component Styling -----------------------------------------------------------
+.c-social-links {
+    @extend %font-set-component-size;
+
+    &__icon {
+        margin-left: rem(8);
+        margin-right: rem(8);
+        width: rem(36);
+
+        fill: c(social, base-day);
+
+        transition: transform $animation-duration-shorter $animation-ease;
+
+        // States
+        &:hover {
+            transform: scale(1.2);
+        }
+
+        &:active {
+            transform: scale(0.9);
+            transition: none;
+        }
+
+        // Conditions
+        .is-nighttime & {
+            fill: c(social, base-night);
+        }
+    }
+}

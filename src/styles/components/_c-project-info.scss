@@ -7,7 +7,7 @@
     color: c(gray, light);
     font-style: normal;
     line-height: 0.8;
-    margin-bottom: 8vh;
+    margin-bottom: 4vh;
     text-align: center;
 
     // Conditions
@@ -40,31 +40,6 @@
             &:last-of-type {
                 margin-left: rem(3);
             }
-        }
-    }
-
-    &__project-link {
-        margin-left: rem(4);
-        margin-right: rem(4);
-        width: rem(40);
-
-        fill: c(github, base-day);
-
-        transition: transform 200ms $animation-ease;
-
-        // States
-        &:hover {
-            transform: scale(1.2);
-        }
-
-        &:active {
-            transform: scale(0.9);
-            transition: none;
-        }
-
-        // Conditions
-        .is-nighttime & {
-            fill: c(github, base-night);
         }
     }
 }

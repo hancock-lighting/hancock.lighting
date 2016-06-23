@@ -22,58 +22,21 @@
               url(#{$path-to-images}/background-skyline-day.svg) no-repeat;
 
             background-position:
-              bottom rem(-140) center; // [1]
+              bottom rem(-2) center; // [1]
 
             background-size:
-              $background-size-skyline, // Skyline, [1]
-              cover;
+              $background-size-skyline; // Skyline, [1]
 
-              // Breakpoints
-              // [2] Skyline distance from bottom
-              // NOTE: Custom crops are needed to keep the background's height
-              // proportional to the viewport.
-
-              // Extra small height                                                                   ↓ [2]
-              @media screen and (min-width: $bp-400) and (min-height: $bp-150) { background-position: $skyline-position-xs-400; }
-              @media screen and (min-width: $bp-450) and (min-height: $bp-150) { background-position: $skyline-position-xs-450; }
-              @media screen and (min-width: $bp-500) and (min-height: $bp-150) { background-position: $skyline-position-xs-500; }
-              @media screen and (min-width: $bp-550) and (min-height: $bp-150) { background-position: $skyline-position-xs-550; }
-              @media screen and (min-width: $bp-600) and (min-height: $bp-150) { background-position: $skyline-position-xs-600; }
-              @media screen and (min-width: $bp-650) and (min-height: $bp-150) { background-position: $skyline-position-xs-650; }
-              @media screen and (min-width: $bp-700) and (min-height: $bp-150) { background-position: $skyline-position-xs-700; }
-              @media screen and (min-width: $bp-750) and (min-height: $bp-150) { background-position: $skyline-position-xs-750; background-size: 90%, cover; }
-              @media screen and (min-width: $bp-800) and (min-height: $bp-150) { background-position: $skyline-position-xs-800; background-size: 85%, cover; }
-              @media screen and (min-width: $bp-850) and (min-height: $bp-150) { background-position: $skyline-position-xs-850; }
-              @media screen and (min-width: $bp-900) and (min-height: $bp-150) { background-position: $skyline-position-xs-900; background-size: 80%, cover; }
-              @media screen and (min-width: $bp-950) and (min-height: $bp-150) { background-position: $skyline-position-xs-950; }
-              @media screen and (min-width: $bp-1000) and (min-height: $bp-150) { background-position: $skyline-position-xs-1000; }
-              @media screen and (min-width: $bp-1050) and (min-height: $bp-150) { background-position: $skyline-position-xs-1050; }
-              @media screen and (min-width: $bp-1100) and (min-height: $bp-150) { background-position: $skyline-position-xs-1100; background-size: 75%, cover; }
-              @media screen and (min-width: $bp-1150) and (min-height: $bp-150) { background-position: $skyline-position-xs-1150; background-size: 70%, cover; }
-              @media screen and (min-width: $bp-1200) and (min-height: $bp-150) { background-position: $skyline-position-xs-1200; background-size: 65%, cover; }
-              @media screen and (min-width: $bp-1250) and (min-height: $bp-150) { background-position: $skyline-position-xs-1250; }
-              @media screen and (min-width: $bp-1300) and (min-height: $bp-150) { background-position: $skyline-position-xs-1300, top rem(-70) center; background-size: 60%, cover; }
-              @media screen and (min-width: $bp-1350) and (min-height: $bp-150) { background-position: $skyline-position-xs-1350; }
-              @media screen and (min-width: $bp-1400) and (min-height: $bp-150) { background-position: $skyline-position-xs-1400; }
-
-              // Small height, 2 col adjustments
-              @media screen and (min-width: $bp-950) and (min-height: $bp-450) { background-position: $skyline-position-m-950; background-size: $background-size-skyline, cover; }
-              @media screen and (min-width: $bp-1000) and (min-height: $bp-450) { background-position: $skyline-position-m-1000; }
-              @media screen and (min-width: $bp-1050) and (min-height: $bp-450) { background-position: $skyline-position-m-1050; }
-              @media screen and (min-width: $bp-1100) and (min-height: $bp-450) { background-position: $skyline-position-m-1100; }
-              @media screen and (min-width: $bp-1150) and (min-height: $bp-450) { background-position: $skyline-position-m-1150; }
-              @media screen and (min-width: $bp-1200) and (min-height: $bp-450) { background-position: $skyline-position-m-1200; }
-              @media screen and (min-width: $bp-1250) and (min-height: $bp-450) { background-position: $skyline-position-m-1250; }
-              @media screen and (min-width: $bp-1300) and (min-height: $bp-450) { background-position: $skyline-position-m-1300; }
-              @media screen and (min-width: $bp-1350) and (min-height: $bp-450) { background-position: $skyline-position-m-1350; }
-              @media screen and (min-width: $bp-1400) and (min-height: $bp-450) { background-position: $skyline-position-m-1400; }
+            // Breakpoints
+            @include skyline-position(clear-day);
         }
     }
 
+    // [1] Hides blurry edges
     &.is-nighttime {
         .l-skyline {
             background:
-              url(#{$path-to-images}/hambone-night.svg) no-repeat,
+              url(#{$path-to-images}/background-skyline-night.svg) no-repeat,
               url(#{$path-to-images}/condition-stars.svg) top center repeat;
 
             background-position:
@@ -85,31 +48,10 @@
               $background-size-stars-s; // Stars removed at extra small height
 
             // Breakpoints
-            // [2] Skyline distance from top
-            // [3] Star's positon
-
-            // Extra small height                                                                         ↓ [2] ↓ [3]
-            @media screen and (min-width: $bp-750) and (max-height: $layout-height-s) { background-size: 75%, $background-size-stars-s; }
-            @media screen and (min-width: $bp-850) and (max-height: $layout-height-s) { background-size: 70%, $background-size-stars-s; }
-            @media screen and (min-width: $bp-950) and (max-height: $layout-height-s) { background-size: 65%, $background-size-stars-s; }
-            @media screen and (min-width: $bp-1050) and (max-height: $layout-height-s) { background-size: 55%, $background-size-stars-s; }
-            @media screen and (min-width: $bp-1150) and (max-height: $layout-height-s) { background-size: 50%, $background-size-stars-s; }
-            @media screen and (min-width: $bp-1250) and (max-height: $layout-height-s) { background-size: 45%, $background-size-stars-s; }
-            @media screen and (min-width: $bp-1350) and (max-height: $layout-height-s) { background-size: 40%, $background-size-stars-s; }
-            @media screen and (min-width: $bp-1450) and (max-height: $layout-height-s) { background-size: 35%, $background-size-stars-s; }
-
-
+            @include skyline-position(clear-night);
 
             // Normal star size at larger breakpoints
-            @media screen and (min-height: $bp-450) { background-size: $background-size-skyline, $background-size-stars-l; }
-
-
-
-
-
-
-
-
+            @media screen and (min-height: $layout-height-m) { background-size: $background-size-skyline, $background-size-stars-l; }
         }
     }
 }

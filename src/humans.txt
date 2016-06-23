@@ -18,8 +18,8 @@ http://hancock.lighting/
 
 
 ## Thanks
-- Name
-	- URL or contact info
+- The Hot Garbage Crew
+- Wikipedia
 
 
 ## Site
@@ -43,4 +43,5 @@ http://hancock.lighting/
 	- Firefox, https://www.mozilla.org/en-US/firefox/new/
 	- Safari, http://www.apple.com/safari/
 	- Sketch, https://www.sketchapp.com/
+	- SVGOMG, https://jakearchibald.github.io/svgomg/
 	- Tower, https://www.git-tower.com/
