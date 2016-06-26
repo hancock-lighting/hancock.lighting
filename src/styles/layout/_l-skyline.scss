@@ -9,7 +9,8 @@
 
     background-color: c(time, day); // Fallback background color
 
-    transition: background-color $animation-duration-long $animation-ease;
+    transition: background-color $animation-duration-longest $animation-ease;
+    will-change: background;
 
     // States
     .is-daytime & {

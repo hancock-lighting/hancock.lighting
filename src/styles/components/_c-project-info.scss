@@ -7,7 +7,6 @@
     color: c(gray, light);
     font-style: normal;
     line-height: 0.8;
-    margin-bottom: 4vh;
     text-align: center;
 
     // Conditions
@@ -26,8 +25,6 @@
     }
 
     &__authors {
-        margin-bottom: rem(20);
-
         font-weight: $font-weight-light;
 
         a {
@@ -40,6 +37,54 @@
             &:last-of-type {
                 margin-left: rem(3);
             }
+        }
+    }
+
+    &__more-info {
+        @extend %font-tracking-loose;
+
+        // border-bottom: 1px dashed c(gray, medium);
+
+        font-size: em(12);
+        font-weight: $font-weight-light;
+        text-transform: uppercase;
+
+        // transition: border-color $animation-duration-shorter ease-in-out;
+
+        // HACK: Clips the letter-spacing's trailing underline
+        // &:after {
+        //     height: rem(25);
+        //     margin-left: rem(-4);
+        //     position: absolute;
+        //     width: rem(10);
+        //
+        //     background-color: c(banner, background-night);
+        //
+        //     content: "";
+        // }
+
+        // States
+        // &:hover {
+        //     border-color: transparent;
+        // }
+
+        // Conditions
+        .is-nighttime & {
+            color: c(gray, darker);
+
+            // States
+            &:hover {
+                color: c(gray, dark);
+            }
+
+            &:active {
+                color: black;
+            }
+
+            // HACK: Clips the letter-spacing's trailing underline
+            // &:after {
+            //     background-color: c(banner, background-day);
+            // }
         }
     }
 }

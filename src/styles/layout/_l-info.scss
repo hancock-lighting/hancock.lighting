@@ -2,12 +2,14 @@
 .l-info {
     align-items: center;
     display: flex;
-    flex-direction: column ;
-    padding-top: rem(80);
-    padding-bottom: rem(100);
+    flex-direction: column;
+    padding-bottom: 4vh;
+    padding-top: 10vh;
     z-index: z(o-info);
 
     background-color: c(time, night); // Fallback background color
+
+    transition: background-color $animation-duration-longest $animation-ease;
 
     // States
     .is-daytime & {
@@ -22,7 +24,5 @@
     @media screen and (min-width: $layout-width-m) {
         flex-basis: 35%;
         justify-content: space-between;
-        padding-top: 0;
-        padding-bottom: 0;
     }
 }

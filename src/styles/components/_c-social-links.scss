@@ -2,9 +2,16 @@
 .c-social-links {
     @extend %font-set-component-size;
 
+    margin-bottom: 12vh;
+
+    // Breakpoints
+    @media screen and (min-width: $layout-width-m) and (min-height: $layout-height-m) {
+        margin-bottom: 0;
+    }
+
     &__icon {
-        margin-left: rem(8);
-        margin-right: rem(8);
+        margin-left: rem(10);
+        margin-right: rem(10);
         width: rem(36);
 
         fill: c(social, base-day);

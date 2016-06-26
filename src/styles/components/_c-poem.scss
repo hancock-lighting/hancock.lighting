@@ -1,8 +1,11 @@
+// Component Logic -------------------------------------------------------------
+$show-parenthetical: 35.5rem; // 568px / `$global-type-size`
+
+
 // Component Styling -----------------------------------------------------------
 .c-poem {
     @extend %font-set-component-size;
 
-    margin-top: 18vh;
     z-index: z(c-tower);
 
     text-align: center;
@@ -30,51 +33,21 @@
         // }
     }
 
-    &__more-info {
-        @extend %font-tracking-loose;
+    &__period {
+        @extend %visuallyhidden;
 
-        border-bottom: 1px dashed c(gray, medium);
-
-        font-size: em(12);
-        font-weight: $font-weight-light;
-        text-transform: uppercase;
-
-        transition: border-color $animation-duration-shorter ease-in-out;
-
-        // HACK: Clips the letter-spacing's trailing underline
-        &:after {
-            height: rem(25);
-            margin-left: rem(-4);
-            position: absolute;
-            width: rem(10);
-
-            background-color: c(banner, background-night);
-
-            content: "";
+        // Breakpoints
+        @media screen and (min-width: $show-parenthetical) {
+            @include visuallyrevealded();
         }
+    }
 
-        // States
-        &:hover {
-            border-color: transparent;
-        }
+    &__parenthetical {
+        @extend %visuallyhidden;
 
-        // Conditions
-        .is-nighttime & {
-            color: c(gray, darker);
-
-            // States
-            &:hover {
-                color: c(gray, dark);
-            }
-
-            &:active {
-                color: black;
-            }
-
-            // HACK: Clips the letter-spacing's trailing underline
-            &:after {
-                background-color: c(banner, background-day);
-            }
+        // Breakpoints
+        @media screen and (min-width: $show-parenthetical) {
+            @include visuallyrevealded();
         }
     }
 }

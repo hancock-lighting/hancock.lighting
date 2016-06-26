@@ -43,6 +43,27 @@
     visibility: hidden;
 }
 
+// Reverts `%visuallyhidden`. Declared as a mixin to use within media queries.
+@mixin visuallyrevealded() {
+    border: initial;
+    rect: initial;
+    height: initial;
+    margin: initial;
+    overflow: initial;
+    padding: initial;
+    position: initial;
+    width: initial;
+
+    &:focus {
+        clip: initial;
+        height: initial;
+        margin: initial;
+        overflow: initial;
+        position: initial;
+        width: initial;
+    }
+}
+
 
 // Typography ------------------------------------------------------------------
 // http://practice.typekit.com/lesson/caring-about-opentype-features/

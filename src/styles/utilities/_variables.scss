@@ -124,28 +124,26 @@ $bp-2500: 156.25em; // 2500px @ `$global-type-size`
 
 // Background Positions --------------------------------------------------------
 // Layout, Height
-$layout-height-xs: $bp-250;
 $layout-height-s: 28.0625em; // 449px @ `$global-type-size`
 $layout-height-m: $bp-450;
 
 // Layout, Width
+$layout-width-s: 65.5625em;  // 1049px @ `$global-type-size`
 $layout-width-m: $bp-1050;
 $layout-width-l: $bp-1100;
 
-// Skyline Height, Extra small height
+// Conditions
+$stars-position-s: top -1.25rem center; // 20px / `$global-type-size`
 
-// TODO: Clean me up
-$skyline-height-xs: bottom -0.125rem center; // 2px / `$global-type-size`
-
-$stars-position-xs: top -1.25rem center; // 20px / `$global-type-size`
-
+// Skyline, Height
+$skyline-height-s: bottom -0.125rem center; // 2px / `$global-type-size`
 
 // Skyline Size, Extra small height
-$skyline-size-xs-750: 75%;
-$skyline-size-xs-850: 70%;
-$skyline-size-xs-950: 65%;
-$skyline-size-xs-1050: 55%;
-$skyline-size-xs-1150: 50%;
-$skyline-size-xs-1250: 45%;
-$skyline-size-xs-1350: 40%;
-$skyline-size-xs-1450: 35%;
+$skyline-size-s-750: 75%;
+$skyline-size-s-850: 70%;
+$skyline-size-s-950: 65%;
+$skyline-size-s-1050: 55%;
+$skyline-size-s-1150: 50%;
+$skyline-size-s-1250: 45%;
+$skyline-size-s-1350: 40%;
+$skyline-size-s-1450: 35%;
