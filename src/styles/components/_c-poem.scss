@@ -1,5 +1,5 @@
 // Component Logic -------------------------------------------------------------
-$show-parenthetical: 35.5rem; // 568px / `$global-type-size`
+$show-parenthetical: 35.5rem; // 568px @ `$global-type-size`
 
 
 // Component Styling -----------------------------------------------------------
@@ -12,7 +12,7 @@ $show-parenthetical: 35.5rem; // 568px / `$global-type-size`
 
     &__lines {
         margin-top: 0;
-        margin-bottom: rem(10);
+        margin-bottom: rem(22);
 
         line-height: 1.9;
 

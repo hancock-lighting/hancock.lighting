@@ -9,7 +9,7 @@
 
     background-color: c(time, night); // Fallback background color
 
-    transition: background-color $animation-duration-longest $animation-ease;
+    transition: $background-transition;
 
     // States
     .is-daytime & {
@@ -23,6 +23,6 @@
     // Breakpoints
     @media screen and (min-width: $layout-width-m) {
         flex-basis: 35%;
-        justify-content: space-between;
+        justify-content: flex-start;
     }
 }

@@ -63,6 +63,9 @@ $animation-duration-long: 0.5s;
 $animation-duration-longer: 0.7s;
 $animation-duration-longest: 0.9s;
 
+// Backgrounds
+$background-transition: background-color $animation-duration-long $animation-ease;
+
 // Flash
 $flash-iteration: infinite;
 $flash-duration-and-ease: 3s ease-in;
@@ -100,7 +103,7 @@ $bp-1350: 84.375em; // 1350px @ `$global-type-size`
 $bp-1400: 87.5em; // 1400px @ `$global-type-size`
 $bp-1450: 90.625em; // 1450px @ `$global-type-size`
 $bp-1500: 93.75em; // 1500px @ `$global-type-size`
-$bp-1550: 71.875em; // 1550px @ `$global-type-size`
+$bp-1550: 96.875em; // 1550px @ `$global-type-size`
 $bp-1600: 100em; // 1600px @ `$global-type-size`
 $bp-1650: 103.125em; // 1650px @ `$global-type-size`
 $bp-1700: 106.25em; // 1700px @ `$global-type-size`
@@ -120,11 +123,14 @@ $bp-2350: 146.875em; // 2350px @ `$global-type-size`
 $bp-2400: 150em; // 2400px @ `$global-type-size`
 $bp-2450: 153.125em; // 2450px @ `$global-type-size`
 $bp-2500: 156.25em; // 2500px @ `$global-type-size`
+$bp-2550: 159.375em; // 2550px @ `$global-type-size`
 
 
 // Background Positions --------------------------------------------------------
 // Layout, Height
-$layout-height-s: 28.0625em; // 449px @ `$global-type-size`
+$layout-height-xs: $bp-200;
+$layout-height-s: 12.5625em; // 201px  @ `$global-type-size`
+$layout-height-m-content: 28.0625em; // 449px @ `$global-type-size`
 $layout-height-m: $bp-450;
 
 // Layout, Width
@@ -133,17 +139,103 @@ $layout-width-m: $bp-1050;
 $layout-width-l: $bp-1100;
 
 // Conditions
-$stars-position-s: top -1.25rem center; // 20px / `$global-type-size`
+$stars-position-s: top -1.25rem center; // 20px @ `$global-type-size`
 
-// Skyline, Height
-$skyline-height-s: bottom -0.125rem center; // 2px / `$global-type-size`
+// Skyline Height, Small
+$skyline-position: bottom -0.125rem center; // 2px @ `$global-type-size`
 
-// Skyline Size, Extra small height
-$skyline-size-s-750: 75%;
-$skyline-size-s-850: 70%;
-$skyline-size-s-950: 65%;
-$skyline-size-s-1050: 55%;
-$skyline-size-s-1150: 50%;
-$skyline-size-s-1250: 45%;
-$skyline-size-s-1350: 40%;
-$skyline-size-s-1450: 35%;
+// Skyline Size, Extra Small
+$skyline-size-xs-450: 60%;
+$skyline-size-xs-550: 52%;
+$skyline-size-xs-650: 44%;
+$skyline-size-xs-750: 39%;
+$skyline-size-xs-850: 35%;
+$skyline-size-xs-950: 31%;
+$skyline-size-xs-1050: 28%;
+$skyline-size-xs-1150: 26%;
+$skyline-size-xs-1250: 24%;
+$skyline-size-xs-1350: 23%;
+$skyline-size-xs-1450: 21%;
+$skyline-size-xs-1550: 20%;
+$skyline-size-xs-1650: 18%;
+$skyline-size-xs-1750: 17.6%;
+$skyline-size-xs-1850: 16.5%;
+$skyline-size-xs-1950: 16%;
+$skyline-size-xs-2050: 15%;
+$skyline-size-xs-2150: 14.5%;
+$skyline-size-xs-2250: 14%;
+$skyline-size-xs-2350: 13.25%;
+$skyline-size-xs-2450: 12.5%;
+$skyline-size-xs-2550: 12.25%;
+
+// Skyline Size, Small
+$skyline-size-s-450: 95%;
+$skyline-size-s-550: 82%;
+$skyline-size-s-650: 69%;
+$skyline-size-s-750: 61%;
+$skyline-size-s-850: 54%;
+$skyline-size-s-950: 49%;
+$skyline-size-s-1050: 45%;
+$skyline-size-s-1150: 41%;
+$skyline-size-s-1250: 38%;
+$skyline-size-s-1350: 36%;
+$skyline-size-s-1450: 33%;
+$skyline-size-s-1550: 31%;
+$skyline-size-s-1650: 29%;
+$skyline-size-s-1750: 27.5%;
+$skyline-size-s-1850: 26%;
+$skyline-size-s-1950: 25%;
+$skyline-size-s-2050: 24%;
+$skyline-size-s-2150: 23%;
+$skyline-size-s-2250: 22%;
+$skyline-size-s-2350: 21%;
+$skyline-size-s-2450: 20%;
+$skyline-size-s-2550: 19%;
+
+// Cloud Size, Extra Small
+$cloud-size-xs-450: bottom -2.1875rem center; // -35px @ `$global-type-size`
+$cloud-size-xs-550: bottom -3.75rem center; // -60px @ `$global-type-size`
+$cloud-size-xs-650: bottom -5rem center; // -80px @ `$global-type-size`
+$cloud-size-xs-750: bottom -6.25rem center; // -100px @ `$global-type-size`
+$cloud-size-xs-850: bottom -8.125rem center; // -130px @ `$global-type-size`
+$cloud-size-xs-950: bottom -9.375rem center; // -150px @ `$global-type-size`
+$cloud-size-xs-1050: bottom -11.25rem center; // -180px @ `$global-type-size`
+$cloud-size-xs-1150: bottom -12.5rem center; // -200px @ `$global-type-size`
+$cloud-size-xs-1250: bottom -14.0625rem center; // -225px @ `$global-type-size`
+$cloud-size-xs-1350: bottom -15rem center; // -240px @ `$global-type-size`
+$cloud-size-xs-1450: bottom -16.5625rem center; // -265px @ `$global-type-size`
+$cloud-size-xs-1550: bottom -18.125rem center; // -290px @ `$global-type-size`
+$cloud-size-xs-1650: bottom -19.375rem center; // -310px @ `$global-type-size`
+$cloud-size-xs-1750: bottom -21.25rem center; // -340px @ `$global-type-size`
+$cloud-size-xs-1850: bottom -23.125rem center; // -370px @ `$global-type-size`
+$cloud-size-xs-1950: bottom -24.375rem center; // -390px @ `$global-type-size`
+$cloud-size-xs-2050: bottom -25.9375rem center; // -415px @ `$global-type-size`
+$cloud-size-xs-2150: bottom -27.8125rem center; // -445px @ `$global-type-size`
+$cloud-size-xs-2250: bottom -29.0625rem center; // -465px @ `$global-type-size`
+$cloud-size-xs-2350: bottom -30.9375rem center; // -495px @ `$global-type-size`
+$cloud-size-xs-2450: bottom -31.875rem center; // -510px @ `$global-type-size`
+$cloud-size-xs-2550: bottom -33.4375rem center; // -535px @ `$global-type-size`
+
+// Cloud Size, Small
+$cloud-size-s-450: bottom 0 center; // 0px @ `$global-type-size`
+$cloud-size-s-550: bottom -0.3125rem center; // -5px @ `$global-type-size`
+$cloud-size-s-650: bottom -2.1875rem center; // -35px @ `$global-type-size`
+$cloud-size-s-750: bottom -3.75rem center; // -60px @ `$global-type-size`
+$cloud-size-s-850: bottom -5.3125rem center; // -85px @ `$global-type-size`
+$cloud-size-s-950: bottom -6.875rem center; // -110px @ `$global-type-size`
+$cloud-size-s-1050: bottom -8.4375rem center; // -135px @ `$global-type-size`
+$cloud-size-s-1150: bottom -10rem center; // -160px @ `$global-type-size`
+$cloud-size-s-1250: bottom -11.25rem center; // -180px @ `$global-type-size`
+$cloud-size-s-1350: bottom -13.125rem center; // -210px @ `$global-type-size`
+$cloud-size-s-1450: bottom -14.0625rem center; // -225px @ `$global-type-size`
+$cloud-size-s-1550: bottom -15.625rem center; // -250px @ `$global-type-size`
+$cloud-size-s-1650: bottom -16.875rem center; // -270px @ `$global-type-size`
+$cloud-size-s-1750: bottom -18.125rem center; // -290px @ `$global-type-size`
+$cloud-size-s-1850: bottom -19.6875rem center; // -315px @ `$global-type-size`
+$cloud-size-s-1950: bottom -20.9375rem center; // -335px @ `$global-type-size`
+$cloud-size-s-2050: bottom -22.1875rem center; // -355px @ `$global-type-size`
+$cloud-size-s-2150: bottom -23.75rem center; // -380px @ `$global-type-size`
+$cloud-size-s-2250: bottom -25.3125rem center; // -405px @ `$global-type-size`
+$cloud-size-s-2350: bottom -26.5625rem center; // -425px @ `$global-type-size`
+$cloud-size-s-2450: bottom -28.125rem center; // -450px @ `$global-type-size`
+$cloud-size-s-2550: bottom -29.6875rem center; // -475px @ `$global-type-size`

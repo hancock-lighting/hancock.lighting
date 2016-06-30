@@ -44,7 +44,7 @@
         .l-skyline {
             background:
               url(#{$path-to-images}/background-skyline-night.svg) no-repeat,
-              url(#{$path-to-images}/condition-clouds-night.svg) no-repeat,
+              url(#{$path-to-images}/condition-clouds-night.svg) no-repeat ,
               url(#{$path-to-images}/condition-stars.svg) top center repeat;
 
             background-position:

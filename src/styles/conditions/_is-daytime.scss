@@ -1,4 +1,6 @@
 // Condition Styling -----------------------------------------------------------
 .is-daytime {
-   background: linear-gradient(to bottom, mix(#9dc5f1, black, 85%), c(time, day) 45%);
+    background: linear-gradient(to bottom, mix(#9dc5f1, black, 85%), c(time, day) 45%);
+
+    transition: $background-transition;
 }

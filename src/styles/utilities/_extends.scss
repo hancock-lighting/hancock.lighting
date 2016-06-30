@@ -43,7 +43,8 @@
     visibility: hidden;
 }
 
-// Reverts `%visuallyhidden`. Declared as a mixin to use within media queries.
+// Reverts `%visuallyhidden`. Written as a mixin so it can be declared within a
+// media query
 @mixin visuallyrevealded() {
     border: initial;
     rect: initial;

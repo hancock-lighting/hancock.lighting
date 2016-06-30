@@ -3,6 +3,8 @@
 .is-nighttime {
     background: linear-gradient(to bottom, c(time, night) 0%, mix(c(time, night), white, 75%) 35%);
 
+    transition: $background-transition;
+
     @media screen and (min-height: $layout-height-m) {
         background: linear-gradient(to bottom, c(time, night) 0%, mix(c(time, night), white, 75%) 40%);
     }

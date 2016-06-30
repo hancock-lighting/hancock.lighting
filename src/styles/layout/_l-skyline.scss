@@ -9,7 +9,7 @@
 
     background-color: c(time, day); // Fallback background color
 
-    transition: background-color $animation-duration-longest $animation-ease;
+    transition: $background-transition;
     will-change: background;
 
     // States

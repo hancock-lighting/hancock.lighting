@@ -2,6 +2,8 @@
 .c-project-info {
     @extend %font-set-component-size;
 
+    margin-top: auto; // Aligns to the bottom of the viewport at 2col
+
     z-index: z(c-project-info);
 
     color: c(gray, light);
