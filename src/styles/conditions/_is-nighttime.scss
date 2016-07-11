@@ -1,7 +1,8 @@
 
 // Condition Styling -----------------------------------------------------------
 .is-nighttime {
-    background: linear-gradient(to bottom, c(time, night) 0%, mix(c(time, night), white, 75%) 35%);
+background-color: #ccc;
+    //background: linear-gradient(to bottom, c(time, night) 0%, mix(c(time, night), white, 75%) 35%);
 
     transition: $background-transition;
 

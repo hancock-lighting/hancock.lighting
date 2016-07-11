@@ -19,11 +19,11 @@
     &.is-daytime {
         .l-skyline {
             background:
-              url(#{$path-to-images}/rain-day.gif) no-repeat,
+              url(#{$path-to-images}/rain-test3.gif) no-repeat,
               url(#{$path-to-images}/background-skyline-day.svg) no-repeat;
 
             background-blend-mode:
-              multiply, // Rain
+              luminosity, // Rain
               normal; // Skyline
 
             background-position:

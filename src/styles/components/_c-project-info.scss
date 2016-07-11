@@ -24,10 +24,32 @@
         font-size: em(13);
         font-weight: $font-weight-light;
         text-transform: uppercase;
+
+        // Breakpoints
+        // 1col
+        @media screen and (min-width: $bp-600) and (max-width: ($layout-width-m - em(1))) {
+            font-size: calc(#{em(13)} + 0.4vw);
+        }
+
+        // 2col
+        @media screen and (min-height: $layout-height-m) and (min-width: $bp-1300) {
+            font-size: calc(#{em(13)} + 0.2vw);
+        }
     }
 
     &__authors {
         font-weight: $font-weight-light;
+
+        // Breakpoints
+        // 1col
+        @media screen and (min-width: $bp-600) and (max-width: ($layout-width-m - em(1))) {
+            font-size: calc(#{em(13)} + 0.6vw);
+        }
+
+        // 2col
+        @media screen and (min-height: $layout-height-m) and (min-width: $bp-1300) {
+            font-size: calc(#{em(13)} + 0.4vw);
+        }
 
         a {
             font-weight: $font-weight-medium;
@@ -45,30 +67,20 @@
     &__more-info {
         @extend %font-tracking-loose;
 
-        // border-bottom: 1px dashed c(gray, medium);
-
         font-size: em(12);
         font-weight: $font-weight-light;
         text-transform: uppercase;
 
-        // transition: border-color $animation-duration-shorter ease-in-out;
+        // Breakpoints
+        // 1col
+        @media screen and (min-width: $bp-600) and (max-width: ($layout-width-m - em(1))) {
+            font-size: calc(#{em(12)} + 0.4vw);
+        }
 
-        // HACK: Clips the letter-spacing's trailing underline
-        // &:after {
-        //     height: rem(25);
-        //     margin-left: rem(-4);
-        //     position: absolute;
-        //     width: rem(10);
-        //
-        //     background-color: c(banner, background-night);
-        //
-        //     content: "";
-        // }
-
-        // States
-        // &:hover {
-        //     border-color: transparent;
-        // }
+        // 2col
+        @media screen and (min-height: $layout-height-m) and (min-width: $bp-1300) {
+            font-size: calc(#{em(12)} + 0.2vw);
+        }
 
         // Conditions
         .is-nighttime & {
@@ -78,15 +90,6 @@
             &:hover {
                 color: c(gray, dark);
             }
-
-            &:active {
-                color: black;
-            }
-
-            // HACK: Clips the letter-spacing's trailing underline
-            // &:after {
-            //     background-color: c(banner, background-day);
-            // }
         }
     }
 }

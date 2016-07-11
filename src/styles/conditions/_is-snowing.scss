@@ -34,7 +34,7 @@
               $background-size-skyline; // Skyline, [1]
 
             // Breakpoints
-            @include skyline-position(snowing);
+            @include skyline-position(snowing-day);
         }
     }
 
@@ -54,7 +54,7 @@
               $background-size-skyline; // Skyline, [1]
 
             // Breakpoints
-            @include skyline-position(snowing);
+            @include skyline-position(snowing-night);
         }
     }
 }

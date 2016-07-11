@@ -11,26 +11,31 @@ $show-parenthetical: 35.5rem; // 568px @ `$global-type-size`
     text-align: center;
 
     &__lines {
-        margin-top: 0;
         margin-bottom: rem(22);
+        margin-top: 0;
 
         line-height: 1.9;
 
         transition: font-size $animation-duration-short $animation-ease;
 
         // Breakpoints
-        // @media screen and (min-width: $bp-1500) {
-        //     font-size: em(20);
-        //     line-height: 2.1;
-        // }
-        //
-        // @media screen and (min-width: $bp-1800) {
-        //     font-size: em(24);
-        // }
-        //
-        // @media screen and (min-width: $bp-2400) {
-        //     font-size: em(28);
-        // }
+        // 1col
+        @media screen and (min-width: $bp-600) and (max-width: ($layout-width-m - em(1))) {
+            font-size: calc(1em + 0.5vw);
+        }
+
+        // 2col
+        @media screen and (min-height: $layout-height-m) and (min-width: $bp-1300) and (max-width: ($bp-1600 - em(1))) {
+            margin-bottom: rem(33);
+
+            font-size: calc(1em + 0.3vw);
+        }
+
+        @media screen and (min-height: $layout-height-m) and (min-width: $bp-1600) {
+            margin-bottom: calc(#{rem(33)} + 1vw);
+
+            font-size: calc(1em + 0.5vw);
+        }
     }
 
     &__period {
