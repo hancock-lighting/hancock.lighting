@@ -34,6 +34,13 @@
 </div>
 <!-- End of `c-install-banner` -->
 
+Banner
+banner: (
+    background-night: #26394b,
+    background-day:   #d6edf0,
+    type-night:       #26394b,
+    type-day:         #d6edf0
+),
 
 // Component Logic -------------------------------------------------------------
 $banner-distance-tweak: rem(-1);

@@ -14,7 +14,7 @@
         margin-right: rem(10);
         width: rem(36);
 
-        fill: c(social, base-day);
+        fill: c(link, base-day);
 
         transition:
           transform $animation-duration-shorter $animation-ease,
@@ -35,20 +35,19 @@
             width: calc(#{rem(36)} + 1vw);
         }
 
-
         // States
         &:hover {
-            transform: scale(1.2);
+            transform: scale(1.4);
         }
 
         &:active {
-            transform: scale(0.9);
+            transform: scale(0.8);
             transition: none;
         }
 
         // Conditions
         .is-nighttime & {
-            fill: c(social, base-night);
+            fill: c(link, base-night);
         }
     }
 }

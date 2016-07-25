@@ -1,54 +1,41 @@
 $colors: (
     // Basics
     black:  #000000,
+    white:  #ffffff,
 
     // Type
     type: (
-        day:   #efe7e6,
-        night: #26394b
+        day:   #f8fbfd,
+        night: #26394B
     ),
 
     // Links
     link: (
-        base-day:     #efe7e6,
-        hover-day:    darken(#efe7e6, 15%),
-        active-day:   #d6edf0,
-        base-night:   #26394b,
-        hover-night:  lighten(#26394b, 25%),
-        active-night: #26394b,
+        base-day:     #c9dff2,
+        hover-day:    tomato,
+        active-day:   teal,
+        base-night:   #236297,
+        hover-night:  bisque,
+        active-night: silver,
     ),
 
     // Time
     time: (
-        day:   #d6edf0,
-        night: #26394b
+        day:   #c9dff2,
+        night: #1b4466
     ),
 
     // Beacon
     beacon: (
-        red-base:    #ff9375,
+        red-base:    #d35b5b,
         red-spur:    lighten(#6c6c6c, 20%),
         red-indent:  lighten(#6c6c6c, 20%),
-        blue-base:   #9dc5f1,
+        blue-base:   #5a9dd6,
         blue-spur:   lighten(#6c6c6c, 20%),
         blue-indent: lighten(#6c6c6c, 20%),
         gray-base:   #6c6c6c,
         gray-spur:   #8a8a8a,
         gray-indent: #8a8a8a
-    ),
-
-    // Banner
-    banner: (
-        background-night: #26394b,
-        background-day:   #d6edf0,
-        type-night:       #26394b,
-        type-day:         #d6edf0
-    ),
-
-    // Social Links
-    social: (
-        base-day:   #d6edf0,
-        base-night: #26394b
     ),
 
     // Grays

@@ -1,7 +1,10 @@
 // Condition Styling -----------------------------------------------------------
 .is-daytime {
-background-color: #ccc;
-    //background: linear-gradient(to bottom, mix(#9dc5f1, black, 85%), c(time, day) 45%);
+    background: linear-gradient(to bottom, #aacdea 0%, #f8fbfd 50%);
 
     transition: $background-transition;
+
+    @media screen and (min-height: $layout-height-m) {
+        background: linear-gradient(to bottom, #aacdea 0%, #f8fbfd 100%);
+    }
 }

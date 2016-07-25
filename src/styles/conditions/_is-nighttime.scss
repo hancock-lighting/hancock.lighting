@@ -1,13 +1,11 @@
-
 // Condition Styling -----------------------------------------------------------
 .is-nighttime {
-background-color: #ccc;
-    //background: linear-gradient(to bottom, c(time, night) 0%, mix(c(time, night), white, 75%) 35%);
+    background: linear-gradient(to bottom, #0e2538 0%, #205887 50%);
 
     transition: $background-transition;
 
     @media screen and (min-height: $layout-height-m) {
-        background: linear-gradient(to bottom, c(time, night) 0%, mix(c(time, night), white, 75%) 40%);
+        background: linear-gradient(to bottom, #0e2538 0%, #205887 100%);
     }
 
     // TODO: Add star twinkle

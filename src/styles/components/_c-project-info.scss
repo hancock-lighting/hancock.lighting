@@ -6,15 +6,9 @@
 
     z-index: z(c-project-info);
 
-    color: c(gray, light);
     font-style: normal;
     line-height: 0.8;
     text-align: center;
-
-    // Conditions
-    .is-nighttime & {
-        color: c(gray, darker);
-    }
 
     &__by {
         @extend %font-tracking-slight;
@@ -68,7 +62,6 @@
         @extend %font-tracking-loose;
 
         font-size: em(12);
-        font-weight: $font-weight-light;
         text-transform: uppercase;
 
         // Breakpoints
@@ -80,16 +73,6 @@
         // 2col
         @media screen and (min-height: $layout-height-m) and (min-width: $bp-1300) {
             font-size: calc(#{em(12)} + 0.2vw);
-        }
-
-        // Conditions
-        .is-nighttime & {
-            color: c(gray, darker);
-
-            // States
-            &:hover {
-                color: c(gray, dark);
-            }
         }
     }
 }
