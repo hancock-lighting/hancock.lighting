@@ -45,7 +45,7 @@
 
 // Reverts `%visuallyhidden`. Written as a mixin so it can be declared within a
 // media query
-@mixin visuallyrevealded() {
+@mixin visuallyrevealed() {
     border: initial;
     rect: initial;
     height: initial;

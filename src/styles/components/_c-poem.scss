@@ -43,7 +43,7 @@ $show-parenthetical: 35.5rem; // 568px @ `$global-type-size`
 
         // Breakpoints
         @media screen and (min-width: $show-parenthetical) {
-            @include visuallyrevealded();
+            @include visuallyrevealed();
         }
     }
 
@@ -52,7 +52,7 @@ $show-parenthetical: 35.5rem; // 568px @ `$global-type-size`
 
         // Breakpoints
         @media screen and (min-width: $show-parenthetical) {
-            @include visuallyrevealded();
+            @include visuallyrevealed();
         }
     }
 }

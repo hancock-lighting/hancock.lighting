@@ -1,3 +1,36 @@
+// Component Logic -------------------------------------------------------------
+%c-project-info-link {
+    transition:
+      background $animation-duration-shortest $animation-ease,
+      color $animation-duration-shortest $animation-ease,
+      outline $animation-duration-shortest $animation-ease;
+
+    // States
+    &:hover {
+        background-color: c(link, base-day);
+        outline: rem(6) solid c(link, base-day);
+
+        color: c(type, night);
+    }
+
+    &:active {
+        outline-width: rem(3);
+
+        transition: none;
+    }
+
+    // Conditions
+    .is-nighttime & {
+
+        &:hover {
+            background-color: c(link, base-night);
+            outline-color: c(link, base-night);
+            color: c(type, day);
+        }
+    }
+}
+
+
 // Component Styling -----------------------------------------------------------
 .c-project-info {
     @extend %font-set-component-size;
@@ -46,6 +79,8 @@
         }
 
         a {
+            @extend %c-project-info-link;
+
             font-weight: $font-weight-medium;
 
             &:first-of-type {
@@ -60,6 +95,7 @@
 
     &__more-info {
         @extend %font-tracking-loose;
+        @extend %c-project-info-link;
 
         font-size: em(12);
         text-transform: uppercase;
