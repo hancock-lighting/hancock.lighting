@@ -12,6 +12,7 @@
         background: linear-gradient(to bottom, #aacdea 0%, #f8fbfd 100%);
     }
 
+    // 1col
     @media screen and (min-height: $layout-height-m) and (max-width: $layout-width-s) {
         background: linear-gradient(to bottom, #aacdea 0%, #f8fbfd 60%);
     }

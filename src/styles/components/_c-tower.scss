@@ -1,12 +1,10 @@
 // Component Styling -----------------------------------------------------------
 .c-tower {
-//margin-left: rem(50); // Slight nudge
+//margin-left: rem(50); // TODO: Slight nudge
     margin-top: rem(20);
     z-index: z(c-tower);
 
     @media screen and (min-height: $bp-300) { margin-top: rem(30); }
 
     @media screen and (min-height: $bp-500) { margin-top: rem(60); }
-
-    // TODO: Add more top margin for taller breakpoints
 }

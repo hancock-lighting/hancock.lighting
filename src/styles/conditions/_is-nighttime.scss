@@ -12,9 +12,8 @@
         background: linear-gradient(to bottom, #0e2538 0%, #205887 100%);
     }
 
+    // 1col
     @media screen and (min-height: $layout-height-m) and (max-width: $layout-width-s) {
         background: linear-gradient(to bottom, #0e2538 0%, #205887 60%);
     }
-
-    // TODO: Add star twinkle
 }
