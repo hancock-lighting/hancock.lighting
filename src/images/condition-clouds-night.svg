@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" id="clouds" viewBox="0 0 1066 283">
   <defs>
     <style>
-      .cls-1 { fill: #4b5b6b; }
-      .cls-2 { fill: #5e6c7a; }
+      .cls-1 { fill: #365e80; }
+      .cls-2 { fill: #3b688c; }
       .cls-3{ opacity: 0.95; filter: url(#AI_GaussianBlur_1); }
     </style>
     <filter id="AI_GaussianBlur_1" name="AI_GaussianBlur_1">
