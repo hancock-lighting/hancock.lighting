@@ -23,7 +23,7 @@
         .l-skyline {
             background:
               url(#{$path-to-images}/snow.gif) center center no-repeat,
-              url(#{$path-to-images}/background-skyline-day.svg) no-repeat;
+              url(#{$path-to-images}/background-skyline-day-cloudy.svg) no-repeat;
 
             background-position:
               center center, // Rain
@@ -43,7 +43,7 @@
         .l-skyline {
             background:
               url(#{$path-to-images}/snow.gif) center center no-repeat,
-              url(#{$path-to-images}/background-skyline-night.svg) no-repeat;
+              url(#{$path-to-images}/background-skyline-night-snowing.svg) no-repeat;
 
             background-position:
               center center, // Rain

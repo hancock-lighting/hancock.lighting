@@ -17,3 +17,22 @@
         background: linear-gradient(to bottom, #0e2538 0%, #205887 60%);
     }
 }
+
+.is-snowing.is-nighttime {
+    background: linear-gradient(to bottom, #2a3238 0%, #647787 35%);
+
+    transition: $background-transition;
+
+    @media screen and (min-height: $layout-height-s) {
+        background: linear-gradient(to bottom, #2a3238 0%, #647787 50%);
+    }
+
+    @media screen and (min-height: $layout-height-m) {
+        background: linear-gradient(to bottom, #2a3238 0%, #647787 100%);
+    }
+
+    // 1col
+    @media screen and (min-height: $layout-height-m) and (max-width: $layout-width-s) {
+        background: linear-gradient(to bottom, #2a3238 0%, #647787 60%);
+    }
+}
