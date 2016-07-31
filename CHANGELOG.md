@@ -6,7 +6,8 @@ This project adheres to [Semantic Versioning](http://semver.org/) and tries to f
 
 ## vNext - Unreleased
 
-- What you have planned
+- Animate twinkling stars
+- Animate drifting clouds
 
 ## v0.1.0 - yyyy-mm-dd
 
