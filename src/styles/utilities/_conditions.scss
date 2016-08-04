@@ -206,6 +206,18 @@
 
     @if $condition-time == "raining-day" {
         // Extra small height
+        @media screen and (min-width: $bp-750) and (max-height: $layout-height-xs) { background-size: $skyline-size-xs-750, cover; }
+        @media screen and (min-width: $bp-850) and (max-height: $layout-height-xs) { background-size: $skyline-size-xs-850, cover; }
+        @media screen and (min-width: $bp-950) and (max-height: $layout-height-xs) { background-size: $skyline-size-xs-950, cover; }
+        @media screen and (min-width: $bp-1050) and (max-height: $layout-height-xs) { background-size: $skyline-size-xs-1050, cover; }
+        @media screen and (min-width: $bp-1150) and (max-height: $layout-height-xs) { background-size: $skyline-size-xs-1150, cover; }
+        @media screen and (min-width: $bp-1250) and (max-height: $layout-height-xs) { background-size: $skyline-size-xs-1250, cover; }
+        @media screen and (min-width: $bp-1350) and (max-height: $layout-height-xs) { background-size: $skyline-size-xs-1350, cover; }
+        @media screen and (min-width: $bp-1450) and (max-height: $layout-height-xs) { background-size: $skyline-size-xs-1450, cover; }
+    }
+
+    @if $condition-time == "raining-night" {
+        // Extra small height
         @media screen and (min-width: $bp-750) and (max-height: $layout-height-xs) { background-size: cover, $skyline-size-xs-750; }
         @media screen and (min-width: $bp-850) and (max-height: $layout-height-xs) { background-size: cover, $skyline-size-xs-850; }
         @media screen and (min-width: $bp-950) and (max-height: $layout-height-xs) { background-size: cover, $skyline-size-xs-950; }
@@ -214,18 +226,6 @@
         @media screen and (min-width: $bp-1250) and (max-height: $layout-height-xs) { background-size: cover, $skyline-size-xs-1250; }
         @media screen and (min-width: $bp-1350) and (max-height: $layout-height-xs) { background-size: cover, $skyline-size-xs-1350; }
         @media screen and (min-width: $bp-1450) and (max-height: $layout-height-xs) { background-size: cover, $skyline-size-xs-1450; }
-    }
-
-    @if $condition-time == "raining-night" {
-        // Extra small height
-        @media screen and (min-width: $bp-750) and (max-height: $layout-height-xs) { background-size: cover, $skyline-size-xs-750, $background-size-stars-s; }
-        @media screen and (min-width: $bp-850) and (max-height: $layout-height-xs) { background-size: cover, $skyline-size-xs-850, $background-size-stars-s; }
-        @media screen and (min-width: $bp-950) and (max-height: $layout-height-xs) { background-size: cover, $skyline-size-xs-950, $background-size-stars-s; }
-        @media screen and (min-width: $bp-1050) and (max-height: $layout-height-xs) { background-size: cover, $skyline-size-xs-1050, $background-size-stars-s; }
-        @media screen and (min-width: $bp-1150) and (max-height: $layout-height-xs) { background-size: cover, $skyline-size-xs-1150, $background-size-stars-s; }
-        @media screen and (min-width: $bp-1250) and (max-height: $layout-height-xs) { background-size: cover, $skyline-size-xs-1250, $background-size-stars-s; }
-        @media screen and (min-width: $bp-1350) and (max-height: $layout-height-xs) { background-size: cover, $skyline-size-xs-1350, $background-size-stars-s; }
-        @media screen and (min-width: $bp-1450) and (max-height: $layout-height-xs) { background-size: cover, $skyline-size-xs-1450, $background-size-stars-s; }
     }
 
     // [1] Snow's position
