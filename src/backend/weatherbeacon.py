@@ -94,13 +94,6 @@ class ForecastJson(webapp2.RequestHandler):
         self.response.headers['Content-Type'] = 'application/json'
         self.response.write(json.dumps(getForecast()))
 
-class Script(webapp2.RequestHandler):
-    def get(self):
-        classes = getClasses()
-        self.response.headers['Content-Type'] = 'application/javascript'
-        template = JINJA_ENVIRONMENT.get_template('script.js')
-        self.response.write(template.render({'classes':classes}))
-
 class SetKey(webapp2.RequestHandler):
     def post(self):
         ApiKey.get_or_insert('key',key=self.request.get('key'))
@@ -110,6 +103,5 @@ class SetKey(webapp2.RequestHandler):
 application = webapp2.WSGIApplication([
     ('/', MainPage),
     ('/forecast.json', ForecastJson),
-    ('/script.js', Script),
     ('/set_key', SetKey),
     ], debug=True)
