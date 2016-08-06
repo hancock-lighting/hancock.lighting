@@ -107,15 +107,9 @@ class StatusJson(webapp2.RequestHandler):
         self.response.headers['Content-Type'] = 'application/json'
         self.response.write(json.dumps(getStatus()))
 
-class ForecastJson(webapp2.RequestHandler):
-    def get(self):
-        self.response.headers['Content-Type'] = 'application/json'
-        self.response.write(json.dumps(getForecast()))
-
 
 application = webapp2.WSGIApplication([
     ('/', MainPage),
     ('/admin/refresh', RefreshHandler),
     ('/v0/status.json', StatusJson),
-    ('/forecast.json', ForecastJson)
     ], debug=True)
