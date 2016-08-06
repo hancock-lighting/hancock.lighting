@@ -5,23 +5,16 @@ api_version: 1
 threadsafe: true
 
 handlers:
-- url: /styles
-  static_dir: static/styles
-- url: /images
-  static_dir: static/images
-- url: /scripts
-  static_dir: static/scripts
-- url: /humans.txt
-  static_files: static/humans.txt
-  upload: static/humans.txt
-- url: /favicon.ico
-  static_files: static/favicon.ico
-  upload: static/favicon.ico
 - url: /admin/.*
   script: weatherbeacon.application
   login: admin
-- url: /.*
+- url: /v0/.*
   script: weatherbeacon.application
+- url: /
+  script: weatherbeacon.application
+- url: /
+  static_dir: static
+
 
 libraries:
 - name: webapp2
