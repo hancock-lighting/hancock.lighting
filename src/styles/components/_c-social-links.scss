@@ -49,5 +49,10 @@
         .is-nighttime & {
             fill: c(link, base-night);
         }
+
+        .is-sox-champs &,
+        .is-sox-rainout & {
+            fill: white;
+        }
     }
 }

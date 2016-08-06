@@ -36,6 +36,11 @@ body {
     &.is-nighttime {
         color: c(type, night);
     }
+
+    .is-sox-champs,
+    .is-sox-rainout {
+        color: c(sox, white);
+    }
 }
 
 // Remove text-shadow in selection highlight

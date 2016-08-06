@@ -63,6 +63,11 @@ $animation-duration-long: 0.5s;
 $animation-duration-longer: 0.7s;
 $animation-duration-longest: 0.9s;
 
+// Keyframes
+$keyframe-base: 75%;
+$keyframe-spur: 90%;
+$keyframe-indent: 75%;
+
 // Backgrounds
 $background-transition: background-color $animation-duration-long $animation-ease;
 
