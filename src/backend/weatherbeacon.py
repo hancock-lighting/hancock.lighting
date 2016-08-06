@@ -1,107 +1,121 @@
 import json
+import re
 import os
 import time
 
 from google.appengine.api import memcache
 from google.appengine.api import urlfetch
-from google.appengine.ext import ndb
 
 import jinja2
 import webapp2
+import yaml
 
-config = {
-    'lat': 42.349939,
-    'lng': -71.072653,
-    'precip_threshold': 0.5,
-    'cloud_threshold': 0.5
-}
+def rel(path):
+    return os.path.join(os.path.dirname(__file__),path)
+
+try:
+    with open(rel("secrets.yaml")) as fh:
+        config = yaml.load(fh)
+except Exception as e:
+    print e
+    config = {}
 
 JINJA_ENVIRONMENT = jinja2.Environment(
-    loader=jinja2.FileSystemLoader(os.path.join(os.path.dirname(__file__),"templates")))
-
-class ApiKey(ndb.Model):
-    key = ndb.StringProperty()
+    loader=jinja2.FileSystemLoader(rel("templates")))
 
 def isDev():
+    # return False
     return os.environ.get('SERVER_SOFTWARE','').startswith('Development')
 
 def getForecast():
-    result = memcache.get('json')
+    result = memcache.get('forecast')
     if result is not None:
         return result
-    key_obj = ApiKey.get_by_id('key')
-    if isDev() and key_obj is None:
-        url = "https://weather-beacon.appspot.com/forecast.json"
-    else:
-        api_key = key_obj.key
-        url = "https://api.forecast.io/forecast/%s/%s,%s" % (api_key,config['lat'],config['lng'])
+    url = "https://api.forecast.io/forecast/%s/%s,%s" % (config['forecast_io']['api_key'],config['weather']['lat'],config['weather']['lon'])
     result = json.loads(urlfetch.fetch(url, headers = {'Cache-Control' : 'max-age=0'}).content)
-    memcache.add(key='json',value=result,time=600)
+    memcache.add(key='forecast',value=result,time=120)
     return result
 
 def describeConditions(f):
-    if f['precipProbability']>config['precip_threshold']:
+    if f['precipProbability']>config['weather']['precip_threshold']:
         if f['precipType'] in ['rain','hail']:
             return 'raining'
         else:
             return 'snowing'
-    elif f['cloudCover']>config['cloud_threshold']:
+    elif f['cloudCover']>config['weather']['cloud_threshold']:
         return 'cloudy'
     else:
         return 'clear'
 
-def getBeaconClass():
+def getSoxStatus():
     if False:
         return "sox-champs"
     elif False:
         return "sox-rainout"
-    else:
-        return describeConditions(getForecast()['currently'])
 
-def getSunClass():
-    f = getForecast()['daily']['data'][0]
+def getSunClass(f):
     now = time.time()
     if now > f['sunriseTime'] and now < f['sunsetTime']:
         return 'daytime'
     else:
         return 'nighttime'
 
-def getClasses():
-    """ Possible classes:
-    is-clear
-    is-cloudy
-    is-raining
-    is-snowing
-    is-sox-rainout
-    is-sox-champs
+def buildStatus():
+    f = getForecast()
+    weather = describeConditions(f['currently'])
+    return {
+            'beacon': getSoxStatus() or weather,
+            'weather': weather,
+            'time': getSunClass(f['daily']['data'][0])
+            }
 
-    is-daytime
-    is-nighttime
-    """
-    return ["is-"+getBeaconClass(),"is-"+getSunClass()]
+def getStatus():
+    if isDev():
+        try:
+            return json.loads(urlfetch.fetch("https://weather-beacon.appspot.com/v0/status.json", headers = {'Cache-Control' : 'max-age=0'}).content)
+        except:
+            return {'beacon': "clear", 'weather': "clear", 'time': "daytime"}
+    result = memcache.get('status')
+    if result is not None:
+        return result
+    result = buildStatus()
+    memcache.add(key='status',value=result,time=600)
+    return result
+
+def RefreshStatus():
+    old_status = memcache.get('status')
+    status = buildStatus()
+    memcache.add(key='status',value=status,time=600)
+    if old_status is None or old_status['beacon'] != status['beacon']:
+        "things changed so maybe tweet or something"
 
 class MainPage(webapp2.RequestHandler):
     def get(self):
-        if isDev() and self.request.get('classes'):
-            classes = self.request.get('classes').split(" ")
-        else:
-            classes = getClasses()
+        status = getStatus()
+        if isDev():
+            status = {k:re.sub(r"[^\w-]","",self.request.get(k,v)) for k,v in status.iteritems()}
         template = JINJA_ENVIRONMENT.get_template('index.html')
-        self.response.write(template.render({'classes':classes}))
+        self.response.write(template.render(status))
+
+class RefreshHandler(webapp2.RequestHandler):
+    def get(self):
+        RefreshStatus()
+        self.response.write("u did the thing")
+
+class StatusJson(webapp2.RequestHandler):
+    def get(self):
+        self.response.headers['Content-Type'] = 'application/json'
+        self.response.write(json.dumps(getStatus()))
 
 class ForecastJson(webapp2.RequestHandler):
     def get(self):
         self.response.headers['Content-Type'] = 'application/json'
         self.response.write(json.dumps(getForecast()))
 
-class SetKey(webapp2.RequestHandler):
-    def post(self):
-        ApiKey.get_or_insert('key',key=self.request.get('key'))
-        self.redirect("/")
-
 
 application = webapp2.WSGIApplication([
     ('/', MainPage),
-    ('/forecast.json', ForecastJson),
-    ('/set_key', SetKey),
+    ('/admin/refresh', RefreshHandler),
+    ('/v0/status.json', StatusJson),
+    ('/forecast.json', ForecastJson)
     ], debug=True)

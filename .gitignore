@@ -3,7 +3,7 @@
 dist/
 node_modules/
 *.pyc
-
+secrets.yaml
 
 
 

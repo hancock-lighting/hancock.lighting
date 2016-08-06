@@ -1,5 +1,5 @@
 application: weather-beacon
-version: 3
+version: 4
 runtime: python27
 api_version: 1
 threadsafe: true
@@ -11,15 +11,15 @@ handlers:
   static_dir: static/images
 - url: /scripts
   static_dir: static/scripts
-- url: /key_setter.html
-  static_files: static/key_setter.html
-  upload: static/key_setter.html
 - url: /humans.txt
   static_files: static/humans.txt
   upload: static/humans.txt
 - url: /favicon.ico
   static_files: static/favicon.ico
   upload: static/favicon.ico
+- url: /admin/.*
+  script: weatherbeacon.application
+  login: admin
 - url: /.*
   script: weatherbeacon.application
 
@@ -27,4 +27,6 @@ libraries:
 - name: webapp2
   version: latest
 - name: jinja2
+  version: latest
+- name: yaml
   version: latest

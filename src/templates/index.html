@@ -58,14 +58,20 @@
     <link rel="prefetch" href="images/condition-stars.svg">
 
 </head>
-<body class="{{ classes|join(" ") }}">
+<body class="is-{{beacon}} is-{{time}}">
 
     <!-- Start of `c-summary` -->
     <header class="c-summary visuallyhidden">
         <h1>
             hancock.lighting
             <p id="status" aria-live="polite">
-                TODO: Add poem line when weather changes here.
+                    {% if beacon == "clear" %}Steady blue, clear view
+                    {% elif beacon == "cloudy" %}Flashing blue, clouds due
+                    {% elif beacon == "raining" %}Steady red, rain ahead
+                    {% elif beacon == "snowing" %}Flashing red, snow instead
+                    {% elif beacon == "sox-rainout" %}Flashing red, the Sox game is cancelled
+                    {% elif beacon == "sox-champs" %}Flashing blue and red, the Boston Red Sox are world champions!
+                    {% endif %}
             </p>
         </h1>
 
