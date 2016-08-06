@@ -28,6 +28,17 @@
             color: c(type, day);
         }
     }
+
+    .is-sox-champs &,
+    .is-sox-rainout & {
+        color: c(sox, white);
+
+        &:hover {
+            background-color: c(sox, blue);
+            outline-color: c(sox, blue);
+            color: c(sox, white);
+        }
+    }
 }
 
 

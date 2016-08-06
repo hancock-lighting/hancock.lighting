@@ -206,6 +206,18 @@
 
     @if $condition-time == "raining-day" {
         // Extra small height
+        @media screen and (min-width: $bp-750) and (max-height: $layout-height-xs) { background-size: $skyline-size-xs-750, cover; }
+        @media screen and (min-width: $bp-850) and (max-height: $layout-height-xs) { background-size: $skyline-size-xs-850, cover; }
+        @media screen and (min-width: $bp-950) and (max-height: $layout-height-xs) { background-size: $skyline-size-xs-950, cover; }
+        @media screen and (min-width: $bp-1050) and (max-height: $layout-height-xs) { background-size: $skyline-size-xs-1050, cover; }
+        @media screen and (min-width: $bp-1150) and (max-height: $layout-height-xs) { background-size: $skyline-size-xs-1150, cover; }
+        @media screen and (min-width: $bp-1250) and (max-height: $layout-height-xs) { background-size: $skyline-size-xs-1250, cover; }
+        @media screen and (min-width: $bp-1350) and (max-height: $layout-height-xs) { background-size: $skyline-size-xs-1350, cover; }
+        @media screen and (min-width: $bp-1450) and (max-height: $layout-height-xs) { background-size: $skyline-size-xs-1450, cover; }
+    }
+
+    @if $condition-time == "raining-night" {
+        // Extra small height
         @media screen and (min-width: $bp-750) and (max-height: $layout-height-xs) { background-size: cover, $skyline-size-xs-750; }
         @media screen and (min-width: $bp-850) and (max-height: $layout-height-xs) { background-size: cover, $skyline-size-xs-850; }
         @media screen and (min-width: $bp-950) and (max-height: $layout-height-xs) { background-size: cover, $skyline-size-xs-950; }
@@ -214,18 +226,6 @@
         @media screen and (min-width: $bp-1250) and (max-height: $layout-height-xs) { background-size: cover, $skyline-size-xs-1250; }
         @media screen and (min-width: $bp-1350) and (max-height: $layout-height-xs) { background-size: cover, $skyline-size-xs-1350; }
         @media screen and (min-width: $bp-1450) and (max-height: $layout-height-xs) { background-size: cover, $skyline-size-xs-1450; }
-    }
-
-    @if $condition-time == "raining-night" {
-        // Extra small height
-        @media screen and (min-width: $bp-750) and (max-height: $layout-height-xs) { background-size: cover, $skyline-size-xs-750, $background-size-stars-s; }
-        @media screen and (min-width: $bp-850) and (max-height: $layout-height-xs) { background-size: cover, $skyline-size-xs-850, $background-size-stars-s; }
-        @media screen and (min-width: $bp-950) and (max-height: $layout-height-xs) { background-size: cover, $skyline-size-xs-950, $background-size-stars-s; }
-        @media screen and (min-width: $bp-1050) and (max-height: $layout-height-xs) { background-size: cover, $skyline-size-xs-1050, $background-size-stars-s; }
-        @media screen and (min-width: $bp-1150) and (max-height: $layout-height-xs) { background-size: cover, $skyline-size-xs-1150, $background-size-stars-s; }
-        @media screen and (min-width: $bp-1250) and (max-height: $layout-height-xs) { background-size: cover, $skyline-size-xs-1250, $background-size-stars-s; }
-        @media screen and (min-width: $bp-1350) and (max-height: $layout-height-xs) { background-size: cover, $skyline-size-xs-1350, $background-size-stars-s; }
-        @media screen and (min-width: $bp-1450) and (max-height: $layout-height-xs) { background-size: cover, $skyline-size-xs-1450, $background-size-stars-s; }
     }
 
     // [1] Snow's position
@@ -326,5 +326,54 @@
         @media screen and (min-width: $bp-2350) and (min-height: $layout-height-s) and (max-height: $layout-height-m-content) { background-size: cover, $skyline-size-s-2350; }
         @media screen and (min-width: $bp-2450) and (min-height: $layout-height-s) and (max-height: $layout-height-m-content) { background-size: cover, $skyline-size-s-2450; }
         @media screen and (min-width: $bp-2550) and (min-height: $layout-height-s) and (max-height: $layout-height-m-content) { background-size: cover, $skyline-size-s-2550; }
+    }
+
+    @if $condition-time == "sox-champs" {
+        // Extra Small height                                                                         ↓ [2]                 ↓ [1]
+        @media screen and (min-width: $bp-450) and (max-height: $layout-height-xs) { background-size: $skyline-size-xs-450, cover; }
+        @media screen and (min-width: $bp-550) and (max-height: $layout-height-xs) { background-size: $skyline-size-xs-550, cover; }
+        @media screen and (min-width: $bp-650) and (max-height: $layout-height-xs) { background-size: $skyline-size-xs-650, cover; }
+        @media screen and (min-width: $bp-750) and (max-height: $layout-height-xs) { background-size: $skyline-size-xs-750, cover; }
+        @media screen and (min-width: $bp-850) and (max-height: $layout-height-xs) { background-size: $skyline-size-xs-850, cover; }
+        @media screen and (min-width: $bp-950) and (max-height: $layout-height-xs) { background-size: $skyline-size-xs-950, cover; }
+        @media screen and (min-width: $bp-1050) and (max-height: $layout-height-xs) { background-size: $skyline-size-xs-1050, cover; }
+        @media screen and (min-width: $bp-1150) and (max-height: $layout-height-xs) { background-size: $skyline-size-xs-1150, cover; }
+        @media screen and (min-width: $bp-1250) and (max-height: $layout-height-xs) { background-size: $skyline-size-xs-1250, cover; }
+        @media screen and (min-width: $bp-1350) and (max-height: $layout-height-xs) { background-size: $skyline-size-xs-1350, cover; }
+        @media screen and (min-width: $bp-1450) and (max-height: $layout-height-xs) { background-size: $skyline-size-xs-1450, cover; }
+        @media screen and (min-width: $bp-1550) and (max-height: $layout-height-xs) { background-size: $skyline-size-xs-1550, cover; }
+        @media screen and (min-width: $bp-1650) and (max-height: $layout-height-xs) { background-size: $skyline-size-xs-1650, cover; }
+        @media screen and (min-width: $bp-1750) and (max-height: $layout-height-xs) { background-size: $skyline-size-xs-1750, cover; }
+        @media screen and (min-width: $bp-1850) and (max-height: $layout-height-xs) { background-size: $skyline-size-xs-1850, cover; }
+        @media screen and (min-width: $bp-1950) and (max-height: $layout-height-xs) { background-size: $skyline-size-xs-1950, cover; }
+        @media screen and (min-width: $bp-2050) and (max-height: $layout-height-xs) { background-size: $skyline-size-xs-2050, cover; }
+        @media screen and (min-width: $bp-2150) and (max-height: $layout-height-xs) { background-size: $skyline-size-xs-2150, cover; }
+        @media screen and (min-width: $bp-2250) and (max-height: $layout-height-xs) { background-size: $skyline-size-xs-2250, cover; }
+        @media screen and (min-width: $bp-2350) and (max-height: $layout-height-xs) { background-size: $skyline-size-xs-2350, cover; }
+        @media screen and (min-width: $bp-2450) and (max-height: $layout-height-xs) { background-size: $skyline-size-xs-2450, cover; }
+        @media screen and (min-width: $bp-2550) and (max-height: $layout-height-xs) { background-size: $skyline-size-xs-2550, cover; }
+        // Small height                                                                                                                         ↓ [2]                ↓ [1]                                                                                                ↓ [1]                ↓ [2]
+        @media screen and (min-width: $bp-450) and (min-height: $layout-height-s) and (max-height: $layout-height-m-content) { background-size: $skyline-size-s-450, cover; }
+        @media screen and (min-width: $bp-550) and (min-height: $layout-height-s) and (max-height: $layout-height-m-content) { background-size: $skyline-size-s-550, cover; }
+        @media screen and (min-width: $bp-650) and (min-height: $layout-height-s) and (max-height: $layout-height-m-content) { background-size: $skyline-size-s-650, cover; }
+        @media screen and (min-width: $bp-750) and (min-height: $layout-height-s) and (max-height: $layout-height-m-content) { background-size: $skyline-size-s-750, cover; }
+        @media screen and (min-width: $bp-850) and (min-height: $layout-height-s) and (max-height: $layout-height-m-content) { background-size: $skyline-size-s-850, cover; }
+        @media screen and (min-width: $bp-950) and (min-height: $layout-height-s) and (max-height: $layout-height-m-content) { background-size: $skyline-size-s-950, cover; }
+        @media screen and (min-width: $bp-1050) and (min-height: $layout-height-s) and (max-height: $layout-height-m-content) { background-size: $skyline-size-s-1050, cover; }
+        @media screen and (min-width: $bp-1150) and (min-height: $layout-height-s) and (max-height: $layout-height-m-content) { background-size: $skyline-size-s-1150, cover; }
+        @media screen and (min-width: $bp-1250) and (min-height: $layout-height-s) and (max-height: $layout-height-m-content) { background-size: $skyline-size-s-1250, cover; }
+        @media screen and (min-width: $bp-1350) and (min-height: $layout-height-s) and (max-height: $layout-height-m-content) { background-size: $skyline-size-s-1350, cover; }
+        @media screen and (min-width: $bp-1450) and (min-height: $layout-height-s) and (max-height: $layout-height-m-content) { background-size: $skyline-size-s-1450, cover; }
+        @media screen and (min-width: $bp-1550) and (min-height: $layout-height-s) and (max-height: $layout-height-m-content) { background-size: $skyline-size-s-1550, cover; }
+        @media screen and (min-width: $bp-1650) and (min-height: $layout-height-s) and (max-height: $layout-height-m-content) { background-size: $skyline-size-s-1650, cover; }
+        @media screen and (min-width: $bp-1750) and (min-height: $layout-height-s) and (max-height: $layout-height-m-content) { background-size: $skyline-size-s-1750, cover; }
+        @media screen and (min-width: $bp-1850) and (min-height: $layout-height-s) and (max-height: $layout-height-m-content) { background-size: $skyline-size-s-1850, cover; }
+        @media screen and (min-width: $bp-1950) and (min-height: $layout-height-s) and (max-height: $layout-height-m-content) { background-size: $skyline-size-s-1950, cover; }
+        @media screen and (min-width: $bp-2050) and (min-height: $layout-height-s) and (max-height: $layout-height-m-content) { background-size: $skyline-size-s-2050, cover; }
+        @media screen and (min-width: $bp-2150) and (min-height: $layout-height-s) and (max-height: $layout-height-m-content) { background-size: $skyline-size-s-2150, cover; }
+        @media screen and (min-width: $bp-2250) and (min-height: $layout-height-s) and (max-height: $layout-height-m-content) { background-size: $skyline-size-s-2250, cover; }
+        @media screen and (min-width: $bp-2350) and (min-height: $layout-height-s) and (max-height: $layout-height-m-content) { background-size: $skyline-size-s-2350, cover; }
+        @media screen and (min-width: $bp-2450) and (min-height: $layout-height-s) and (max-height: $layout-height-m-content) { background-size: $skyline-size-s-2450, cover; }
+        @media screen and (min-width: $bp-2550) and (min-height: $layout-height-s) and (max-height: $layout-height-m-content) { background-size: $skyline-size-s-2550, cover; }
     }
 }

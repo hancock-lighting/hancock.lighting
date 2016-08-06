@@ -36,6 +36,12 @@ $show-parenthetical: 35.5rem; // 568px @ `$global-type-size`
 
             font-size: calc(1em + 0.5vw);
         }
+
+        // Conditions
+        .is-sox-champs &,
+        .is-sox-rainout & {
+            color: c(sox, white);
+        }
     }
 
     &__period {

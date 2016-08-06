@@ -25,4 +25,11 @@
         flex-basis: 35%;
         justify-content: flex-start;
     }
+
+    // Conditions
+    .is-sox-champs &,
+    .is-sox-rainout & {
+        background-color: c(sox, red);
+        background-size: 84%;
+    }
 }
