@@ -27,14 +27,20 @@ def isDev():
     # return False
     return os.environ.get('SERVER_SOFTWARE','').startswith('Development')
 
-def getForecast():
-    result = memcache.get('forecast')
-    if result is not None:
-        return result
-    url = "https://api.forecast.io/forecast/%s/%s,%s" % (config['forecast_io']['api_key'],config['weather']['lat'],config['weather']['lon'])
+def getJson(url,cache_secs=None):
+    mc_key = "url:"+url
+    if cache_secs is not None:
+        result = memcache.get(mc_key)
+        if result is not None:
+            return result
     result = json.loads(urlfetch.fetch(url, headers = {'Cache-Control' : 'max-age=0'}).content)
-    memcache.add(key='forecast',value=result,time=120)
+    if cache_secs is not None:
+        memcache.add(key=mc_key,value=result,time=cache_secs)
     return result
+
+def getForecast():
+    url = "https://api.forecast.io/forecast/%s/%s,%s" % (config['forecast_io']['api_key'],config['weather']['lat'],config['weather']['lon'])
+    return getJson(url,120)
 
 def describeConditions(f):
     if f['precipProbability']>config['weather']['precip_threshold']:
@@ -63,29 +69,29 @@ def getSunClass(f):
 def buildStatus():
     f = getForecast()
     weather = describeConditions(f['currently'])
-    return {
+    status = {
             'beacon': getSoxStatus() or weather,
             'weather': weather,
             'time': getSunClass(f['daily']['data'][0])
             }
+    memcache.add(key='status',value=result,time=600)
+    return status
 
 def getStatus():
     if isDev():
         try:
-            return json.loads(urlfetch.fetch("https://weather-beacon.appspot.com/v0/status.json", headers = {'Cache-Control' : 'max-age=0'}).content)
+            return getJson("https://weather-beacon.appspot.com/v0/status.json",60)
         except:
             return {'beacon': "clear", 'weather': "clear", 'time': "daytime"}
     result = memcache.get('status')
     if result is not None:
         return result
     result = buildStatus()
-    memcache.add(key='status',value=result,time=600)
     return result
 
 def RefreshStatus():
     old_status = memcache.get('status')
     status = buildStatus()
-    memcache.add(key='status',value=status,time=600)
     if old_status is None or old_status['beacon'] != status['beacon']:
         "things changed so maybe tweet or something"
 
