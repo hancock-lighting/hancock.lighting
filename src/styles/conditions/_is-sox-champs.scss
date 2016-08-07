@@ -63,8 +63,8 @@
     &.is-nighttime {
         .l-skyline {
             background:
-              url(#{$path-to-images}/background-skyline-night.svg) no-repeat,
-              url(#{$path-to-images}/sox-champs.gif) center center no-repeat;
+              url(#{$path-to-images}/background-skyline-nighttime.svg) no-repeat,
+              url(#{$path-to-images}/condition-sox-champs.gif) center center no-repeat;
 
             background-position:
               bottom rem(-2) center, // Fireworks

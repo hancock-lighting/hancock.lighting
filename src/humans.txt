@@ -21,6 +21,7 @@ http://hancock.lighting/
 - The Hot Garbage Crew
 - The City of Boston
 - Wikipedia
+- Boston.com
 
 
 ## Site
@@ -32,6 +33,7 @@ http://hancock.lighting/
 	- SVG
 - Components
 	- Git, https://git-scm.com/
+    - GitHub, https://github.com/
 	- Google App Engine, https://cloud.google.com/appengine/
 	- Gulp, http://gulpjs.com/
 	- Sass, http://sass-lang.com/

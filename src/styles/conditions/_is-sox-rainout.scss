@@ -22,8 +22,8 @@
     &.is-daytime {
         .l-skyline {
             background:
-              url(#{$path-to-images}/background-skyline-day.svg) no-repeat,
-              url(#{$path-to-images}/rain-daytime.gif) no-repeat;
+              url(#{$path-to-images}/background-skyline-daytime.svg) no-repeat,
+              url(#{$path-to-images}/condition-rain-daytime.gif) no-repeat;
 
             background-blend-mode:
               normal, // Skyline
@@ -48,8 +48,8 @@
     &.is-nighttime {
         .l-skyline {
             background:
-              url(#{$path-to-images}/rain-nighttime.gif) no-repeat,
-              url(#{$path-to-images}/background-skyline-night.svg) no-repeat;
+              url(#{$path-to-images}/condition-rain-nighttime.gif) no-repeat,
+              url(#{$path-to-images}/background-skyline-nighttime.svg) no-repeat;
               //url(#{$path-to-images}/condition-stars.svg) top center repeat;
 
             background-blend-mode:

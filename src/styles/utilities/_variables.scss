@@ -56,12 +56,12 @@ $background-size-stars-l: 98%;
 
 // Animation -------------------------------------------------------------------
 $animation-ease: cubic-bezier(0.785, 0.135, 0.15, 0.86);
-$animation-duration-shortest: 0.1s;
-$animation-duration-shorter: 0.2s;
-$animation-duration-short: 0.3s;
-$animation-duration-long: 0.5s;
-$animation-duration-longer: 0.7s;
-$animation-duration-longest: 0.9s;
+$animation-duration-shortest: 100ms;
+$animation-duration-shorter: 200ms;
+$animation-duration-short: 300ms;
+$animation-duration-long: 500ms;
+$animation-duration-longer: 700ms;
+$animation-duration-longest: 900ms;
 
 // Keyframes
 $keyframe-base: 75%;
@@ -134,7 +134,7 @@ $bp-2550: 159.375em; // 2550px @ `$global-type-size`
 // Background Positions --------------------------------------------------------
 // Layout, Height
 $layout-height-xs: $bp-200;
-$layout-height-s: 12.5625em; // 201px  @ `$global-type-size`
+$layout-height-s: 12.5625em; // 201px @ `$global-type-size`
 $layout-height-m-content: 28.0625em; // 449px @ `$global-type-size`
 $layout-height-m: $bp-450;
 
