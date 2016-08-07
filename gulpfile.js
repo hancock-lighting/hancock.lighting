@@ -49,7 +49,7 @@ var pipelines = {
     src: "src/images/**/*",
     dest: "dist/static/images",
     munges: [
-              ["cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))"]
+              ["imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })"]
             ]
   },
   styles: {
