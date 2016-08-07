@@ -22,8 +22,8 @@
     &.is-daytime {
         .l-skyline {
             background:
-              url(#{$path-to-images}/background-skyline-day-cloudy.svg) no-repeat,
-              url(#{$path-to-images}/condition-clouds-day.svg) no-repeat;
+              url(#{$path-to-images}/background-skyline-daytime-cloudy.svg) no-repeat,
+              url(#{$path-to-images}/condition-clouds-daytime.svg) no-repeat;
 
             background-position:
               bottom rem(-2) center, // Skyline [1]
@@ -41,8 +41,8 @@
     &.is-nighttime {
         .l-skyline {
             background:
-              url(#{$path-to-images}/background-skyline-night-cloudy.svg) no-repeat,
-              url(#{$path-to-images}/condition-clouds-night.svg) no-repeat ,
+              url(#{$path-to-images}/background-skyline-nighttime-cloudy.svg) no-repeat,
+              url(#{$path-to-images}/condition-clouds-nighttime.svg) no-repeat ,
               url(#{$path-to-images}/condition-stars.svg) top center repeat;
 
             background-position:
