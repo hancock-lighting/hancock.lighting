@@ -15,6 +15,14 @@
         }
     }
 
+    // Animates skyline size and stars when the viewport is resized
+    &.is-daytime,
+    &.is-nighttime {
+        .l-skyline {
+            transition: background-size $animation-duration-short $animation-ease; // Skyline
+        }
+    }
+
     // [1] Hides blurry edges
     &.is-daytime {
         .l-skyline {
@@ -22,7 +30,7 @@
               url(#{$path-to-images}/background-skyline-daytime.svg) no-repeat;
 
             background-position:
-              bottom rem(-2) center; // [1]
+              bottom rem(-2) center; // Skyline, [1]
 
             background-size:
               $background-size-skyline; // Skyline, [1]

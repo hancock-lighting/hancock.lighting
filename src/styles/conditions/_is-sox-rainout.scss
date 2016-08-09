@@ -6,16 +6,24 @@
         // Loop that targets beacon SVG
         @for $i from 1 through 7 {
             #beacon-antenna { animation: flash-red-base $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
-            //#beacon-top-spur-left { animation: flash-red-spur $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
-            //#beacon-top-spur-right { animation: flash-red-spur $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+            #beacon-top-spur-left { animation: flash-red-spur $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+            #beacon-top-spur-right { animation: flash-red-spur $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
             #beacon-top-base { animation: flash-red-base $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
-            //#beacon-bottom-#{$i}-spur { animation: flash-red-spur $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
-            //#beacon-bottom-#{$i}-indent { animation: flash-red-indent $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+            #beacon-bottom-#{$i}-spur { animation: flash-red-spur $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+            #beacon-bottom-#{$i}-indent { animation: flash-red-indent $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
             #beacon-bottom-#{$i}-base { animation: flash-red-base $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
         }
 
         // Animation logic
         @include beacon-flash(red);
+    }
+
+    // Animates skyline size when the viewport is resized
+    &.is-daytime,
+    &.is-nighttime {
+        .l-skyline {
+            transition: background-size $animation-duration-short $animation-ease; // Skyline
+        }
     }
 
     // [1] Hides blurry edges
@@ -30,7 +38,7 @@
               normal; // Rain
 
             background-position:
-              bottom rem(-2) center, // Skyline [1]
+              bottom rem(-2) center, // Skyline, [1]
               center center; // Rain
 
             background-size:
@@ -39,9 +47,6 @@
 
             // Breakpoints
             @include skyline-position(raining-day);
-
-            // Normal star size at larger breakpoints
-            @media screen and (min-height: $layout-height-m) { background-size: $background-size-skyline, cover; }
         }
     }
 
@@ -50,28 +55,21 @@
             background:
               url(#{$path-to-images}/condition-rain-nighttime.gif) no-repeat,
               url(#{$path-to-images}/background-skyline-nighttime.svg) no-repeat;
-              //url(#{$path-to-images}/condition-stars.svg) top center repeat;
 
             background-blend-mode:
               overlay, // Rain
               normal; // Skyline
-              //normal; // Stars
 
             background-position:
               center center, // Rain
-              bottom rem(-2) center; // Skyline [1]
-              //top rem(-20) center; // Stars
+              bottom rem(-2) center; // Skyline, [1]
 
             background-size:
               cover, // Rain
               $background-size-skyline; // Skyline, [1]
-              //$background-size-stars-s; // Stars removed at extra small height
 
             // Breakpoints
             @include skyline-position(raining-night);
-
-            // Normal star size at larger breakpoints
-            @media screen and (min-height: $layout-height-m) { background-size: cover, $background-size-skyline; }
         }
     }
 }

@@ -1,5 +1,5 @@
 // Component Logic -------------------------------------------------------------
-$show-parenthetical: 35.5rem; // 568px @ `$global-type-size`
+$show-parenthetical: 35.5em; // 568px @ `$global-type-size`
 
 
 // Component Styling -----------------------------------------------------------
@@ -11,36 +11,31 @@ $show-parenthetical: 35.5rem; // 568px @ `$global-type-size`
     text-align: center;
 
     &__lines {
-        margin-bottom: rem(22);
         margin-top: 0;
 
         line-height: 1.9;
 
         transition: font-size $animation-duration-short $animation-ease;
 
-        // Breakpoints
-        // 1col
-        @media screen and (min-width: $bp-600) and (max-width: ($layout-width-m - em(1))) {
-            font-size: calc(1em + 0.5vw);
-        }
-
-        // 2col
-        @media screen and (min-height: $layout-height-m) and (min-width: $bp-1300) and (max-width: ($bp-1600 - em(1))) {
-            margin-bottom: rem(33);
-
-            font-size: calc(1em + 0.3vw);
-        }
-
-        @media screen and (min-height: $layout-height-m) and (min-width: $bp-1600) {
-            margin-bottom: calc(#{rem(33)} + 1vw);
-
-            font-size: calc(1em + 0.5vw);
-        }
-
         // Conditions
         .is-sox-champs &,
         .is-sox-rainout & {
             color: c(sox, white);
+        }
+
+        // Breakpoints
+        // 1col, increases font size until the skyline starts to shrink
+        @media screen and (min-width: $bp-600) and (max-width: ($layout-width-m - em(1))) {
+            font-size: calc(1em + 0.5vw);
+        }
+
+        // 2col, increases font size when there is enough vertical space
+        @media screen and (min-height: $layout-height-l) and (min-width: $bp-1300) { //and (max-width: ($bp-1600 - em(1))) {
+            font-size: calc(1em + 0.3vw);
+        }
+
+        @media screen and (min-height: $layout-height-xl) and (min-width: $bp-1600) {
+            font-size: calc(1em + 0.5vw);
         }
     }
 

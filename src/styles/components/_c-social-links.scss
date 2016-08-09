@@ -20,21 +20,6 @@
           transform $animation-duration-shorter $animation-ease,
           width $animation-duration-shorter $animation-ease;
 
-        // Breakpoints
-        // 1col
-        @media screen and (min-width: $bp-600) and (max-width: ($layout-width-m - em(1))) {
-            margin-left: 1.75vw;
-            margin-right: 1.75vw;
-            width: calc(#{rem(36)} + 1vw);
-        }
-
-        // 2col
-        @media screen and (min-height: $layout-height-m) and (min-width: $bp-1300) {
-            margin-left: 1.25vw;
-            margin-right: 1.25vw;
-            width: calc(#{rem(36)} + 1vw);
-        }
-
         // States
         &:hover {
             transform: scale(1.4);
@@ -53,6 +38,21 @@
         .is-sox-champs &,
         .is-sox-rainout & {
             fill: white;
+        }
+
+        // Breakpoints
+        // 1col
+        @media screen and (min-width: $bp-600) and (max-width: ($layout-width-m - em(1))) {
+            margin-left: 1.75vw;
+            margin-right: 1.75vw;
+            width: calc(#{rem(36)} + 0.75vw);
+        }
+
+        // 2col
+        @media screen and (min-height: $layout-height-l) and (min-width: $bp-1300) {
+            margin-left: 1.25vw;
+            margin-right: 1.25vw;
+            width: calc(#{rem(36)} + 0.75vw);
         }
     }
 }

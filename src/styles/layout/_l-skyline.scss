@@ -13,7 +13,7 @@
     transition: $background-transition;
     will-change: background;
 
-    // States
+    // Conditions
     .is-daytime & {
         background-color: c(time, day);
     }

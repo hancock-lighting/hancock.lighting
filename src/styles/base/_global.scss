@@ -18,7 +18,8 @@ html {
 
 // Applies `border-box` to all HTML elements:
 // [1] https://github.com/AllThingsSmitty/css-protips#inherit-box-sizing
-*, *:before,
+*,
+*:before,
 *:after {
     box-sizing: inherit; // [1]
 }
@@ -47,7 +48,6 @@ body {
 ::selection { text-shadow: none; }
 
 // Applies defaults to all child elements, override as needed
-// [1] Better font rendering
 body {
     @extend %font-ligatures-common;
     @extend %font-kerning;

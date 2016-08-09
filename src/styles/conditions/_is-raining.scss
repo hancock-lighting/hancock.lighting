@@ -15,6 +15,14 @@
         }
     }
 
+    // Animates skyline size when the viewport is resized
+    &.is-daytime,
+    &.is-nighttime {
+        .l-skyline {
+            transition: background-size $animation-duration-short $animation-ease; // Skyline
+        }
+    }
+
     // [1] Hides blurry edges
     &.is-daytime {
         .l-skyline {
@@ -27,8 +35,13 @@
               // normal; // Rain
 
             background-position:
+<<<<<<< Updated upstream
               bottom rem(-2) center; // Skyline [1]
               // center center; // Rain
+=======
+              bottom rem(-2) center, // Skyline, [1]
+              center center; // Rain
+>>>>>>> Stashed changes
 
             background-size:
             $background-size-skyline; // Skyline, [1]
@@ -50,8 +63,13 @@
               normal; // Skyline
 
             background-position:
+<<<<<<< Updated upstream
               // center center, // Rain
               bottom rem(-2) center; // Skyline [1]
+=======
+              center center, // Rain
+              bottom rem(-2) center; // Skyline, [1]
+>>>>>>> Stashed changes
 
             background-size:
               // cover, // Rain

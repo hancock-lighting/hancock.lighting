@@ -58,8 +58,16 @@
         }
     }
 
+    // Animates skyline size when the viewport is resized
+    &.is-daytime,
+    &.is-nighttime {
+        .l-skyline {
+            transition: background-size $animation-duration-short $animation-ease; // Skyline
+        }
+    }
+
     // [1] Hides blurry edges
-    // Ostensibly, The Sox will only play at night, so they'll only win at night?
+    // NOTE: The Sox will only play at night, so they'll only win at night?
     &.is-nighttime {
         .l-skyline {
             background:
@@ -67,12 +75,12 @@
               url(#{$path-to-images}/condition-sox-champs.gif) center center no-repeat;
 
             background-position:
-              bottom rem(-2) center, // Fireworks
-              center center; // Skyline [1]
+              bottom rem(-2) center, // Skyline, [1]
+              center center; // Fireworks
 
             background-size:
-              $background-size-skyline, // Fireworks
-              cover; // Skyline, [1]
+              $background-size-skyline, // Skyline, [1]
+              cover; // Fireworks
 
             // Breakpoints
             @include skyline-position(sox-champs);
