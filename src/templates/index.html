@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en-US">
+<html lang="en-US" itemscope itemtype="http://schema.org/Place">
 <head>
 
     <meta charset="utf-8">
@@ -13,14 +13,17 @@
     <meta property="og:description" content="Steady blue, clear view. Flashing blue, clouds due. Steady red, rain ahead. Flashing red, snow instead."/>
     <meta property="og:url" content="http://hancock.lighting/"/>
     <meta property="og:type" content="article"/>
-    <meta property="og:image" content="http://hancock.lighting/static/favicons/card-facebook.png"/>
+    <meta property="og:image" content="http://hancock.lighting/images/favicons/facebook.png"/>
     <meta property="og:image:width" content="599"/>
     <meta property="og:image:height" content="314"/>
-    <meta name="twitter:title" content="hancock.lighting" />
-    <meta name="twitter:description" content="Steady blue, clear view. Flashing blue, clouds due. Steady red, rain ahead. Flashing red, snow instead." />
-    <meta name="twitter:site" content="@HancockLighting" />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:image" content="http://hancock.lighting/static/favicons/card-twitter.png" />
+    <meta name="twitter:title" content="hancock.lighting"/>
+    <meta name="twitter:description" content="Steady blue, clear view. Flashing blue, clouds due. Steady red, rain ahead. Flashing red, snow instead."/>
+    <meta name="twitter:site" content="@HancockLighting"/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:image" content="http://hancock.lighting/images/favicons/twitter-summary-image.png"/>
+    <meta itemprop="name" content="hancock.lighting"/>
+    <meta itemprop="description" content="Steady blue, clear view. Flashing blue, clouds due. Steady red, rain ahead. Flashing red, snow instead."/>
+    <meta itemprop="image" content="http://hancock.lighting/images/favicons/google-plus.png"/>
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
@@ -32,13 +35,20 @@
     <meta name="theme-color" content="#65AFF0">
 
     <script>window.wb_status={beacon:'{{beacon}}', weather:'{{weather}}', time:'{{time}}' };</script>
-    <script src="scripts/main.min.js" async></script>
 
+    <link rel="prefetch" href="images/condition-rain-daytime.gif">
+    <link rel="prefetch" href="images/condition-rain-nighttime.gif">
+    <link rel="prefetch" href="images/condition-snow.gif">
+    <link rel="prefetch" href="images/background-skyline-daytime-cloudy.svg">
+    <link rel="prefetch" href="images/background-skyline-daytime.svg">
+    <link rel="prefetch" href="images/background-skyline-nighttime-cloudy.svg">
+    <link rel="prefetch" href="images/background-skyline-nighttime-cloudy.svg">
+    <link rel="prefetch" href="images/background-skyline-nighttime-snowing.svg">
+    <link rel="prefetch" href="images/background-skyline-nighttime.svg">
+    <link rel="prefetch" href="images/condition-clouds-daytime.svg">
+    <link rel="prefetch" href="images/condition-clouds-nighttime.svg">
+    <link rel="prefetch" href="images/condition-stars.svg">
 
-<!--
-    <link rel="prefetch" href="images/rain-daytime.gif">
-
--->
 </head>
 <body class="is-{{beacon}} is-{{time}}">
 
@@ -228,7 +238,7 @@
                 </g>
               </g>
             </svg>
-            <canvas id="weather-canvas" class="c-canvas"></canvas>
+            <!-- <canvas id="weather-canvas" class="c-canvas"></canvas> -->
         </main>
 
         <aside class="l-info">

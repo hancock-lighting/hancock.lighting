@@ -6,16 +6,24 @@
         // Loop that targets beacon SVG
         @for $i from 1 through 7 {
             #beacon-antenna { animation: flash-red-base $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
-            //#beacon-top-spur-left { animation: flash-red-spur $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
-            //#beacon-top-spur-right { animation: flash-red-spur $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+            #beacon-top-spur-left { animation: flash-red-spur $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+            #beacon-top-spur-right { animation: flash-red-spur $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
             #beacon-top-base { animation: flash-red-base $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
-            //#beacon-bottom-#{$i}-spur { animation: flash-red-spur $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
-            //#beacon-bottom-#{$i}-indent { animation: flash-red-indent $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+            #beacon-bottom-#{$i}-spur { animation: flash-red-spur $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+            #beacon-bottom-#{$i}-indent { animation: flash-red-indent $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
             #beacon-bottom-#{$i}-base { animation: flash-red-base $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
         }
 
         // Animation logic
         @include beacon-flash(red);
+    }
+
+    // Animates skyline size when the viewport is resized
+    &.is-daytime,
+    &.is-nighttime {
+        .l-skyline {
+            transition: background-size $animation-duration-short $animation-ease; // Skyline
+        }
     }
 
     // [1] Hides blurry edges
@@ -26,11 +34,11 @@
               url(#{$path-to-images}/background-skyline-daytime-cloudy.svg) no-repeat;
 
             background-position:
-              center center, // Rain
-              bottom rem(-2) center; // Skyline [1]
+              center center, // Snow
+              bottom rem(-2) center; // Skyline, [1]
 
             background-size:
-              cover, // Rain
+              cover, // Snow
               $background-size-skyline; // Skyline, [1]
 
             // Breakpoints
@@ -46,11 +54,11 @@
               url(#{$path-to-images}/background-skyline-nighttime-snowing.svg) no-repeat;
 
             background-position:
-              center center, // Rain
-              bottom rem(-2) center; // Skyline [1]
+              center center, // Snow
+              bottom rem(-2) center; // Skyline, [1]
 
             background-size:
-              cover, // Rain
+              cover, // Snow
               $background-size-skyline; // Skyline, [1]
 
             // Breakpoints

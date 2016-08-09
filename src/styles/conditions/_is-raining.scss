@@ -15,24 +15,32 @@
         }
     }
 
+    // Animates skyline size when the viewport is resized
+    &.is-daytime,
+    &.is-nighttime {
+        .l-skyline {
+            transition: background-size $animation-duration-short $animation-ease; // Skyline
+        }
+    }
+
     // [1] Hides blurry edges
     &.is-daytime {
         .l-skyline {
             background:
-              url(#{$path-to-images}/background-skyline-daytime.svg) no-repeat;
-              // url(#{$path-to-images}/condition-rain-daytime.gif) no-repeat;
+              url(#{$path-to-images}/background-skyline-daytime.svg) no-repeat,
+              url(#{$path-to-images}/condition-rain-daytime.gif) no-repeat;
 
             background-blend-mode:
-              normal; // Skyline
-              // normal; // Rain
+              normal, // Skyline
+              normal; // Rain
 
             background-position:
-              bottom rem(-2) center; // Skyline [1]
-              // center center; // Rain
+              bottom rem(-2) center, // Skyline, [1]
+              center center; // Rain
 
             background-size:
-            $background-size-skyline; // Skyline, [1]
-            // cover; // Rain
+            $background-size-skyline, // Skyline, [1]
+            cover; // Rain
 
             // Breakpoints
             @include skyline-position(raining-day);
@@ -42,19 +50,19 @@
     &.is-nighttime {
         .l-skyline {
             background:
-              // url(#{$path-to-images}/condition-rain-nighttime.gif) no-repeat,
+              url(#{$path-to-images}/condition-rain-nighttime.gif) no-repeat,
               url(#{$path-to-images}/background-skyline-nighttime.svg) no-repeat;
 
             background-blend-mode:
-              // overlay, // Rain
+              overlay, // Rain
               normal; // Skyline
 
             background-position:
-              // center center, // Rain
-              bottom rem(-2) center; // Skyline [1]
+              center center, // Rain
+              bottom rem(-2) center; // Skyline, [1]
 
             background-size:
-              // cover, // Rain
+              cover, // Rain
               $background-size-skyline; // Skyline, [1]
 
             // Breakpoints

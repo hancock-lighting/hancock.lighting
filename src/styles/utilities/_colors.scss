@@ -23,12 +23,12 @@ $colors: (
 
     // Beacon
     beacon: (
-        red-base:    #d35b5b,
-        red-spur:    lighten(#6c6c6c, 20%),
-        red-indent:  lighten(#6c6c6c, 20%),
-        blue-base:   #5a9dd6,
-        blue-spur:   lighten(#6c6c6c, 20%),
-        blue-indent: lighten(#6c6c6c, 20%),
+        red-base:    #ed5a5a,
+        red-spur:    darken(#6c6c6c, 3%),
+        red-indent:  lighten(#6c6c6c, 10%),
+        blue-base:   #65aff0,
+        blue-spur:   darken(#6c6c6c, 3%),
+        blue-indent: lighten(#6c6c6c, 10%),
         gray-base:   #6c6c6c,
         gray-spur:   #8a8a8a,
         gray-indent: #8a8a8a
