@@ -62,6 +62,11 @@ var pipelines = {
                "minifycss()"]
             ]
   },
+  styletemplates: {
+    src: "dist/static/styles/**/*",
+    dest: "dist/templates/styles",
+    munges: []
+  },
   scripts: {
     src: "src/scripts/**/*.js",
     dest: "dist/static/scripts",
