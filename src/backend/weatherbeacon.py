@@ -10,6 +10,12 @@ import jinja2
 import webapp2
 import yaml
 
+from google.appengine.ext import vendor
+vendor.add('lib')
+
+import twitter
+
+
 def rel(path):
     return os.path.join(os.path.dirname(__file__),path)
 
@@ -19,6 +25,15 @@ try:
 except Exception as e:
     print e
     config = {}
+
+if "twitter" in config:
+    auth=twitter.OAuth( config['twitter']['access_token'],
+                        config['twitter']['access_token_secret'],
+                        config['twitter']['consumer_key'],
+                        config['twitter']['consumer_secret'])
+    t = twitter.Twitter(auth=auth)
+    t_upload = twitter.Twitter(domain='upload.twitter.com',auth=auth)
+
 
 JINJA_ENVIRONMENT = jinja2.Environment(
     loader=jinja2.FileSystemLoader(rel("templates")))
@@ -74,7 +89,7 @@ def buildStatus():
             'weather': weather,
             'time': getSunClass(f['daily']['data'][0])
             }
-    memcache.add(key='status',value=result,time=600)
+    memcache.add(key='status',value=status,time=600)
     return status
 
 def getStatus():
@@ -89,11 +104,26 @@ def getStatus():
     result = buildStatus()
     return result
 
+def tweetStatus(status):
+    tweet_text = {
+                'clear': "Steady blue, clear view",
+                'cloudy': "Flashing blue, clouds due",
+                'raining': "Steady red, rain ahead",
+                'snowing': "Flashing red, snow instead",
+                'sox-rainout': "Flashing red, the Sox game is cancelled",
+                'sox-champs': "Flashing blue and red, the Boston Red Sox are world champions!"
+            }[status['beacon']]
+    with open(rel("tweet_gifs/%s.gif"%status['beacon']),"rb") as fh:
+        gif_data = fh.read()
+    gif_media_id = t_upload.media.upload(media=gif_data)["media_id_string"]
+    t.statuses.update(status=tweet_text, media_ids=gif_media_id)
+
+
 def RefreshStatus():
     old_status = memcache.get('status')
     status = buildStatus()
     if old_status is None or old_status['beacon'] != status['beacon']:
-        "things changed so maybe tweet or something"
+        tweetStatus(status)
 
 class MainPage(webapp2.RequestHandler):
     def get(self):
