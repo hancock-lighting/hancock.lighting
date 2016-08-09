@@ -1,12 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
-    <title>safari-pinned-tab-red</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="apple" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="safari-pinned-tab-red" fill="#000000">
-            <circle id="Oval" cx="8" cy="8" r="6"></circle>
-        </g>
-    </g>
-</svg>
+<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h16v16H0z"/><circle fill="#000" cx="8" cy="8" r="6"/></g></svg>
