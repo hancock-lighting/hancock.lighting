@@ -12,6 +12,6 @@ This project adheres to [Semantic Versioning](http://semver.org/) and tries to f
 - Add Windows Pinned Site functionality
 - An API would be kinda cute to have
 
-## v0.1.0 - yyyy-mm-dd
+## v0.1.0 - 2016-08-10
 
 - Initial release.
