@@ -27,7 +27,7 @@ This site makes liberal use of evergreen browser features such as [flexbox](http
 
 Assuming you have [Node](https://nodejs.org/en/) and [Node Package Manager](https://www.npmjs.com/) installed, you can install a local copy by:
 
-1. Cloning from `CLONE INSTRUCTIONS` 
+1. Cloning from `https://github.com/ericwbailey/hancock.lighting.git` 
 - Running `npm install`
 - Then running `gulp`
 
