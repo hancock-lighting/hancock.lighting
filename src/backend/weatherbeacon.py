@@ -50,7 +50,7 @@ def getJson(url,cache_secs=None):
             return result
     result = json.loads(urlfetch.fetch(url, headers = {'Cache-Control' : 'max-age=0'}).content)
     if cache_secs is not None:
-        memcache.add(key=mc_key,value=result,time=cache_secs)
+        memcache.set(key=mc_key,value=result,time=cache_secs)
     return result
 
 def getForecast():
@@ -89,7 +89,7 @@ def buildStatus():
             'weather': weather,
             'time': getSunClass(f['daily']['data'][0])
             }
-    memcache.add(key='status',value=status)
+    memcache.set(key='status',value=status,15*60)
     return status
 
 def getStatus():
