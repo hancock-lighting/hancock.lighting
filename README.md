@@ -44,14 +44,14 @@ Where the `beacon` values are:
 - `raining`
 - `snowing`
 - `sox-rainout`
-- `sox-champs`
+- `sox-champs` (only works with `nighttime`)
 
 And the `time` values are:
 
 - `daytime`
 - `nighttime`
 
-Note: `sox-champs` only works with `nighttime`.
+Note: Changing the site's time and weather states won't affect the outside world.
 
 ## Contributing
 
