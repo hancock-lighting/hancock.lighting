@@ -14,7 +14,7 @@ var gulp         = require('gulp'),
     uglify       = require('gulp-uglify');
 
 
-gulp.task('browser-sync', function() {
+gulp.task('browser-sync', ['gae-serve'], function() {
   browserSync({
     proxy: "127.0.0.1:8080"
   });
@@ -24,7 +24,7 @@ gulp.task('bs-reload', function () {
   browserSync.reload();
 });
 
-gulp.task('gae-serve', function () {
+gulp.task('gae-serve', ['pipelines'], function () {
   gulp.src('dist/app.yaml')
     .pipe(gae('dev_appserver.py', [], {}));
 });
@@ -63,9 +63,14 @@ var pipelines = {
             ]
   },
   styletemplates: {
-    src: "dist/static/styles/**/*",
+    src: "src/styles/**/*.scss",
     dest: "dist/templates/styles",
-    munges: []
+    munges: [
+              ["sass()",
+               "autoprefixer('last 2 versions')"],
+              ["rename({suffix: '.min'})",
+               "minifycss()"]
+            ]
   },
   scripts: {
     src: "src/scripts/**/*.js",
@@ -101,7 +106,7 @@ pipeline_names.forEach(function(pn) {
     } else {
       g = g.pipe(gulp.dest(p.dest));
     }
-    g = g.pipe(browserSync.reload({stream:true}));
+    return g.pipe(browserSync.reload({stream:true}));
   });
 });
 
@@ -113,4 +118,4 @@ gulp.task('watch-pipelines',function() {
   });
 })
 
-gulp.task('default', ['pipelines', 'watch-pipelines', 'gae-serve', 'browser-sync']);
+gulp.task('default', ['watch-pipelines','browser-sync']);
