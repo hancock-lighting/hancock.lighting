@@ -55,9 +55,9 @@ Note: Changing the site's time and weather states won't affect the outside world
 
 ## Contributing
 
-Please follow the [contributing guidelines](https://github.com/ericwbailey/hancock.lighting/CONTRIBUTING.md) for submitting Issues and Pull and Feature Requests.
+Please follow the [contributing guidelines](https://github.com/ericwbailey/hancock.lighting/blob/master/CONTRIBUTING.md) for submitting Issues and Pull and Feature Requests.
 
-If you'd just like to show a little love, contacting the [authors](https://github.com/ericwbailey/hancock.lighting/AUTHORS) on Twitter is probably your best bet:
+If you'd just like to show a little love, contacting the [authors](https://github.com/ericwbailey/hancock.lighting/blob/master/AUTHORS) on Twitter is probably your best bet:
 
 - [@ericwbailey](https://twitter.com/ericwbailey)
 - [@mclaughlin](http://twitter.com/mclaughlin)
