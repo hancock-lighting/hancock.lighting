@@ -113,10 +113,11 @@ def tweetStatus(status):
                 'sox-rainout': "Flashing red, the Sox game is cancelled",
                 'sox-champs': "Flashing blue and red, the Boston Red Sox are world champions!"
             }[status['beacon']]
-    with open(rel("tweet_gifs/%s.gif"%status['beacon']),"rb") as fh:
-        gif_data = fh.read()
-    gif_media_id = t_upload.media.upload(media=gif_data)["media_id_string"]
-    t.statuses.update(status=tweet_text, media_ids=gif_media_id)
+    t.statuses.update(status=tweet_text)
+    # with open(rel("tweet_gifs/%s.gif"%status['beacon']),"rb") as fh:
+    #     gif_data = fh.read()
+    # gif_media_id = t_upload.media.upload(media=gif_data)["media_id_string"]
+    # t.statuses.update(status=tweet_text, media_ids=gif_media_id)
 
 
 def RefreshStatus():
