@@ -44,20 +44,20 @@ Where the `beacon` values are:
 - `raining`
 - `snowing`
 - `sox-rainout`
-- `sox-champs`
+- `sox-champs` (only works with `nighttime`)
 
 And the `time` values are:
 
 - `daytime`
 - `nighttime`
 
-Note: `sox-champs` only works with `nighttime`.
+Note: Changing the site's time and weather states won't affect the outside world.
 
 ## Contributing
 
-Please follow the [contributing guidelines](https://github.com/ericwbailey/hancock.lighting/CONTRIBUTING.md) for submitting Issues and Pull and Feature Requests.
+Please follow the [contributing guidelines](https://github.com/ericwbailey/hancock.lighting/blob/master/CONTRIBUTING.md) for submitting Issues and Pull and Feature Requests.
 
-If you'd just like to show a little love, contacting the [authors](https://github.com/ericwbailey/hancock.lighting/AUTHORS) on Twitter is probably your best bet:
+If you'd just like to show a little love, contacting the [authors](https://github.com/ericwbailey/hancock.lighting/blob/master/AUTHORS) on Twitter is probably your best bet:
 
 - [@ericwbailey](https://twitter.com/ericwbailey)
 - [@mclaughlin](http://twitter.com/mclaughlin)
