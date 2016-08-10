@@ -5,7 +5,7 @@ Steady blue, clear view. Flashing blue, clouds due. Steady red, rain ahead. Flas
 ## Table of Contents
 
 1. [Motivation](#motivation)
-- [Installation](#installation)
+- [Technology](#technology)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -17,9 +17,15 @@ When I was working at the Boston Globe, I tried my hardest to resurrect the [old
 
 This site makes good on that attempt, and is a little love letter to the city that's been my home for the past decade. It's also a chance to put a lot of CSS techniques into practice, including some new approaches and technologies I wanted a chance to try out. Fortunately, I was also able to browbeat [my friend Dan](https://github.com/danielsmc) into helping with the icky Python part.
 
-## Installation
+## Technology
 
-Install a local copy by:
+### Browser Support
+
+This site makes liberal use of evergreen browser features such as [flexbox](http://caniuse.com/#feat=flexbox), [SVG](http://caniuse.com/#feat=svg), [viewport units](http://caniuse.com/#feat=viewport-units), [CSS blend modes](http://caniuse.com/#feat=css-backgroundblendmode), etc. As such, it has few for IE support.
+
+### Installation
+
+Assuming you have [Node](https://nodejs.org/en/) and [Node Package Manager](https://www.npmjs.com/) installed, you can install a local copy by:
 
 1. Cloning from `CLONE INSTRUCTIONS` 
 - Running `npm install`
@@ -29,7 +35,7 @@ This should pull down this repo's code, install all required Node modules, then 
 
 ### Cheating
 
-If you're impatient and would like to preview the different  states without waiting for the time and weather to change, you can append the following to the end of the URL: `/?beacon=raining&time=nighttime`
+If you're impatient and would like to preview the different  states without waiting for the time and weather to change, you can append the following to the end of the URL: `/?beacon=BEACONVALUES&time=nighttime`
 
 Where the `beacon` values are:
 
