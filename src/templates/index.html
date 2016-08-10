@@ -26,9 +26,9 @@
     <meta itemprop="image" content="http://hancock.lighting/images/social/google-plus.png"/>
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" href="/" type="image/gif" >
+    <link rel="icon" href="/favicon-{{ 'blue' if beacon in ['clear','cloudy'] else 'red' }}{{ '-flashing' if beacon in ['cloudy','snowing','sox-rainout'] }}.gif" type="image/gif" >
     <link rel="manifest" href="/manifest.json">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#65AFF0">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="{{ '#65AFF0' if beacon in ['clear','cloudy'] else '#ED5A5A' }}">
     <meta name="msapplication-TileColor" content="#65AFF0">
     <meta name="msapplication-TileImage" content="/mstile-144x144.png">
     <meta name="theme-color" content="#65AFF0">
