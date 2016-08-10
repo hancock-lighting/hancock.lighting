@@ -89,7 +89,7 @@ def buildStatus():
             'weather': weather,
             'time': getSunClass(f['daily']['data'][0])
             }
-    memcache.set(key='status',value=status,15*60)
+    memcache.set(key='status',value=status,time=15*60)
     return status
 
 def getStatus():
