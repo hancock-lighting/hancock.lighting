@@ -1,0 +1,20 @@
+// Component Styling -----------------------------------------------------------
+.c-silhouette {
+    position: absolute;
+    z-index: z(c-silhouette);
+    bottom: rem(-2);
+    left: -1%;
+    width: 102%;
+    // max-height: 30%;
+
+    @media screen and (min-width: $bp-450) and (max-height: $layout-height-m-content) {
+    	width: 450px;
+    	width: calc(450px + 2.4%);
+    	left: auto;
+    }
+
+   	@media screen and (min-width: $bp-450) and (max-height: $layout-height-s) {
+    	width: 280px;
+    	width: calc(280px + 1.5%);
+   	}
+}
