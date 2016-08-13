@@ -1,5 +1,54 @@
 // Component Logic -------------------------------------------------------------
-$show-parenthetical: 35.5em; // 568px @ `$global-type-size`
+$c-poem-show-parenthetical: 35.5em; // 568px @ `$global-type-size`
+
+%c-poem-condition-switch {
+    transition:
+      background $animation-duration-shortest $animation-ease,
+      color $animation-duration-shortest $animation-ease,
+      outline $animation-duration-shortest $animation-ease;
+
+    // States
+    &:hover {
+        background-color: c(link, base-day);
+
+        outline: rem(10) solid c(link, base-day);
+
+        color: c(type, night);
+    }
+
+    &:active {
+        outline-width: rem(2);
+
+        transition: none;
+    }
+
+    // Conditions
+    .is-nighttime & {
+
+        // States
+        &:hover {
+            background-color: c(link, base-night);
+
+            outline-color: c(link, base-night);
+
+            color: c(type, day);
+        }
+    }
+
+    .is-sox-champs &,
+    .is-sox-rainout & {
+        color: c(sox, white);
+
+        // States
+        &:hover {
+            background-color: c(sox, blue);
+
+            outline-color: c(sox, blue);
+
+            color: c(sox, white);
+        }
+    }
+}
 
 
 // Component Styling -----------------------------------------------------------
@@ -43,7 +92,7 @@ $show-parenthetical: 35.5em; // 568px @ `$global-type-size`
         @extend %visuallyhidden;
 
         // Breakpoints
-        @media screen and (min-width: $show-parenthetical) {
+        @media screen and (min-width: $c-poem-show-parenthetical) {
             @include visuallyrevealed();
         }
     }
@@ -52,13 +101,16 @@ $show-parenthetical: 35.5em; // 568px @ `$global-type-size`
         @extend %visuallyhidden;
 
         // Breakpoints
-        @media screen and (min-width: $show-parenthetical) {
+        @media screen and (min-width: $c-poem-show-parenthetical) {
             @include visuallyrevealed();
         }
     }
 
     &__condition-switch {
-        background-color: transparent;
+        @extend %c-poem-condition-switch;
+
         border: none;
+
+        background-color: transparent;
     }
 }
