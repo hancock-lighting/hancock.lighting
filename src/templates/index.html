@@ -70,6 +70,9 @@
             {% elif beacon == "sox-champs" %}Flashing blue and red, the Boston Red Sox are world champions!
             {% endif %}
         </p>
+        <p>
+            Note: This page automatically refreshes every 7 minutes.
+        </p>
     </header>
     <!-- End of `c-summary` -->
 
@@ -252,12 +255,12 @@
             <!-- Start of `c-poem` -->
             <figure class="c-poem">
                 <p class="c-poem__lines">
-                    Steady blue, clear view<span class="c-poem__period">.</span><br />
-                    Flashing blue, clouds due<span class="c-poem__period">.</span><br />
-                    Steady red, rain ahead<span class="c-poem__period">.</span><br />
-                    Flashing red, snow instead<span class="c-poem__period">.</span><br />
-                    <span class="c-poem__parenthetical">(Except in summer, when it means<br />
-                    the Red Sox game is canceled).</span>
+                    <button class="c-poem__condition-switch">Steady blue, clear view<span class="c-poem__period">.</span></button><br />
+                    <button class="c-poem__condition-switch">Flashing blue, clouds due<span class="c-poem__period">.</span></button><br />
+                    <button class="c-poem__condition-switch">Steady red, rain ahead<span class="c-poem__period">.</span></button><br />
+                    <button class="c-poem__condition-switch">Flashing red, snow instead<span class="c-poem__period">.</span></button><br />
+                    <span class="c-poem__parenthetical"><button class="c-poem__condition-switch">(Except in summer, when it means<br />
+                    the Red Sox game is canceled).</button></span>
                 </p>
             </figure>
             <!-- End of `c-poem` -->

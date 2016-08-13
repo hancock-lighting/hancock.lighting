@@ -56,4 +56,9 @@ $show-parenthetical: 35.5em; // 568px @ `$global-type-size`
             @include visuallyrevealed();
         }
     }
+
+    &__condition-switch {
+        background-color: transparent;
+        border: none;
+    }
 }
