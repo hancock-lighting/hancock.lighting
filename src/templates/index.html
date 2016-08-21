@@ -9,6 +9,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>{% include 'styles/condition-bundles/'+beacon+'.min.css' %}</style>
 
+    <script src="scripts/main.min.js" async></script>
+
+    <link rel="preload" href="styles/lazy.min.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="styles/lazy.min.css"></noscript>
+
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="hancock">
 
