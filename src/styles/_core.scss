@@ -1,14 +1,6 @@
-// Utilities -------------------------------------------------------------------
-// Order is important
-@import
-    'utilities/variables',
-    'utilities/logic',
-    'utilities/extends',
-    'utilities/z-index',
-    'utilities/conditions',
-    'utilities/colors',
-    'utilities/type';
+@import 'utilities';
 
+@import 'type/critical';
 
 // Vendor ----------------------------------------------------------------------
 @import '_vendor/normalize';
@@ -37,5 +29,3 @@
     "components/c-social-links";
 
 
-// Layout ----------------------------------------------------------------------
-@import 'media/print';
