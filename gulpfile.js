@@ -3,6 +3,7 @@ var gulp         = require('gulp'),
     browserSync  = require('browser-sync'),
     cache        = require('gulp-cache'),
     concat       = require('gulp-concat'),
+    del          = require('del');
     gae          = require('gulp-gae'),
     imagemin     = require('gulp-imagemin'),
     jshint       = require('gulp-jshint'),
@@ -13,6 +14,10 @@ var gulp         = require('gulp'),
     sourcemaps   = require('gulp-sourcemaps'),
     uglify       = require('gulp-uglify');
 
+
+gulp.task('clean', function() {
+  return del(["dist/"]);
+})
 
 gulp.task('browser-sync', ['gae-serve'], function() {
   browserSync({
