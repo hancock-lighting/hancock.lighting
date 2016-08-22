@@ -1,55 +1,6 @@
 // Component Logic -------------------------------------------------------------
 $c-poem-show-parenthetical: 35.5em; // 568px @ `$global-type-size`
 
-%c-poem-condition-switch {
-    transition:
-      background $animation-duration-shortest $animation-ease,
-      color $animation-duration-shortest $animation-ease,
-      outline $animation-duration-shortest $animation-ease;
-
-    // States
-    &:hover {
-        background-color: c(link, base-day);
-
-        outline: rem(10) solid c(link, base-day);
-
-        color: c(type, night);
-    }
-
-    &:active {
-        outline-width: rem(2);
-
-        transition: none;
-    }
-
-    // Conditions
-    .is-nighttime & {
-
-        // States
-        &:hover {
-            background-color: c(link, base-night);
-
-            outline-color: c(link, base-night);
-
-            color: c(type, day);
-        }
-    }
-
-    .is-sox-champs &,
-    .is-sox-rainout & {
-        color: c(sox, white);
-
-        // States
-        &:hover {
-            background-color: c(sox, blue);
-
-            outline-color: c(sox, blue);
-
-            color: c(sox, white);
-        }
-    }
-}
-
 
 // Component Styling -----------------------------------------------------------
 .c-poem {
@@ -107,10 +58,21 @@ $c-poem-show-parenthetical: 35.5em; // 568px @ `$global-type-size`
     }
 
     &__condition-switch {
-        @extend %c-poem-condition-switch;
-
         border: none;
 
         background-color: transparent;
+
+        transition: transform $animation-duration-long $animation-ease;
+
+        // States
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        &:active {
+            transform: scale(1);
+
+            transition: none;
+        }
     }
 }
