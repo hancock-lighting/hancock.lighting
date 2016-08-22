@@ -35,6 +35,8 @@ This should pull down this repo's code, install all required Node modules, then 
 
 ### Previewing Conditions
 
+You can tap on the different lines of the poem to change it to the relevant weather condition. You'll still have to wait for either day or night to see the different times of day, though. Same for a Sox game rainout or championship win (that'd spoil the fun).
+
 If you would like to preview different states without waiting for the time and weather to change, you can append the following to the end of the URL: `/?beacon=cloudy&time=nighttime` when running locally.
 
 Where the `beacon` values are:
