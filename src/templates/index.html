@@ -9,6 +9,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>{% include 'styles/condition-bundles/'+beacon+'.min.css' %}</style>
 
+    <script src="scripts/main.min.js" async></script>
+
+    <link rel="preload" href="styles/lazy.min.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="styles/lazy.min.css"></noscript>
+
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="hancock">
 
@@ -69,6 +74,9 @@
             {% elif beacon == "sox-rainout" %}Flashing red, the Sox game is cancelled
             {% elif beacon == "sox-champs" %}Flashing blue and red, the Boston Red Sox are world champions!
             {% endif %}
+        </p>
+        <p>
+            Note: This page automatically refreshes every 7 minutes.
         </p>
     </header>
     <!-- End of `c-summary` -->
@@ -252,12 +260,12 @@
             <!-- Start of `c-poem` -->
             <figure class="c-poem">
                 <p class="c-poem__lines">
-                    Steady blue, clear view<span class="c-poem__period">.</span><br />
-                    Flashing blue, clouds due<span class="c-poem__period">.</span><br />
-                    Steady red, rain ahead<span class="c-poem__period">.</span><br />
-                    Flashing red, snow instead<span class="c-poem__period">.</span><br />
-                    <span class="c-poem__parenthetical">(Except in summer, when it means<br />
-                    the Red Sox game is canceled).</span>
+                    <button class="c-poem__condition-switch" data-beacon="clear">Steady blue, clear view<span class="c-poem__period">.</span></button><br />
+                    <button class="c-poem__condition-switch" data-beacon="cloudy">Flashing blue, clouds due<span class="c-poem__period">.</span></button><br />
+                    <button class="c-poem__condition-switch" data-beacon="raining">Steady red, rain ahead<span class="c-poem__period">.</span></button><br />
+                    <button class="c-poem__condition-switch" data-beacon="snowing">Flashing red, snow instead<span class="c-poem__period">.</span></button><br />
+                    <span class="c-poem__parenthetical"><button class="c-poem__condition-switch" data-beacon="sox-rainout">(Except in summer, when it means<br />
+                    the Red Sox game is canceled).</button></span>
                 </p>
             </figure>
             <!-- End of `c-poem` -->

@@ -1,5 +1,5 @@
 // Component Logic -------------------------------------------------------------
-$show-parenthetical: 35.5em; // 568px @ `$global-type-size`
+$c-poem-show-parenthetical: 35.5em; // 568px @ `$global-type-size`
 
 
 // Component Styling -----------------------------------------------------------
@@ -43,7 +43,7 @@ $show-parenthetical: 35.5em; // 568px @ `$global-type-size`
         @extend %visuallyhidden;
 
         // Breakpoints
-        @media screen and (min-width: $show-parenthetical) {
+        @media screen and (min-width: $c-poem-show-parenthetical) {
             @include visuallyrevealed();
         }
     }
@@ -52,8 +52,27 @@ $show-parenthetical: 35.5em; // 568px @ `$global-type-size`
         @extend %visuallyhidden;
 
         // Breakpoints
-        @media screen and (min-width: $show-parenthetical) {
+        @media screen and (min-width: $c-poem-show-parenthetical) {
             @include visuallyrevealed();
+        }
+    }
+
+    &__condition-switch {
+        border: none;
+
+        background-color: transparent;
+
+        transition: transform $animation-duration-long $animation-ease;
+
+        // States
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        &:active {
+            transform: scale(1);
+
+            transition: none;
         }
     }
 }

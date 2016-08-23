@@ -19,14 +19,14 @@
     }
 
     // Animates skyline size and weather effects when the viewport is resized
-    &.is-daytime,
-    &.is-nighttime {
-        .l-skyline {
-            transition:
-              background-position ($animation-duration-longest * 2) $animation-ease, // Clouds
-              background-size $animation-duration-short $animation-ease; // Skyline
-        }
-    }
+    // &.is-daytime,
+    // &.is-nighttime {
+    //     .l-skyline {
+    //         transition:
+    //           background-position ($animation-duration-longest * 2) $animation-ease, // Clouds
+    //           background-size $animation-duration-short $animation-ease; // Skyline
+    //     }
+    // }
 
     // [1] Hides blurry edges
     &.is-daytime {

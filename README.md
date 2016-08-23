@@ -21,7 +21,7 @@ This site makes good on that attempt, and is a little love letter to the city th
 
 ### Browser Support
 
-This site makes liberal use of evergreen browser features such as [flexbox](http://caniuse.com/#feat=flexbox), [SVG](http://caniuse.com/#feat=svg), [viewport units](http://caniuse.com/#feat=viewport-units), [CSS blend modes](http://caniuse.com/#feat=css-backgroundblendmode), etc. As such, it makes few concessions for IE support.
+This site makes liberal use of evergreen browser features such as [flexbox](http://caniuse.com/#feat=flexbox), [SVG](http://caniuse.com/#feat=svg), [viewport units](http://caniuse.com/#feat=viewport-units), [CSS blend modes](http://caniuse.com/#feat=css-backgroundblendmode), etc. As such, it makes few concessions for older browsers such as Internet Explorer.
 
 ### Installation
 
@@ -33,9 +33,11 @@ Assuming you have [Node](https://nodejs.org/en/) and [Node Package Manager](http
 
 This should pull down this repo's code, install all required Node modules, then build the site and open it in your browser via [Browsersync](https://www.browsersync.io/).
 
-### Cheating
+### Previewing Conditions
 
-If you're impatient and would like to preview the different  states without waiting for the time and weather to change, you can append the following to the end of the URL: `/?beacon=cloudy&time=nighttime`
+You can tap on the different lines of the poem to change it to the relevant weather condition. You'll still have to wait for either day or night to see the different times of day, though. Same for a Sox game rainout or championship win (that'd spoil the fun).
+
+If you would like to preview different states without waiting for the time and weather to change, you can append the following to the end of the URL: `/?beacon=cloudy&time=nighttime` when running locally.
 
 Where the `beacon` values are:
 

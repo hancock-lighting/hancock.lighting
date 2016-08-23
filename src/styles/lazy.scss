@@ -1,10 +1,9 @@
-@import 'core';
+@import 'utilities';
 
+@import 'type/lazy';
 
 // Conditions ------------------------------------------------------------------
 @import
-    "conditions/is-daytime",
-    "conditions/is-nighttime",
     "conditions/is-clear",
     "conditions/is-cloudy",
     "conditions/is-raining",
@@ -13,6 +12,8 @@
     "conditions/is-sox-champs",
     "conditions/is-sox-rainout";
 
+// Layout ----------------------------------------------------------------------
+@import 'media/print';
 
 // Shame -----------------------------------------------------------------------
 @import 'shame';
