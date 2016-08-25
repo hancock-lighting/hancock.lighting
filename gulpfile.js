@@ -123,4 +123,6 @@ gulp.task('watch-pipelines',function() {
   });
 })
 
+gulp.task('build',['pipelines']);
+
 gulp.task('default', ['watch-pipelines','browser-sync']);
