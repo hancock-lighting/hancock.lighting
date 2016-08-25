@@ -1,6 +1,20 @@
 language: node_js
 node_js:
-  - "node"
+- node
+
 before_script:
-  - npm install -g gulp
+- openssl aes-256-cbc -K $encrypted_641eef2f1849_key -iv $encrypted_641eef2f1849_iv
+  -in secrets.tar.enc -out secrets.tar -d
+- tar xvf secrets.tar
+- mv secrets.yaml src/backend
+- npm install -g gulp
+
 script: gulp build
+
+deploy:
+  provider: gae
+  project: weather-beacon
+  config: dist/app.yaml
+  keyfile: client-secret.json
+  skip_cleanup: true
+  default: true
