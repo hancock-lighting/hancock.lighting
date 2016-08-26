@@ -18,3 +18,7 @@ deploy:
   keyfile: client-secret.json
   skip_cleanup: true
   default: true
+
+cache:
+  directories:
+    - node_modules
