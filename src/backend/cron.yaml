@@ -1,4 +1,0 @@
-cron:
-- description: "refresh status"
-  url: /admin/refresh
-  schedule: every 5 minutes
