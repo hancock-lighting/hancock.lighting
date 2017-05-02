@@ -1,0 +1,31 @@
+// Base Styling ----------------------------------------------------------------
+a {
+    color: c(link, base-day);
+    text-decoration: none;
+
+    transition: color $animation-duration-shortest ease-in-out;
+
+    // States
+    &:hover {
+        color: c(link, hover-day);
+    }
+
+    &:active {
+        color: c(link, active-day);
+
+        transition: none;
+    }
+
+    // Conditions
+    .is-nighttime & {
+        color: c(link, base-night);
+
+        &:hover {
+            color: c(link, hover-night);
+        }
+
+        &:active {
+            color: c(link, active-night);
+        }
+    }
+}

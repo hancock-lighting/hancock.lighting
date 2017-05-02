@@ -1,0 +1,33 @@
+// Layout Styling --------------------------------------------------------------
+.l-info {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 4vh;
+    padding-top: 8vh;
+    z-index: z(o-info);
+
+    background-color: c(time, night); // Fallback background color
+
+    transition: $background-transition;
+
+    // Conditions
+    .is-daytime & {
+        background-color: c(time, night);
+    }
+
+    .is-nighttime & {
+        background-color: c(time, day);
+    }
+
+    .is-sox-champs &,
+    .is-sox-rainout & {
+        background-color: c(sox, red);
+    }
+
+    // Breakpoints
+    @media screen and (min-width: $layout-width-m) {
+        flex-basis: 35%;
+        justify-content: flex-start;
+    }
+}

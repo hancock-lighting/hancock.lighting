@@ -1,0 +1,89 @@
+// Condition Styling -----------------------------------------------------------
+.is-sox-champs {
+
+    // Colors the tower
+    .c-tower {
+        // Blues
+        #beacon-antenna { animation: flash-champs-blue-base $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+        #beacon-bottom-1-spur { animation: flash-champs-blue-spur $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+        #beacon-bottom-1-indent { animation: flash-champs-blue-indent $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+        #beacon-bottom-1-base { animation: flash-champs-blue-base $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+        #beacon-bottom-3-spur { animation: flash-champs-blue-spur $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+        #beacon-bottom-3-indent { animation: flash-champs-blue-indent $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+        #beacon-bottom-3-base { animation: flash-champs-blue-base $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+        #beacon-bottom-5-spur { animation: flash-champs-blue-spur $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+        #beacon-bottom-5-indent { animation: flash-champs-blue-indent $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+        #beacon-bottom-5-base { animation: flash-champs-blue-base $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+        #beacon-bottom-7-spur { animation: flash-champs-blue-spur $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+        #beacon-bottom-7-indent { animation: flash-champs-blue-indent $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+        #beacon-bottom-7-base { animation: flash-champs-blue-base $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+
+        // Reds
+        #beacon-top-base { animation: flash-champs-red-base $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+        #beacon-bottom-2-spur { animation: flash-champs-red-spur $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+        #beacon-bottom-2-indent { animation: flash-champs-red-indent $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+        #beacon-bottom-2-base { animation: flash-champs-red-base $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+        #beacon-bottom-4-spur { animation: flash-champs-red-spur $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+        #beacon-bottom-4-indent { animation: flash-champs-red-indent $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+        #beacon-bottom-4-base { animation: flash-champs-red-base $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+        #beacon-bottom-6-spur { animation: flash-champs-red-spur $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+        #beacon-bottom-6-indent { animation: flash-champs-red-indent $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+        #beacon-bottom-6-base { animation: flash-champs-red-base $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+
+        // Gray
+        #beacon-top-spur-left { animation: flash-champs-red-spur $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+        #beacon-top-spur-right { animation: flash-champs-red-spur $flash-duration-and-ease; animation-iteration-count: $flash-iteration; }
+
+        // Animation
+        // Red
+        @keyframes flash-champs-red-base {
+            #{$keyframe-base} { fill: c(beacon, red-base); }
+        }
+        @keyframes flash-champs-red-spur {
+            #{$keyframe-spur} { fill: c(beacon, red-spur); }
+        }
+        @keyframes flash-champs-red-indent {
+            75% { fill: c(beacon, red-indent); }
+        }
+
+        // Blue
+        @keyframes flash-champs-blue-base {
+            #{$keyframe-base} { fill: c(beacon, blue-base); }
+        }
+        @keyframes flash-champs-blue-spur {
+            #{$keyframe-spur} { fill: c(beacon, blue-spur); }
+        }
+        @keyframes flash-champs-blue-indent {
+            #{$keyframe-indent} { fill: c(beacon, blue-indent); }
+        }
+    }
+
+    // Animates skyline size when the viewport is resized
+    // &.is-daytime,
+    // &.is-nighttime {
+    //     .l-skyline {
+    //         transition: background-size $animation-duration-short $animation-ease; // Skyline
+    //     }
+    // }
+
+    // [1] Hides blurry edges
+    // NOTE: The Sox will only play at night, so they'll only win at night?
+    &.is-nighttime {
+        .l-skyline {
+            background:
+              url(#{$path-to-images}/background-skyline-nighttime.svg) no-repeat,
+              url(#{$path-to-images}/condition-sox-champs.gif) center center no-repeat;
+
+            background-position:
+              bottom rem(-2) center, // Skyline, [1]
+              center center; // Fireworks
+
+            background-size:
+              $background-size-skyline, // Skyline, [1]
+              cover; // Fireworks
+
+            // Breakpoints
+            @include skyline-position(sox-champs);
+        }
+    }
+}

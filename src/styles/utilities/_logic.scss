@@ -1,0 +1,82 @@
+// Beacon Flash ----------------------------------------------------------------
+@mixin beacon-flash($color) {
+    @keyframes flash-#{$color}-base {
+        #{$keyframe-base} { fill: c(beacon, #{$color}-base); }
+    }
+    @keyframes flash-#{$color}-spur {
+        #{$keyframe-spur} { fill: c(beacon, #{$color}-spur); }
+    }
+    @keyframes flash-#{$color}-indent {
+        #{$keyframe-indent} { fill: c(beacon, #{$color}-indent); }
+    }
+}
+
+
+// Clearfix ------------------------------------------------------------------
+// Written as a mixin so it can be declared within a media query
+@mixin clearfix {
+    & {
+        *zoom: 1;
+    }
+
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+
+// Strip Unit ------------------------------------------------------------------
+@function strip-unit($number) {
+    @if type-of($number) == 'number' and not unitless($number) {
+        @return $number / ($number * 0 + 1);
+    }
+
+    @return $number;
+}
+
+
+// PX to Em/Rem -------------------------------------------------------------------
+// Em
+$browser-context: $global-type-size;
+
+@function em($pixels, $context: $browser-context) {
+    @if (unitless($pixels)) {
+        $pixels: $pixels * 1px;
+    }
+
+    @if (unitless($context)) {
+        $context: $context * 1px;
+    }
+
+    @return $pixels / $context * 1em;
+}
+
+// Rem
+$browser-context: $global-type-size;
+
+@function rem($pixels, $context: $browser-context) {
+    @if (unitless($pixels)) {
+        $pixels: $pixels * 1px;
+    }
+
+    @if (unitless($context)) {
+        $context: $context * 1px;
+    }
+
+    @return $pixels / $context * 1rem;
+}
+
+// Text Truncate ---------------------------------------------------------------
+// Written as a mixin so it can be declared within a media query. Requires the
+// element to be block or inline-block
+@mixin text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

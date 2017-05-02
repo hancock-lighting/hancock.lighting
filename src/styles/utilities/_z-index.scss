@@ -1,0 +1,22 @@
+$z-index: (
+    // Banish things out of sight
+    basement: -999999,
+
+    // Layout
+    o-info: 100,
+        c-tower: 110,
+    o-skyline: 200,
+        c-poem: 210,
+        c-install-instructions: 210,
+        c-project-info: 210,
+
+    // Pop up/over UI elements
+
+    // Ensure things are displayed
+    ceiling: 999999
+);
+
+// Retrieve z-index vales from $z-index map
+@function z($key) {
+    @return map-get($z-index, $key);
+}

@@ -1,0 +1,33 @@
+// Layout Styling --------------------------------------------------------------
+// [1] Aligns `c-tower` to the bottom center of the screen
+.l-skyline {
+    align-items: center; // [1]
+    display: flex; // [1]
+    flex-direction: column-reverse; // [1]
+    height: 99vh;
+    z-index: z(o-skyline);
+
+    background-color: c(time, day); // Fallback background color
+
+    transition: $background-transition;
+    will-change: background;
+
+    // Conditions
+    .is-daytime & {
+        background-color: c(time, day);
+    }
+
+    .is-nighttime & {
+        background-color: c(time, night);
+    }
+
+    // Breakpoints
+    @media screen and (min-width: $layout-width-m) and (min-height: $layout-height-m) {
+        flex-basis: 65%;
+        height: 100vh;
+    }
+
+    @media screen and (min-width: $bp-1100) and (min-height: $layout-width-l) {
+        flex-basis: 70%;
+    }
+}

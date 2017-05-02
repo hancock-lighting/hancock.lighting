@@ -1,0 +1,65 @@
+$colors: (
+    // Basics
+    black:  #000000,
+    white:  #ffffff,
+
+    // Type
+    type: (
+        day:   #f8fbfd,
+        night: #26394B
+    ),
+
+    // Links
+    link: (
+        base-day:     #c9dff2,
+        base-night:   #236297,
+    ),
+
+    // Time
+    time: (
+        day:   #c9dff2,
+        night: #1b4466
+    ),
+
+    // Beacon
+    beacon: (
+        red-base:    #ed5a5a,
+        red-spur:    darken(#6c6c6c, 3%),
+        red-indent:  lighten(#6c6c6c, 10%),
+        blue-base:   #65aff0,
+        blue-spur:   darken(#6c6c6c, 3%),
+        blue-indent: lighten(#6c6c6c, 10%),
+        gray-base:   #6c6c6c,
+        gray-spur:   #8a8a8a,
+        gray-indent: #8a8a8a
+    ),
+
+    // Sox
+    sox: (
+        red:   #d35b5b,
+        white: #ffffff,
+        blue:  #236297
+    ),
+
+    // Grays
+    gray: (
+        lighter: #e9e8e9,
+        light:   #d9d8d6,
+        medium:  #afb2b3,
+        dark:    #929493,
+        darker:  #696e71
+    )
+);
+
+// Retrieve color from $colors map
+@function c($color-name, $color-variant:null) {
+    // Color variant is optional
+    @if ($color-variant != null) {
+        // Return `map-get` for cleaner declaration
+        @return map-get(map-get($colors, $color-name), $color-variant);
+    }
+    // Color with color variant
+    @else if ($color-variant == null) {
+        @return map-get($colors, $color-name);
+    }
+}
